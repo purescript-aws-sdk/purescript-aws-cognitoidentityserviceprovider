@@ -20,482 +20,670 @@ import Data.StrMap as StrMap
 import AWS.Request as Request
 import AWS.Request.Types as Types
 
-serviceName = "CognitoIdentityServiceProvider" :: String
-
 
 -- | <p>Adds additional user attributes to the user pool schema.</p>
 addCustomAttributes :: forall eff. AddCustomAttributesRequest -> Aff (exception :: EXCEPTION | eff) AddCustomAttributesResponse
-addCustomAttributes = Request.request serviceName "addCustomAttributes" 
+addCustomAttributes = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "addCustomAttributes"
 
 
 -- | <p>Adds the specified user to the specified group.</p> <p>Requires developer credentials.</p>
 adminAddUserToGroup :: forall eff. AdminAddUserToGroupRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-adminAddUserToGroup = Request.request serviceName "adminAddUserToGroup" 
+adminAddUserToGroup = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminAddUserToGroup"
 
 
 -- | <p>Confirms user registration as an admin without using a confirmation code. Works on any user.</p> <p>Requires developer credentials.</p>
 adminConfirmSignUp :: forall eff. AdminConfirmSignUpRequest -> Aff (exception :: EXCEPTION | eff) AdminConfirmSignUpResponse
-adminConfirmSignUp = Request.request serviceName "adminConfirmSignUp" 
+adminConfirmSignUp = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminConfirmSignUp"
 
 
 -- | <p>Creates a new user in the specified user pool.</p> <p>If <code>MessageAction</code> is not set, the default is to send a welcome message via email or phone (SMS).</p> <note> <p>This message is based on a template that you configured in your call to or . This template includes your custom sign-up instructions and placeholders for user name and temporary password.</p> </note> <p>Alternatively, you can call AdminCreateUser with “SUPPRESS” for the <code>MessageAction</code> parameter, and Amazon Cognito will not send any email. </p> <p>In either case, the user will be in the <code>FORCE_CHANGE_PASSWORD</code> state until they sign in and change their password.</p> <p>AdminCreateUser requires developer credentials.</p>
 adminCreateUser :: forall eff. AdminCreateUserRequest -> Aff (exception :: EXCEPTION | eff) AdminCreateUserResponse
-adminCreateUser = Request.request serviceName "adminCreateUser" 
+adminCreateUser = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminCreateUser"
 
 
 -- | <p>Deletes a user as an administrator. Works on any user.</p> <p>Requires developer credentials.</p>
 adminDeleteUser :: forall eff. AdminDeleteUserRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-adminDeleteUser = Request.request serviceName "adminDeleteUser" 
+adminDeleteUser = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminDeleteUser"
 
 
 -- | <p>Deletes the user attributes in a user pool as an administrator. Works on any user.</p> <p>Requires developer credentials.</p>
 adminDeleteUserAttributes :: forall eff. AdminDeleteUserAttributesRequest -> Aff (exception :: EXCEPTION | eff) AdminDeleteUserAttributesResponse
-adminDeleteUserAttributes = Request.request serviceName "adminDeleteUserAttributes" 
+adminDeleteUserAttributes = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminDeleteUserAttributes"
 
 
 -- | <p>Disables the user from signing in with the specified external (SAML or social) identity provider. If the user to disable is a Cognito User Pools native username + password user, they are not permitted to use their password to sign-in. If the user to disable is a linked external IdP user, any link between that user and an existing user is removed. The next time the external user (no longer attached to the previously linked <code>DestinationUser</code>) signs in, they must create a new user account. See .</p> <p>This action is enabled only for admin access and requires developer credentials.</p> <p>The <code>ProviderName</code> must match the value specified when creating an IdP for the pool. </p> <p>To disable a native username + password user, the <code>ProviderName</code> value must be <code>Cognito</code> and the <code>ProviderAttributeName</code> must be <code>Cognito_Subject</code>, with the <code>ProviderAttributeValue</code> being the name that is used in the user pool for the user.</p> <p>The <code>ProviderAttributeName</code> must always be <code>Cognito_Subject</code> for social identity providers. The <code>ProviderAttributeValue</code> must always be the exact subject that was used when the user was originally linked as a source user.</p> <p>For de-linking a SAML identity, there are two scenarios. If the linked identity has not yet been used to sign-in, the <code>ProviderAttributeName</code> and <code>ProviderAttributeValue</code> must be the same values that were used for the <code>SourceUser</code> when the identities were originally linked in the call. (If the linking was done with <code>ProviderAttributeName</code> set to <code>Cognito_Subject</code>, the same applies here). However, if the user has already signed in, the <code>ProviderAttributeName</code> must be <code>Cognito_Subject</code> and <code>ProviderAttributeValue</code> must be the subject of the SAML assertion.</p>
 adminDisableProviderForUser :: forall eff. AdminDisableProviderForUserRequest -> Aff (exception :: EXCEPTION | eff) AdminDisableProviderForUserResponse
-adminDisableProviderForUser = Request.request serviceName "adminDisableProviderForUser" 
+adminDisableProviderForUser = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminDisableProviderForUser"
 
 
 -- | <p>Disables the specified user as an administrator. Works on any user.</p> <p>Requires developer credentials.</p>
 adminDisableUser :: forall eff. AdminDisableUserRequest -> Aff (exception :: EXCEPTION | eff) AdminDisableUserResponse
-adminDisableUser = Request.request serviceName "adminDisableUser" 
+adminDisableUser = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminDisableUser"
 
 
 -- | <p>Enables the specified user as an administrator. Works on any user.</p> <p>Requires developer credentials.</p>
 adminEnableUser :: forall eff. AdminEnableUserRequest -> Aff (exception :: EXCEPTION | eff) AdminEnableUserResponse
-adminEnableUser = Request.request serviceName "adminEnableUser" 
+adminEnableUser = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminEnableUser"
 
 
 -- | <p>Forgets the device, as an administrator.</p> <p>Requires developer credentials.</p>
 adminForgetDevice :: forall eff. AdminForgetDeviceRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-adminForgetDevice = Request.request serviceName "adminForgetDevice" 
+adminForgetDevice = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminForgetDevice"
 
 
 -- | <p>Gets the device, as an administrator.</p> <p>Requires developer credentials.</p>
 adminGetDevice :: forall eff. AdminGetDeviceRequest -> Aff (exception :: EXCEPTION | eff) AdminGetDeviceResponse
-adminGetDevice = Request.request serviceName "adminGetDevice" 
+adminGetDevice = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminGetDevice"
 
 
 -- | <p>Gets the specified user by user name in a user pool as an administrator. Works on any user.</p> <p>Requires developer credentials.</p>
 adminGetUser :: forall eff. AdminGetUserRequest -> Aff (exception :: EXCEPTION | eff) AdminGetUserResponse
-adminGetUser = Request.request serviceName "adminGetUser" 
+adminGetUser = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminGetUser"
 
 
 -- | <p>Initiates the authentication flow, as an administrator.</p> <p>Requires developer credentials.</p>
 adminInitiateAuth :: forall eff. AdminInitiateAuthRequest -> Aff (exception :: EXCEPTION | eff) AdminInitiateAuthResponse
-adminInitiateAuth = Request.request serviceName "adminInitiateAuth" 
+adminInitiateAuth = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminInitiateAuth"
 
 
 -- | <p>Links an existing user account in a user pool (<code>DestinationUser</code>) to an identity from an external identity provider (<code>SourceUser</code>) based on a specified attribute name and value from the external identity provider. This allows you to create a link from the existing user account to an external federated user identity that has not yet been used to sign in, so that the federated user identity can be used to sign in as the existing user account. </p> <p> For example, if there is an existing user with a username and password, this API links that user to a federated user identity, so that when the federated user identity is used, the user signs in as the existing user account. </p> <important> <p>Because this API allows a user with an external federated identity to sign in as an existing user in the user pool, it is critical that it only be used with external identity providers and provider attributes that have been trusted by the application owner.</p> </important> <p>See also .</p> <p>This action is enabled only for admin access and requires developer credentials.</p>
 adminLinkProviderForUser :: forall eff. AdminLinkProviderForUserRequest -> Aff (exception :: EXCEPTION | eff) AdminLinkProviderForUserResponse
-adminLinkProviderForUser = Request.request serviceName "adminLinkProviderForUser" 
+adminLinkProviderForUser = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminLinkProviderForUser"
 
 
 -- | <p>Lists devices, as an administrator.</p> <p>Requires developer credentials.</p>
 adminListDevices :: forall eff. AdminListDevicesRequest -> Aff (exception :: EXCEPTION | eff) AdminListDevicesResponse
-adminListDevices = Request.request serviceName "adminListDevices" 
+adminListDevices = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminListDevices"
 
 
 -- | <p>Lists the groups that the user belongs to.</p> <p>Requires developer credentials.</p>
 adminListGroupsForUser :: forall eff. AdminListGroupsForUserRequest -> Aff (exception :: EXCEPTION | eff) AdminListGroupsForUserResponse
-adminListGroupsForUser = Request.request serviceName "adminListGroupsForUser" 
+adminListGroupsForUser = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminListGroupsForUser"
 
 
 -- | <p>Lists a history of user activity and any risks detected as part of Amazon Cognito advanced security.</p>
 adminListUserAuthEvents :: forall eff. AdminListUserAuthEventsRequest -> Aff (exception :: EXCEPTION | eff) AdminListUserAuthEventsResponse
-adminListUserAuthEvents = Request.request serviceName "adminListUserAuthEvents" 
+adminListUserAuthEvents = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminListUserAuthEvents"
 
 
 -- | <p>Removes the specified user from the specified group.</p> <p>Requires developer credentials.</p>
 adminRemoveUserFromGroup :: forall eff. AdminRemoveUserFromGroupRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-adminRemoveUserFromGroup = Request.request serviceName "adminRemoveUserFromGroup" 
+adminRemoveUserFromGroup = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminRemoveUserFromGroup"
 
 
 -- | <p>Resets the specified user's password in a user pool as an administrator. Works on any user.</p> <p>When a developer calls this API, the current password is invalidated, so it must be changed. If a user tries to sign in after the API is called, the app will get a PasswordResetRequiredException exception back and should direct the user down the flow to reset the password, which is the same as the forgot password flow. In addition, if the user pool has phone verification selected and a verified phone number exists for the user, or if email verification is selected and a verified email exists for the user, calling this API will also result in sending a message to the end user with the code to change their password.</p> <p>Requires developer credentials.</p>
 adminResetUserPassword :: forall eff. AdminResetUserPasswordRequest -> Aff (exception :: EXCEPTION | eff) AdminResetUserPasswordResponse
-adminResetUserPassword = Request.request serviceName "adminResetUserPassword" 
+adminResetUserPassword = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminResetUserPassword"
 
 
 -- | <p>Responds to an authentication challenge, as an administrator.</p> <p>Requires developer credentials.</p>
 adminRespondToAuthChallenge :: forall eff. AdminRespondToAuthChallengeRequest -> Aff (exception :: EXCEPTION | eff) AdminRespondToAuthChallengeResponse
-adminRespondToAuthChallenge = Request.request serviceName "adminRespondToAuthChallenge" 
+adminRespondToAuthChallenge = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminRespondToAuthChallenge"
 
 
 -- | <p>Sets the user's multi-factor authentication (MFA) preference.</p>
 adminSetUserMFAPreference :: forall eff. AdminSetUserMFAPreferenceRequest -> Aff (exception :: EXCEPTION | eff) AdminSetUserMFAPreferenceResponse
-adminSetUserMFAPreference = Request.request serviceName "adminSetUserMFAPreference" 
+adminSetUserMFAPreference = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminSetUserMFAPreference"
 
 
 -- | <p>Sets all the user settings for a specified user name. Works on any user.</p> <p>Requires developer credentials.</p>
 adminSetUserSettings :: forall eff. AdminSetUserSettingsRequest -> Aff (exception :: EXCEPTION | eff) AdminSetUserSettingsResponse
-adminSetUserSettings = Request.request serviceName "adminSetUserSettings" 
+adminSetUserSettings = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminSetUserSettings"
 
 
 -- | <p>Provides feedback for an authentication event as to whether it was from a valid user. This feedback is used for improving the risk evaluation decision for the user pool as part of Amazon Cognito advanced security.</p>
 adminUpdateAuthEventFeedback :: forall eff. AdminUpdateAuthEventFeedbackRequest -> Aff (exception :: EXCEPTION | eff) AdminUpdateAuthEventFeedbackResponse
-adminUpdateAuthEventFeedback = Request.request serviceName "adminUpdateAuthEventFeedback" 
+adminUpdateAuthEventFeedback = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminUpdateAuthEventFeedback"
 
 
 -- | <p>Updates the device status as an administrator.</p> <p>Requires developer credentials.</p>
 adminUpdateDeviceStatus :: forall eff. AdminUpdateDeviceStatusRequest -> Aff (exception :: EXCEPTION | eff) AdminUpdateDeviceStatusResponse
-adminUpdateDeviceStatus = Request.request serviceName "adminUpdateDeviceStatus" 
+adminUpdateDeviceStatus = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminUpdateDeviceStatus"
 
 
 -- | <p>Updates the specified user's attributes, including developer attributes, as an administrator. Works on any user.</p> <p>For custom attributes, you must prepend the <code>custom:</code> prefix to the attribute name.</p> <p>In addition to updating user attributes, this API can also be used to mark phone and email as verified.</p> <p>Requires developer credentials.</p>
 adminUpdateUserAttributes :: forall eff. AdminUpdateUserAttributesRequest -> Aff (exception :: EXCEPTION | eff) AdminUpdateUserAttributesResponse
-adminUpdateUserAttributes = Request.request serviceName "adminUpdateUserAttributes" 
+adminUpdateUserAttributes = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminUpdateUserAttributes"
 
 
 -- | <p>Signs out users from all devices, as an administrator.</p> <p>Requires developer credentials.</p>
 adminUserGlobalSignOut :: forall eff. AdminUserGlobalSignOutRequest -> Aff (exception :: EXCEPTION | eff) AdminUserGlobalSignOutResponse
-adminUserGlobalSignOut = Request.request serviceName "adminUserGlobalSignOut" 
+adminUserGlobalSignOut = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "adminUserGlobalSignOut"
 
 
 -- | <p>Returns a unique generated shared secret key code for the user account. The request takes an access token or a session string, but not both.</p>
 associateSoftwareToken :: forall eff. AssociateSoftwareTokenRequest -> Aff (exception :: EXCEPTION | eff) AssociateSoftwareTokenResponse
-associateSoftwareToken = Request.request serviceName "associateSoftwareToken" 
+associateSoftwareToken = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "associateSoftwareToken"
 
 
 -- | <p>Changes the password for a specified user in a user pool.</p>
 changePassword :: forall eff. ChangePasswordRequest -> Aff (exception :: EXCEPTION | eff) ChangePasswordResponse
-changePassword = Request.request serviceName "changePassword" 
+changePassword = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "changePassword"
 
 
 -- | <p>Confirms tracking of the device. This API call is the call that begins device tracking.</p>
 confirmDevice :: forall eff. ConfirmDeviceRequest -> Aff (exception :: EXCEPTION | eff) ConfirmDeviceResponse
-confirmDevice = Request.request serviceName "confirmDevice" 
+confirmDevice = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "confirmDevice"
 
 
 -- | <p>Allows a user to enter a confirmation code to reset a forgotten password.</p>
 confirmForgotPassword :: forall eff. ConfirmForgotPasswordRequest -> Aff (exception :: EXCEPTION | eff) ConfirmForgotPasswordResponse
-confirmForgotPassword = Request.request serviceName "confirmForgotPassword" 
+confirmForgotPassword = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "confirmForgotPassword"
 
 
 -- | <p>Confirms registration of a user and handles the existing alias from a previous user.</p>
 confirmSignUp :: forall eff. ConfirmSignUpRequest -> Aff (exception :: EXCEPTION | eff) ConfirmSignUpResponse
-confirmSignUp = Request.request serviceName "confirmSignUp" 
+confirmSignUp = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "confirmSignUp"
 
 
 -- | <p>Creates a new group in the specified user pool.</p> <p>Requires developer credentials.</p>
 createGroup :: forall eff. CreateGroupRequest -> Aff (exception :: EXCEPTION | eff) CreateGroupResponse
-createGroup = Request.request serviceName "createGroup" 
+createGroup = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "createGroup"
 
 
 -- | <p>Creates an identity provider for a user pool.</p>
 createIdentityProvider :: forall eff. CreateIdentityProviderRequest -> Aff (exception :: EXCEPTION | eff) CreateIdentityProviderResponse
-createIdentityProvider = Request.request serviceName "createIdentityProvider" 
+createIdentityProvider = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "createIdentityProvider"
 
 
 -- | <p>Creates a new OAuth2.0 resource server and defines custom scopes in it.</p>
 createResourceServer :: forall eff. CreateResourceServerRequest -> Aff (exception :: EXCEPTION | eff) CreateResourceServerResponse
-createResourceServer = Request.request serviceName "createResourceServer" 
+createResourceServer = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "createResourceServer"
 
 
 -- | <p>Creates the user import job.</p>
 createUserImportJob :: forall eff. CreateUserImportJobRequest -> Aff (exception :: EXCEPTION | eff) CreateUserImportJobResponse
-createUserImportJob = Request.request serviceName "createUserImportJob" 
+createUserImportJob = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "createUserImportJob"
 
 
 -- | <p>Creates a new Amazon Cognito user pool and sets the password policy for the pool.</p>
 createUserPool :: forall eff. CreateUserPoolRequest -> Aff (exception :: EXCEPTION | eff) CreateUserPoolResponse
-createUserPool = Request.request serviceName "createUserPool" 
+createUserPool = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "createUserPool"
 
 
 -- | <p>Creates the user pool client.</p>
 createUserPoolClient :: forall eff. CreateUserPoolClientRequest -> Aff (exception :: EXCEPTION | eff) CreateUserPoolClientResponse
-createUserPoolClient = Request.request serviceName "createUserPoolClient" 
+createUserPoolClient = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "createUserPoolClient"
 
 
 -- | <p>Creates a new domain for a user pool.</p>
 createUserPoolDomain :: forall eff. CreateUserPoolDomainRequest -> Aff (exception :: EXCEPTION | eff) CreateUserPoolDomainResponse
-createUserPoolDomain = Request.request serviceName "createUserPoolDomain" 
+createUserPoolDomain = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "createUserPoolDomain"
 
 
 -- | <p>Deletes a group. Currently only groups with no members can be deleted.</p> <p>Requires developer credentials.</p>
 deleteGroup :: forall eff. DeleteGroupRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteGroup = Request.request serviceName "deleteGroup" 
+deleteGroup = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "deleteGroup"
 
 
 -- | <p>Deletes an identity provider for a user pool.</p>
 deleteIdentityProvider :: forall eff. DeleteIdentityProviderRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteIdentityProvider = Request.request serviceName "deleteIdentityProvider" 
+deleteIdentityProvider = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "deleteIdentityProvider"
 
 
 -- | <p>Deletes a resource server.</p>
 deleteResourceServer :: forall eff. DeleteResourceServerRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteResourceServer = Request.request serviceName "deleteResourceServer" 
+deleteResourceServer = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "deleteResourceServer"
 
 
 -- | <p>Allows a user to delete himself or herself.</p>
 deleteUser :: forall eff. DeleteUserRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteUser = Request.request serviceName "deleteUser" 
+deleteUser = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "deleteUser"
 
 
 -- | <p>Deletes the attributes for a user.</p>
 deleteUserAttributes :: forall eff. DeleteUserAttributesRequest -> Aff (exception :: EXCEPTION | eff) DeleteUserAttributesResponse
-deleteUserAttributes = Request.request serviceName "deleteUserAttributes" 
+deleteUserAttributes = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "deleteUserAttributes"
 
 
 -- | <p>Deletes the specified Amazon Cognito user pool.</p>
 deleteUserPool :: forall eff. DeleteUserPoolRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteUserPool = Request.request serviceName "deleteUserPool" 
+deleteUserPool = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "deleteUserPool"
 
 
 -- | <p>Allows the developer to delete the user pool client.</p>
 deleteUserPoolClient :: forall eff. DeleteUserPoolClientRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-deleteUserPoolClient = Request.request serviceName "deleteUserPoolClient" 
+deleteUserPoolClient = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "deleteUserPoolClient"
 
 
 -- | <p>Deletes a domain for a user pool.</p>
 deleteUserPoolDomain :: forall eff. DeleteUserPoolDomainRequest -> Aff (exception :: EXCEPTION | eff) DeleteUserPoolDomainResponse
-deleteUserPoolDomain = Request.request serviceName "deleteUserPoolDomain" 
+deleteUserPoolDomain = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "deleteUserPoolDomain"
 
 
 -- | <p>Gets information about a specific identity provider.</p>
 describeIdentityProvider :: forall eff. DescribeIdentityProviderRequest -> Aff (exception :: EXCEPTION | eff) DescribeIdentityProviderResponse
-describeIdentityProvider = Request.request serviceName "describeIdentityProvider" 
+describeIdentityProvider = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "describeIdentityProvider"
 
 
 -- | <p>Describes a resource server.</p>
 describeResourceServer :: forall eff. DescribeResourceServerRequest -> Aff (exception :: EXCEPTION | eff) DescribeResourceServerResponse
-describeResourceServer = Request.request serviceName "describeResourceServer" 
+describeResourceServer = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "describeResourceServer"
 
 
 -- | <p>Describes the risk configuration.</p>
 describeRiskConfiguration :: forall eff. DescribeRiskConfigurationRequest -> Aff (exception :: EXCEPTION | eff) DescribeRiskConfigurationResponse
-describeRiskConfiguration = Request.request serviceName "describeRiskConfiguration" 
+describeRiskConfiguration = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "describeRiskConfiguration"
 
 
 -- | <p>Describes the user import job.</p>
 describeUserImportJob :: forall eff. DescribeUserImportJobRequest -> Aff (exception :: EXCEPTION | eff) DescribeUserImportJobResponse
-describeUserImportJob = Request.request serviceName "describeUserImportJob" 
+describeUserImportJob = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "describeUserImportJob"
 
 
 -- | <p>Returns the configuration information and metadata of the specified user pool.</p>
 describeUserPool :: forall eff. DescribeUserPoolRequest -> Aff (exception :: EXCEPTION | eff) DescribeUserPoolResponse
-describeUserPool = Request.request serviceName "describeUserPool" 
+describeUserPool = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "describeUserPool"
 
 
 -- | <p>Client method for returning the configuration information and metadata of the specified user pool client.</p>
 describeUserPoolClient :: forall eff. DescribeUserPoolClientRequest -> Aff (exception :: EXCEPTION | eff) DescribeUserPoolClientResponse
-describeUserPoolClient = Request.request serviceName "describeUserPoolClient" 
+describeUserPoolClient = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "describeUserPoolClient"
 
 
 -- | <p>Gets information about a domain.</p>
 describeUserPoolDomain :: forall eff. DescribeUserPoolDomainRequest -> Aff (exception :: EXCEPTION | eff) DescribeUserPoolDomainResponse
-describeUserPoolDomain = Request.request serviceName "describeUserPoolDomain" 
+describeUserPoolDomain = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "describeUserPoolDomain"
 
 
 -- | <p>Forgets the specified device.</p>
 forgetDevice :: forall eff. ForgetDeviceRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
-forgetDevice = Request.request serviceName "forgetDevice" 
+forgetDevice = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "forgetDevice"
 
 
 -- | <p>Calling this API causes a message to be sent to the end user with a confirmation code that is required to change the user's password. For the <code>Username</code> parameter, you can use the username or user alias. If a verified phone number exists for the user, the confirmation code is sent to the phone number. Otherwise, if a verified email exists, the confirmation code is sent to the email. If neither a verified phone number nor a verified email exists, <code>InvalidParameterException</code> is thrown. To use the confirmation code for resetting the password, call .</p>
 forgotPassword :: forall eff. ForgotPasswordRequest -> Aff (exception :: EXCEPTION | eff) ForgotPasswordResponse
-forgotPassword = Request.request serviceName "forgotPassword" 
+forgotPassword = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "forgotPassword"
 
 
 -- | <p>Gets the header information for the .csv file to be used as input for the user import job.</p>
 getCSVHeader :: forall eff. GetCSVHeaderRequest -> Aff (exception :: EXCEPTION | eff) GetCSVHeaderResponse
-getCSVHeader = Request.request serviceName "getCSVHeader" 
+getCSVHeader = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "getCSVHeader"
 
 
 -- | <p>Gets the device.</p>
 getDevice :: forall eff. GetDeviceRequest -> Aff (exception :: EXCEPTION | eff) GetDeviceResponse
-getDevice = Request.request serviceName "getDevice" 
+getDevice = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "getDevice"
 
 
 -- | <p>Gets a group.</p> <p>Requires developer credentials.</p>
 getGroup :: forall eff. GetGroupRequest -> Aff (exception :: EXCEPTION | eff) GetGroupResponse
-getGroup = Request.request serviceName "getGroup" 
+getGroup = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "getGroup"
 
 
 -- | <p>Gets the specified identity provider.</p>
 getIdentityProviderByIdentifier :: forall eff. GetIdentityProviderByIdentifierRequest -> Aff (exception :: EXCEPTION | eff) GetIdentityProviderByIdentifierResponse
-getIdentityProviderByIdentifier = Request.request serviceName "getIdentityProviderByIdentifier" 
+getIdentityProviderByIdentifier = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "getIdentityProviderByIdentifier"
 
 
 -- | <p>This method takes a user pool ID, and returns the signing certificate.</p>
 getSigningCertificate :: forall eff. GetSigningCertificateRequest -> Aff (exception :: EXCEPTION | eff) GetSigningCertificateResponse
-getSigningCertificate = Request.request serviceName "getSigningCertificate" 
+getSigningCertificate = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "getSigningCertificate"
 
 
 -- | <p>Gets the UI Customization information for a particular app client's app UI, if there is something set. If nothing is set for the particular client, but there is an existing pool level customization (app <code>clientId</code> will be <code>ALL</code>), then that is returned. If nothing is present, then an empty shape is returned.</p>
 getUICustomization :: forall eff. GetUICustomizationRequest -> Aff (exception :: EXCEPTION | eff) GetUICustomizationResponse
-getUICustomization = Request.request serviceName "getUICustomization" 
+getUICustomization = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "getUICustomization"
 
 
 -- | <p>Gets the user attributes and metadata for a user.</p>
 getUser :: forall eff. GetUserRequest -> Aff (exception :: EXCEPTION | eff) GetUserResponse
-getUser = Request.request serviceName "getUser" 
+getUser = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "getUser"
 
 
 -- | <p>Gets the user attribute verification code for the specified attribute name.</p>
 getUserAttributeVerificationCode :: forall eff. GetUserAttributeVerificationCodeRequest -> Aff (exception :: EXCEPTION | eff) GetUserAttributeVerificationCodeResponse
-getUserAttributeVerificationCode = Request.request serviceName "getUserAttributeVerificationCode" 
+getUserAttributeVerificationCode = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "getUserAttributeVerificationCode"
 
 
 -- | <p>Gets the user pool multi-factor authentication (MFA) configuration.</p>
 getUserPoolMfaConfig :: forall eff. GetUserPoolMfaConfigRequest -> Aff (exception :: EXCEPTION | eff) GetUserPoolMfaConfigResponse
-getUserPoolMfaConfig = Request.request serviceName "getUserPoolMfaConfig" 
+getUserPoolMfaConfig = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "getUserPoolMfaConfig"
 
 
 -- | <p>Signs out users from all devices.</p>
 globalSignOut :: forall eff. GlobalSignOutRequest -> Aff (exception :: EXCEPTION | eff) GlobalSignOutResponse
-globalSignOut = Request.request serviceName "globalSignOut" 
+globalSignOut = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "globalSignOut"
 
 
 -- | <p>Initiates the authentication flow.</p>
 initiateAuth :: forall eff. InitiateAuthRequest -> Aff (exception :: EXCEPTION | eff) InitiateAuthResponse
-initiateAuth = Request.request serviceName "initiateAuth" 
+initiateAuth = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "initiateAuth"
 
 
 -- | <p>Lists the devices.</p>
 listDevices :: forall eff. ListDevicesRequest -> Aff (exception :: EXCEPTION | eff) ListDevicesResponse
-listDevices = Request.request serviceName "listDevices" 
+listDevices = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "listDevices"
 
 
 -- | <p>Lists the groups associated with a user pool.</p> <p>Requires developer credentials.</p>
 listGroups :: forall eff. ListGroupsRequest -> Aff (exception :: EXCEPTION | eff) ListGroupsResponse
-listGroups = Request.request serviceName "listGroups" 
+listGroups = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "listGroups"
 
 
 -- | <p>Lists information about all identity providers for a user pool.</p>
 listIdentityProviders :: forall eff. ListIdentityProvidersRequest -> Aff (exception :: EXCEPTION | eff) ListIdentityProvidersResponse
-listIdentityProviders = Request.request serviceName "listIdentityProviders" 
+listIdentityProviders = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "listIdentityProviders"
 
 
 -- | <p>Lists the resource servers for a user pool.</p>
 listResourceServers :: forall eff. ListResourceServersRequest -> Aff (exception :: EXCEPTION | eff) ListResourceServersResponse
-listResourceServers = Request.request serviceName "listResourceServers" 
+listResourceServers = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "listResourceServers"
 
 
 -- | <p>Lists the user import jobs.</p>
 listUserImportJobs :: forall eff. ListUserImportJobsRequest -> Aff (exception :: EXCEPTION | eff) ListUserImportJobsResponse
-listUserImportJobs = Request.request serviceName "listUserImportJobs" 
+listUserImportJobs = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "listUserImportJobs"
 
 
 -- | <p>Lists the clients that have been created for the specified user pool.</p>
 listUserPoolClients :: forall eff. ListUserPoolClientsRequest -> Aff (exception :: EXCEPTION | eff) ListUserPoolClientsResponse
-listUserPoolClients = Request.request serviceName "listUserPoolClients" 
+listUserPoolClients = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "listUserPoolClients"
 
 
 -- | <p>Lists the user pools associated with an AWS account.</p>
 listUserPools :: forall eff. ListUserPoolsRequest -> Aff (exception :: EXCEPTION | eff) ListUserPoolsResponse
-listUserPools = Request.request serviceName "listUserPools" 
+listUserPools = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "listUserPools"
 
 
 -- | <p>Lists the users in the Amazon Cognito user pool.</p>
 listUsers :: forall eff. ListUsersRequest -> Aff (exception :: EXCEPTION | eff) ListUsersResponse
-listUsers = Request.request serviceName "listUsers" 
+listUsers = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "listUsers"
 
 
 -- | <p>Lists the users in the specified group.</p> <p>Requires developer credentials.</p>
 listUsersInGroup :: forall eff. ListUsersInGroupRequest -> Aff (exception :: EXCEPTION | eff) ListUsersInGroupResponse
-listUsersInGroup = Request.request serviceName "listUsersInGroup" 
+listUsersInGroup = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "listUsersInGroup"
 
 
 -- | <p>Resends the confirmation (for confirmation of registration) to a specific user in the user pool.</p>
 resendConfirmationCode :: forall eff. ResendConfirmationCodeRequest -> Aff (exception :: EXCEPTION | eff) ResendConfirmationCodeResponse
-resendConfirmationCode = Request.request serviceName "resendConfirmationCode" 
+resendConfirmationCode = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "resendConfirmationCode"
 
 
 -- | <p>Responds to the authentication challenge.</p>
 respondToAuthChallenge :: forall eff. RespondToAuthChallengeRequest -> Aff (exception :: EXCEPTION | eff) RespondToAuthChallengeResponse
-respondToAuthChallenge = Request.request serviceName "respondToAuthChallenge" 
+respondToAuthChallenge = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "respondToAuthChallenge"
 
 
 -- | <p>Configures actions on detected risks. To delete the risk configuration for <code>UserPoolId</code> or <code>ClientId</code>, pass null values for all four configuration types.</p> <p>To enable Amazon Cognito advanced security features, update the user pool to include the <code>UserPoolAddOns</code> key<code>AdvancedSecurityMode</code>.</p> <p>See .</p>
 setRiskConfiguration :: forall eff. SetRiskConfigurationRequest -> Aff (exception :: EXCEPTION | eff) SetRiskConfigurationResponse
-setRiskConfiguration = Request.request serviceName "setRiskConfiguration" 
+setRiskConfiguration = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "setRiskConfiguration"
 
 
 -- | <p>Sets the UI customization information for a user pool's built-in app UI.</p> <p>You can specify app UI customization settings for a single client (with a specific <code>clientId</code>) or for all clients (by setting the <code>clientId</code> to <code>ALL</code>). If you specify <code>ALL</code>, the default configuration will be used for every client that has no UI customization set previously. If you specify UI customization settings for a particular client, it will no longer fall back to the <code>ALL</code> configuration. </p> <note> <p>To use this API, your user pool must have a domain associated with it. Otherwise, there is no place to host the app's pages, and the service will throw an error.</p> </note>
 setUICustomization :: forall eff. SetUICustomizationRequest -> Aff (exception :: EXCEPTION | eff) SetUICustomizationResponse
-setUICustomization = Request.request serviceName "setUICustomization" 
+setUICustomization = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "setUICustomization"
 
 
 -- | <p>Set the user's multi-factor authentication (MFA) method preference.</p>
 setUserMFAPreference :: forall eff. SetUserMFAPreferenceRequest -> Aff (exception :: EXCEPTION | eff) SetUserMFAPreferenceResponse
-setUserMFAPreference = Request.request serviceName "setUserMFAPreference" 
+setUserMFAPreference = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "setUserMFAPreference"
 
 
 -- | <p>Set the user pool MFA configuration.</p>
 setUserPoolMfaConfig :: forall eff. SetUserPoolMfaConfigRequest -> Aff (exception :: EXCEPTION | eff) SetUserPoolMfaConfigResponse
-setUserPoolMfaConfig = Request.request serviceName "setUserPoolMfaConfig" 
+setUserPoolMfaConfig = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "setUserPoolMfaConfig"
 
 
 -- | <p>Sets the user settings like multi-factor authentication (MFA). If MFA is to be removed for a particular attribute pass the attribute with code delivery as null. If null list is passed, all MFA options are removed.</p>
 setUserSettings :: forall eff. SetUserSettingsRequest -> Aff (exception :: EXCEPTION | eff) SetUserSettingsResponse
-setUserSettings = Request.request serviceName "setUserSettings" 
+setUserSettings = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "setUserSettings"
 
 
 -- | <p>Registers the user in the specified user pool and creates a user name, password, and user attributes.</p>
 signUp :: forall eff. SignUpRequest -> Aff (exception :: EXCEPTION | eff) SignUpResponse
-signUp = Request.request serviceName "signUp" 
+signUp = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "signUp"
 
 
 -- | <p>Starts the user import.</p>
 startUserImportJob :: forall eff. StartUserImportJobRequest -> Aff (exception :: EXCEPTION | eff) StartUserImportJobResponse
-startUserImportJob = Request.request serviceName "startUserImportJob" 
+startUserImportJob = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "startUserImportJob"
 
 
 -- | <p>Stops the user import job.</p>
 stopUserImportJob :: forall eff. StopUserImportJobRequest -> Aff (exception :: EXCEPTION | eff) StopUserImportJobResponse
-stopUserImportJob = Request.request serviceName "stopUserImportJob" 
+stopUserImportJob = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "stopUserImportJob"
 
 
 -- | <p>Provides the feedback for an authentication event whether it was from a valid user or not. This feedback is used for improving the risk evaluation decision for the user pool as part of Amazon Cognito advanced security.</p>
 updateAuthEventFeedback :: forall eff. UpdateAuthEventFeedbackRequest -> Aff (exception :: EXCEPTION | eff) UpdateAuthEventFeedbackResponse
-updateAuthEventFeedback = Request.request serviceName "updateAuthEventFeedback" 
+updateAuthEventFeedback = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "updateAuthEventFeedback"
 
 
 -- | <p>Updates the device status.</p>
 updateDeviceStatus :: forall eff. UpdateDeviceStatusRequest -> Aff (exception :: EXCEPTION | eff) UpdateDeviceStatusResponse
-updateDeviceStatus = Request.request serviceName "updateDeviceStatus" 
+updateDeviceStatus = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "updateDeviceStatus"
 
 
 -- | <p>Updates the specified group with the specified attributes.</p> <p>Requires developer credentials.</p>
 updateGroup :: forall eff. UpdateGroupRequest -> Aff (exception :: EXCEPTION | eff) UpdateGroupResponse
-updateGroup = Request.request serviceName "updateGroup" 
+updateGroup = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "updateGroup"
 
 
 -- | <p>Updates identity provider information for a user pool.</p>
 updateIdentityProvider :: forall eff. UpdateIdentityProviderRequest -> Aff (exception :: EXCEPTION | eff) UpdateIdentityProviderResponse
-updateIdentityProvider = Request.request serviceName "updateIdentityProvider" 
+updateIdentityProvider = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "updateIdentityProvider"
 
 
 -- | <p>Updates the name and scopes of resource server. All other fields are read-only.</p>
 updateResourceServer :: forall eff. UpdateResourceServerRequest -> Aff (exception :: EXCEPTION | eff) UpdateResourceServerResponse
-updateResourceServer = Request.request serviceName "updateResourceServer" 
+updateResourceServer = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "updateResourceServer"
 
 
 -- | <p>Allows a user to update a specific attribute (one at a time).</p>
 updateUserAttributes :: forall eff. UpdateUserAttributesRequest -> Aff (exception :: EXCEPTION | eff) UpdateUserAttributesResponse
-updateUserAttributes = Request.request serviceName "updateUserAttributes" 
+updateUserAttributes = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "updateUserAttributes"
 
 
 -- | <p>Updates the specified user pool with the specified attributes.</p>
 updateUserPool :: forall eff. UpdateUserPoolRequest -> Aff (exception :: EXCEPTION | eff) UpdateUserPoolResponse
-updateUserPool = Request.request serviceName "updateUserPool" 
+updateUserPool = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "updateUserPool"
 
 
 -- | <p>Allows the developer to update the specified user pool client and password policy.</p>
 updateUserPoolClient :: forall eff. UpdateUserPoolClientRequest -> Aff (exception :: EXCEPTION | eff) UpdateUserPoolClientResponse
-updateUserPoolClient = Request.request serviceName "updateUserPoolClient" 
+updateUserPoolClient = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "updateUserPoolClient"
 
 
 -- | <p>Use this API to register a user's entered TOTP code and mark the user's software token MFA status as "verified" if successful,</p>
 verifySoftwareToken :: forall eff. VerifySoftwareTokenRequest -> Aff (exception :: EXCEPTION | eff) VerifySoftwareTokenResponse
-verifySoftwareToken = Request.request serviceName "verifySoftwareToken" 
+verifySoftwareToken = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "verifySoftwareToken"
 
 
 -- | <p>Verifies the specified user attributes in the user pool.</p>
 verifyUserAttribute :: forall eff. VerifyUserAttributeRequest -> Aff (exception :: EXCEPTION | eff) VerifyUserAttributeResponse
-verifyUserAttribute = Request.request serviceName "verifyUserAttribute" 
+verifyUserAttribute = Request.request service method  where
+    service = Request.ServiceName "CognitoIdentityServiceProvider"
+    method = Request.MethodName "verifyUserAttribute"
 
 
 newtype AWSAccountIdType = AWSAccountIdType String
