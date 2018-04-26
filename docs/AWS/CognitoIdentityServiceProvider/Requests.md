@@ -11,7 +11,7 @@ addCustomAttributes :: forall eff. Service -> AddCustomAttributesRequest -> Aff 
 #### `adminAddUserToGroup`
 
 ``` purescript
-adminAddUserToGroup :: forall eff. Service -> AdminAddUserToGroupRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+adminAddUserToGroup :: forall eff. Service -> AdminAddUserToGroupRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Adds the specified user to the specified group.</p> <p>Requires developer credentials.</p>
@@ -35,7 +35,7 @@ adminCreateUser :: forall eff. Service -> AdminCreateUserRequest -> Aff (excepti
 #### `adminDeleteUser`
 
 ``` purescript
-adminDeleteUser :: forall eff. Service -> AdminDeleteUserRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+adminDeleteUser :: forall eff. Service -> AdminDeleteUserRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes a user as an administrator. Works on any user.</p> <p>Requires developer credentials.</p>
@@ -75,7 +75,7 @@ adminEnableUser :: forall eff. Service -> AdminEnableUserRequest -> Aff (excepti
 #### `adminForgetDevice`
 
 ``` purescript
-adminForgetDevice :: forall eff. Service -> AdminForgetDeviceRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+adminForgetDevice :: forall eff. Service -> AdminForgetDeviceRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Forgets the device, as an administrator.</p> <p>Requires developer credentials.</p>
@@ -139,7 +139,7 @@ adminListUserAuthEvents :: forall eff. Service -> AdminListUserAuthEventsRequest
 #### `adminRemoveUserFromGroup`
 
 ``` purescript
-adminRemoveUserFromGroup :: forall eff. Service -> AdminRemoveUserFromGroupRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+adminRemoveUserFromGroup :: forall eff. Service -> AdminRemoveUserFromGroupRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Removes the specified user from the specified group.</p> <p>Requires developer credentials.</p>
@@ -307,7 +307,7 @@ createUserPoolDomain :: forall eff. Service -> CreateUserPoolDomainRequest -> Af
 #### `deleteGroup`
 
 ``` purescript
-deleteGroup :: forall eff. Service -> DeleteGroupRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteGroup :: forall eff. Service -> DeleteGroupRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes a group. Currently only groups with no members can be deleted.</p> <p>Requires developer credentials.</p>
@@ -315,7 +315,7 @@ deleteGroup :: forall eff. Service -> DeleteGroupRequest -> Aff (exception :: EX
 #### `deleteIdentityProvider`
 
 ``` purescript
-deleteIdentityProvider :: forall eff. Service -> DeleteIdentityProviderRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteIdentityProvider :: forall eff. Service -> DeleteIdentityProviderRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes an identity provider for a user pool.</p>
@@ -323,7 +323,7 @@ deleteIdentityProvider :: forall eff. Service -> DeleteIdentityProviderRequest -
 #### `deleteResourceServer`
 
 ``` purescript
-deleteResourceServer :: forall eff. Service -> DeleteResourceServerRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteResourceServer :: forall eff. Service -> DeleteResourceServerRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes a resource server.</p>
@@ -331,7 +331,7 @@ deleteResourceServer :: forall eff. Service -> DeleteResourceServerRequest -> Af
 #### `deleteUser`
 
 ``` purescript
-deleteUser :: forall eff. Service -> DeleteUserRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteUser :: forall eff. Service -> DeleteUserRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Allows a user to delete himself or herself.</p>
@@ -347,7 +347,7 @@ deleteUserAttributes :: forall eff. Service -> DeleteUserAttributesRequest -> Af
 #### `deleteUserPool`
 
 ``` purescript
-deleteUserPool :: forall eff. Service -> DeleteUserPoolRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteUserPool :: forall eff. Service -> DeleteUserPoolRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Deletes the specified Amazon Cognito user pool.</p>
@@ -355,7 +355,7 @@ deleteUserPool :: forall eff. Service -> DeleteUserPoolRequest -> Aff (exception
 #### `deleteUserPoolClient`
 
 ``` purescript
-deleteUserPoolClient :: forall eff. Service -> DeleteUserPoolClientRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+deleteUserPoolClient :: forall eff. Service -> DeleteUserPoolClientRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Allows the developer to delete the user pool client.</p>
@@ -427,7 +427,7 @@ describeUserPoolDomain :: forall eff. Service -> DescribeUserPoolDomainRequest -
 #### `forgetDevice`
 
 ``` purescript
-forgetDevice :: forall eff. Service -> ForgetDeviceRequest -> Aff (exception :: EXCEPTION | eff) NoOutput
+forgetDevice :: forall eff. Service -> ForgetDeviceRequest -> Aff (exception :: EXCEPTION | eff) Unit
 ```
 
 <p>Forgets the specified device.</p>

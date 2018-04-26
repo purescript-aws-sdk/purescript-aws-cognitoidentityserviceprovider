@@ -19,7 +19,7 @@ addCustomAttributes (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.r
 
 
 -- | <p>Adds the specified user to the specified group.</p> <p>Requires developer credentials.</p>
-adminAddUserToGroup :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.AdminAddUserToGroupRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+adminAddUserToGroup :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.AdminAddUserToGroupRequest -> Aff (exception :: EXCEPTION | eff) Unit
 adminAddUserToGroup (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "adminAddUserToGroup"
 
@@ -37,7 +37,7 @@ adminCreateUser (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.reque
 
 
 -- | <p>Deletes a user as an administrator. Works on any user.</p> <p>Requires developer credentials.</p>
-adminDeleteUser :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.AdminDeleteUserRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+adminDeleteUser :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.AdminDeleteUserRequest -> Aff (exception :: EXCEPTION | eff) Unit
 adminDeleteUser (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "adminDeleteUser"
 
@@ -67,7 +67,7 @@ adminEnableUser (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.reque
 
 
 -- | <p>Forgets the device, as an administrator.</p> <p>Requires developer credentials.</p>
-adminForgetDevice :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.AdminForgetDeviceRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+adminForgetDevice :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.AdminForgetDeviceRequest -> Aff (exception :: EXCEPTION | eff) Unit
 adminForgetDevice (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "adminForgetDevice"
 
@@ -115,7 +115,7 @@ adminListUserAuthEvents (CognitoIdentityServiceProvider.Service serviceImpl) = A
 
 
 -- | <p>Removes the specified user from the specified group.</p> <p>Requires developer credentials.</p>
-adminRemoveUserFromGroup :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.AdminRemoveUserFromGroupRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+adminRemoveUserFromGroup :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.AdminRemoveUserFromGroupRequest -> Aff (exception :: EXCEPTION | eff) Unit
 adminRemoveUserFromGroup (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "adminRemoveUserFromGroup"
 
@@ -241,25 +241,25 @@ createUserPoolDomain (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.
 
 
 -- | <p>Deletes a group. Currently only groups with no members can be deleted.</p> <p>Requires developer credentials.</p>
-deleteGroup :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteGroupRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteGroup :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteGroupRequest -> Aff (exception :: EXCEPTION | eff) Unit
 deleteGroup (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteGroup"
 
 
 -- | <p>Deletes an identity provider for a user pool.</p>
-deleteIdentityProvider :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteIdentityProviderRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteIdentityProvider :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteIdentityProviderRequest -> Aff (exception :: EXCEPTION | eff) Unit
 deleteIdentityProvider (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteIdentityProvider"
 
 
 -- | <p>Deletes a resource server.</p>
-deleteResourceServer :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteResourceServerRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteResourceServer :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteResourceServerRequest -> Aff (exception :: EXCEPTION | eff) Unit
 deleteResourceServer (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteResourceServer"
 
 
 -- | <p>Allows a user to delete himself or herself.</p>
-deleteUser :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteUserRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteUser :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteUserRequest -> Aff (exception :: EXCEPTION | eff) Unit
 deleteUser (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteUser"
 
@@ -271,13 +271,13 @@ deleteUserAttributes (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.
 
 
 -- | <p>Deletes the specified Amazon Cognito user pool.</p>
-deleteUserPool :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteUserPoolRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteUserPool :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteUserPoolRequest -> Aff (exception :: EXCEPTION | eff) Unit
 deleteUserPool (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteUserPool"
 
 
 -- | <p>Allows the developer to delete the user pool client.</p>
-deleteUserPoolClient :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteUserPoolClientRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+deleteUserPoolClient :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.DeleteUserPoolClientRequest -> Aff (exception :: EXCEPTION | eff) Unit
 deleteUserPoolClient (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "deleteUserPoolClient"
 
@@ -331,7 +331,7 @@ describeUserPoolDomain (CognitoIdentityServiceProvider.Service serviceImpl) = AW
 
 
 -- | <p>Forgets the specified device.</p>
-forgetDevice :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.ForgetDeviceRequest -> Aff (exception :: EXCEPTION | eff) Types.NoOutput
+forgetDevice :: forall eff. CognitoIdentityServiceProvider.Service -> CognitoIdentityServiceProviderTypes.ForgetDeviceRequest -> Aff (exception :: EXCEPTION | eff) Unit
 forgetDevice (CognitoIdentityServiceProvider.Service serviceImpl) = AWS.request serviceImpl method  where
     method = AWS.MethodName "forgetDevice"
 

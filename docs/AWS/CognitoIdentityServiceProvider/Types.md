@@ -76,7 +76,7 @@ Constructs AccountTakeoverActionType's fields from required parameters
 
 ``` purescript
 newtype AccountTakeoverActionsType
-  = AccountTakeoverActionsType { "LowAction" :: NullOrUndefined (AccountTakeoverActionType), "MediumAction" :: NullOrUndefined (AccountTakeoverActionType), "HighAction" :: NullOrUndefined (AccountTakeoverActionType) }
+  = AccountTakeoverActionsType { "LowAction" :: Maybe (AccountTakeoverActionType), "MediumAction" :: Maybe (AccountTakeoverActionType), "HighAction" :: Maybe (AccountTakeoverActionType) }
 ```
 
 <p>Account takeover actions type.</p>
@@ -101,7 +101,7 @@ Constructs AccountTakeoverActionsType from required parameters
 #### `newAccountTakeoverActionsType'`
 
 ``` purescript
-newAccountTakeoverActionsType' :: ({ "LowAction" :: NullOrUndefined (AccountTakeoverActionType), "MediumAction" :: NullOrUndefined (AccountTakeoverActionType), "HighAction" :: NullOrUndefined (AccountTakeoverActionType) } -> { "LowAction" :: NullOrUndefined (AccountTakeoverActionType), "MediumAction" :: NullOrUndefined (AccountTakeoverActionType), "HighAction" :: NullOrUndefined (AccountTakeoverActionType) }) -> AccountTakeoverActionsType
+newAccountTakeoverActionsType' :: ({ "LowAction" :: Maybe (AccountTakeoverActionType), "MediumAction" :: Maybe (AccountTakeoverActionType), "HighAction" :: Maybe (AccountTakeoverActionType) } -> { "LowAction" :: Maybe (AccountTakeoverActionType), "MediumAction" :: Maybe (AccountTakeoverActionType), "HighAction" :: Maybe (AccountTakeoverActionType) }) -> AccountTakeoverActionsType
 ```
 
 Constructs AccountTakeoverActionsType's fields from required parameters
@@ -126,7 +126,7 @@ Encode AccountTakeoverEventActionType
 
 ``` purescript
 newtype AccountTakeoverRiskConfigurationType
-  = AccountTakeoverRiskConfigurationType { "NotifyConfiguration" :: NullOrUndefined (NotifyConfigurationType), "Actions" :: AccountTakeoverActionsType }
+  = AccountTakeoverRiskConfigurationType { "NotifyConfiguration" :: Maybe (NotifyConfigurationType), "Actions" :: AccountTakeoverActionsType }
 ```
 
 <p>Configuration for mitigation actions and notification for different levels of risk detected for a potential account takeover.</p>
@@ -151,7 +151,7 @@ Constructs AccountTakeoverRiskConfigurationType from required parameters
 #### `newAccountTakeoverRiskConfigurationType'`
 
 ``` purescript
-newAccountTakeoverRiskConfigurationType' :: AccountTakeoverActionsType -> ({ "NotifyConfiguration" :: NullOrUndefined (NotifyConfigurationType), "Actions" :: AccountTakeoverActionsType } -> { "NotifyConfiguration" :: NullOrUndefined (NotifyConfigurationType), "Actions" :: AccountTakeoverActionsType }) -> AccountTakeoverRiskConfigurationType
+newAccountTakeoverRiskConfigurationType' :: AccountTakeoverActionsType -> ({ "NotifyConfiguration" :: Maybe (NotifyConfigurationType), "Actions" :: AccountTakeoverActionsType } -> { "NotifyConfiguration" :: Maybe (NotifyConfigurationType), "Actions" :: AccountTakeoverActionsType }) -> AccountTakeoverRiskConfigurationType
 ```
 
 Constructs AccountTakeoverRiskConfigurationType's fields from required parameters
@@ -296,7 +296,7 @@ Encode AdminConfirmSignUpResponse
 
 ``` purescript
 newtype AdminCreateUserConfigType
-  = AdminCreateUserConfigType { "AllowAdminCreateUserOnly" :: NullOrUndefined (BooleanType), "UnusedAccountValidityDays" :: NullOrUndefined (AdminCreateUserUnusedAccountValidityDaysType), "InviteMessageTemplate" :: NullOrUndefined (MessageTemplateType) }
+  = AdminCreateUserConfigType { "AllowAdminCreateUserOnly" :: Maybe (BooleanType), "UnusedAccountValidityDays" :: Maybe (AdminCreateUserUnusedAccountValidityDaysType), "InviteMessageTemplate" :: Maybe (MessageTemplateType) }
 ```
 
 <p>The configuration for creating a new user profile.</p>
@@ -321,7 +321,7 @@ Constructs AdminCreateUserConfigType from required parameters
 #### `newAdminCreateUserConfigType'`
 
 ``` purescript
-newAdminCreateUserConfigType' :: ({ "AllowAdminCreateUserOnly" :: NullOrUndefined (BooleanType), "UnusedAccountValidityDays" :: NullOrUndefined (AdminCreateUserUnusedAccountValidityDaysType), "InviteMessageTemplate" :: NullOrUndefined (MessageTemplateType) } -> { "AllowAdminCreateUserOnly" :: NullOrUndefined (BooleanType), "UnusedAccountValidityDays" :: NullOrUndefined (AdminCreateUserUnusedAccountValidityDaysType), "InviteMessageTemplate" :: NullOrUndefined (MessageTemplateType) }) -> AdminCreateUserConfigType
+newAdminCreateUserConfigType' :: ({ "AllowAdminCreateUserOnly" :: Maybe (BooleanType), "UnusedAccountValidityDays" :: Maybe (AdminCreateUserUnusedAccountValidityDaysType), "InviteMessageTemplate" :: Maybe (MessageTemplateType) } -> { "AllowAdminCreateUserOnly" :: Maybe (BooleanType), "UnusedAccountValidityDays" :: Maybe (AdminCreateUserUnusedAccountValidityDaysType), "InviteMessageTemplate" :: Maybe (MessageTemplateType) }) -> AdminCreateUserConfigType
 ```
 
 Constructs AdminCreateUserConfigType's fields from required parameters
@@ -330,7 +330,7 @@ Constructs AdminCreateUserConfigType's fields from required parameters
 
 ``` purescript
 newtype AdminCreateUserRequest
-  = AdminCreateUserRequest { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "UserAttributes" :: NullOrUndefined (AttributeListType), "ValidationData" :: NullOrUndefined (AttributeListType), "TemporaryPassword" :: NullOrUndefined (PasswordType), "ForceAliasCreation" :: NullOrUndefined (ForceAliasCreation), "MessageAction" :: NullOrUndefined (MessageActionType), "DesiredDeliveryMediums" :: NullOrUndefined (DeliveryMediumListType) }
+  = AdminCreateUserRequest { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "UserAttributes" :: Maybe (AttributeListType), "ValidationData" :: Maybe (AttributeListType), "TemporaryPassword" :: Maybe (PasswordType), "ForceAliasCreation" :: Maybe (ForceAliasCreation), "MessageAction" :: Maybe (MessageActionType), "DesiredDeliveryMediums" :: Maybe (DeliveryMediumListType) }
 ```
 
 <p>Represents the request to create a user in the specified user pool.</p>
@@ -355,7 +355,7 @@ Constructs AdminCreateUserRequest from required parameters
 #### `newAdminCreateUserRequest'`
 
 ``` purescript
-newAdminCreateUserRequest' :: UserPoolIdType -> UsernameType -> ({ "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "UserAttributes" :: NullOrUndefined (AttributeListType), "ValidationData" :: NullOrUndefined (AttributeListType), "TemporaryPassword" :: NullOrUndefined (PasswordType), "ForceAliasCreation" :: NullOrUndefined (ForceAliasCreation), "MessageAction" :: NullOrUndefined (MessageActionType), "DesiredDeliveryMediums" :: NullOrUndefined (DeliveryMediumListType) } -> { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "UserAttributes" :: NullOrUndefined (AttributeListType), "ValidationData" :: NullOrUndefined (AttributeListType), "TemporaryPassword" :: NullOrUndefined (PasswordType), "ForceAliasCreation" :: NullOrUndefined (ForceAliasCreation), "MessageAction" :: NullOrUndefined (MessageActionType), "DesiredDeliveryMediums" :: NullOrUndefined (DeliveryMediumListType) }) -> AdminCreateUserRequest
+newAdminCreateUserRequest' :: UserPoolIdType -> UsernameType -> ({ "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "UserAttributes" :: Maybe (AttributeListType), "ValidationData" :: Maybe (AttributeListType), "TemporaryPassword" :: Maybe (PasswordType), "ForceAliasCreation" :: Maybe (ForceAliasCreation), "MessageAction" :: Maybe (MessageActionType), "DesiredDeliveryMediums" :: Maybe (DeliveryMediumListType) } -> { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "UserAttributes" :: Maybe (AttributeListType), "ValidationData" :: Maybe (AttributeListType), "TemporaryPassword" :: Maybe (PasswordType), "ForceAliasCreation" :: Maybe (ForceAliasCreation), "MessageAction" :: Maybe (MessageActionType), "DesiredDeliveryMediums" :: Maybe (DeliveryMediumListType) }) -> AdminCreateUserRequest
 ```
 
 Constructs AdminCreateUserRequest's fields from required parameters
@@ -364,7 +364,7 @@ Constructs AdminCreateUserRequest's fields from required parameters
 
 ``` purescript
 newtype AdminCreateUserResponse
-  = AdminCreateUserResponse { "User" :: NullOrUndefined (UserType) }
+  = AdminCreateUserResponse { "User" :: Maybe (UserType) }
 ```
 
 <p>Represents the response from the server to the request to create the user.</p>
@@ -389,7 +389,7 @@ Constructs AdminCreateUserResponse from required parameters
 #### `newAdminCreateUserResponse'`
 
 ``` purescript
-newAdminCreateUserResponse' :: ({ "User" :: NullOrUndefined (UserType) } -> { "User" :: NullOrUndefined (UserType) }) -> AdminCreateUserResponse
+newAdminCreateUserResponse' :: ({ "User" :: Maybe (UserType) } -> { "User" :: Maybe (UserType) }) -> AdminCreateUserResponse
 ```
 
 Constructs AdminCreateUserResponse's fields from required parameters
@@ -788,7 +788,7 @@ Constructs AdminGetUserRequest's fields from required parameters
 
 ``` purescript
 newtype AdminGetUserResponse
-  = AdminGetUserResponse { "Username" :: UsernameType, "UserAttributes" :: NullOrUndefined (AttributeListType), "UserCreateDate" :: NullOrUndefined (DateType), "UserLastModifiedDate" :: NullOrUndefined (DateType), "Enabled" :: NullOrUndefined (BooleanType), "UserStatus" :: NullOrUndefined (UserStatusType), "MFAOptions" :: NullOrUndefined (MFAOptionListType), "PreferredMfaSetting" :: NullOrUndefined (StringType), "UserMFASettingList" :: NullOrUndefined (UserMFASettingListType) }
+  = AdminGetUserResponse { "Username" :: UsernameType, "UserAttributes" :: Maybe (AttributeListType), "UserCreateDate" :: Maybe (DateType), "UserLastModifiedDate" :: Maybe (DateType), "Enabled" :: Maybe (BooleanType), "UserStatus" :: Maybe (UserStatusType), "MFAOptions" :: Maybe (MFAOptionListType), "PreferredMfaSetting" :: Maybe (StringType), "UserMFASettingList" :: Maybe (UserMFASettingListType) }
 ```
 
 <p>Represents the response from the server from the request to get the specified user as an administrator.</p>
@@ -813,7 +813,7 @@ Constructs AdminGetUserResponse from required parameters
 #### `newAdminGetUserResponse'`
 
 ``` purescript
-newAdminGetUserResponse' :: UsernameType -> ({ "Username" :: UsernameType, "UserAttributes" :: NullOrUndefined (AttributeListType), "UserCreateDate" :: NullOrUndefined (DateType), "UserLastModifiedDate" :: NullOrUndefined (DateType), "Enabled" :: NullOrUndefined (BooleanType), "UserStatus" :: NullOrUndefined (UserStatusType), "MFAOptions" :: NullOrUndefined (MFAOptionListType), "PreferredMfaSetting" :: NullOrUndefined (StringType), "UserMFASettingList" :: NullOrUndefined (UserMFASettingListType) } -> { "Username" :: UsernameType, "UserAttributes" :: NullOrUndefined (AttributeListType), "UserCreateDate" :: NullOrUndefined (DateType), "UserLastModifiedDate" :: NullOrUndefined (DateType), "Enabled" :: NullOrUndefined (BooleanType), "UserStatus" :: NullOrUndefined (UserStatusType), "MFAOptions" :: NullOrUndefined (MFAOptionListType), "PreferredMfaSetting" :: NullOrUndefined (StringType), "UserMFASettingList" :: NullOrUndefined (UserMFASettingListType) }) -> AdminGetUserResponse
+newAdminGetUserResponse' :: UsernameType -> ({ "Username" :: UsernameType, "UserAttributes" :: Maybe (AttributeListType), "UserCreateDate" :: Maybe (DateType), "UserLastModifiedDate" :: Maybe (DateType), "Enabled" :: Maybe (BooleanType), "UserStatus" :: Maybe (UserStatusType), "MFAOptions" :: Maybe (MFAOptionListType), "PreferredMfaSetting" :: Maybe (StringType), "UserMFASettingList" :: Maybe (UserMFASettingListType) } -> { "Username" :: UsernameType, "UserAttributes" :: Maybe (AttributeListType), "UserCreateDate" :: Maybe (DateType), "UserLastModifiedDate" :: Maybe (DateType), "Enabled" :: Maybe (BooleanType), "UserStatus" :: Maybe (UserStatusType), "MFAOptions" :: Maybe (MFAOptionListType), "PreferredMfaSetting" :: Maybe (StringType), "UserMFASettingList" :: Maybe (UserMFASettingListType) }) -> AdminGetUserResponse
 ```
 
 Constructs AdminGetUserResponse's fields from required parameters
@@ -822,7 +822,7 @@ Constructs AdminGetUserResponse's fields from required parameters
 
 ``` purescript
 newtype AdminInitiateAuthRequest
-  = AdminInitiateAuthRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "AuthFlow" :: AuthFlowType, "AuthParameters" :: NullOrUndefined (AuthParametersType), "ClientMetadata" :: NullOrUndefined (ClientMetadataType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "ContextData" :: NullOrUndefined (ContextDataType) }
+  = AdminInitiateAuthRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "AuthFlow" :: AuthFlowType, "AuthParameters" :: Maybe (AuthParametersType), "ClientMetadata" :: Maybe (ClientMetadataType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "ContextData" :: Maybe (ContextDataType) }
 ```
 
 <p>Initiates the authorization request, as an administrator.</p>
@@ -847,7 +847,7 @@ Constructs AdminInitiateAuthRequest from required parameters
 #### `newAdminInitiateAuthRequest'`
 
 ``` purescript
-newAdminInitiateAuthRequest' :: AuthFlowType -> ClientIdType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "AuthFlow" :: AuthFlowType, "AuthParameters" :: NullOrUndefined (AuthParametersType), "ClientMetadata" :: NullOrUndefined (ClientMetadataType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "ContextData" :: NullOrUndefined (ContextDataType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "AuthFlow" :: AuthFlowType, "AuthParameters" :: NullOrUndefined (AuthParametersType), "ClientMetadata" :: NullOrUndefined (ClientMetadataType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "ContextData" :: NullOrUndefined (ContextDataType) }) -> AdminInitiateAuthRequest
+newAdminInitiateAuthRequest' :: AuthFlowType -> ClientIdType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "AuthFlow" :: AuthFlowType, "AuthParameters" :: Maybe (AuthParametersType), "ClientMetadata" :: Maybe (ClientMetadataType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "ContextData" :: Maybe (ContextDataType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "AuthFlow" :: AuthFlowType, "AuthParameters" :: Maybe (AuthParametersType), "ClientMetadata" :: Maybe (ClientMetadataType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "ContextData" :: Maybe (ContextDataType) }) -> AdminInitiateAuthRequest
 ```
 
 Constructs AdminInitiateAuthRequest's fields from required parameters
@@ -856,7 +856,7 @@ Constructs AdminInitiateAuthRequest's fields from required parameters
 
 ``` purescript
 newtype AdminInitiateAuthResponse
-  = AdminInitiateAuthResponse { "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) }
+  = AdminInitiateAuthResponse { "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) }
 ```
 
 <p>Initiates the authentication response, as an administrator.</p>
@@ -881,7 +881,7 @@ Constructs AdminInitiateAuthResponse from required parameters
 #### `newAdminInitiateAuthResponse'`
 
 ``` purescript
-newAdminInitiateAuthResponse' :: ({ "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) } -> { "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) }) -> AdminInitiateAuthResponse
+newAdminInitiateAuthResponse' :: ({ "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) } -> { "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) }) -> AdminInitiateAuthResponse
 ```
 
 Constructs AdminInitiateAuthResponse's fields from required parameters
@@ -938,7 +938,7 @@ Encode AdminLinkProviderForUserResponse
 
 ``` purescript
 newtype AdminListDevicesRequest
-  = AdminListDevicesRequest { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "Limit" :: NullOrUndefined (QueryLimitType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) }
+  = AdminListDevicesRequest { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "Limit" :: Maybe (QueryLimitType), "PaginationToken" :: Maybe (SearchPaginationTokenType) }
 ```
 
 <p>Represents the request to list devices, as an administrator.</p>
@@ -963,7 +963,7 @@ Constructs AdminListDevicesRequest from required parameters
 #### `newAdminListDevicesRequest'`
 
 ``` purescript
-newAdminListDevicesRequest' :: UserPoolIdType -> UsernameType -> ({ "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "Limit" :: NullOrUndefined (QueryLimitType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) } -> { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "Limit" :: NullOrUndefined (QueryLimitType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) }) -> AdminListDevicesRequest
+newAdminListDevicesRequest' :: UserPoolIdType -> UsernameType -> ({ "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "Limit" :: Maybe (QueryLimitType), "PaginationToken" :: Maybe (SearchPaginationTokenType) } -> { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "Limit" :: Maybe (QueryLimitType), "PaginationToken" :: Maybe (SearchPaginationTokenType) }) -> AdminListDevicesRequest
 ```
 
 Constructs AdminListDevicesRequest's fields from required parameters
@@ -972,7 +972,7 @@ Constructs AdminListDevicesRequest's fields from required parameters
 
 ``` purescript
 newtype AdminListDevicesResponse
-  = AdminListDevicesResponse { "Devices" :: NullOrUndefined (DeviceListType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) }
+  = AdminListDevicesResponse { "Devices" :: Maybe (DeviceListType), "PaginationToken" :: Maybe (SearchPaginationTokenType) }
 ```
 
 <p>Lists the device's response, as an administrator.</p>
@@ -997,7 +997,7 @@ Constructs AdminListDevicesResponse from required parameters
 #### `newAdminListDevicesResponse'`
 
 ``` purescript
-newAdminListDevicesResponse' :: ({ "Devices" :: NullOrUndefined (DeviceListType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) } -> { "Devices" :: NullOrUndefined (DeviceListType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) }) -> AdminListDevicesResponse
+newAdminListDevicesResponse' :: ({ "Devices" :: Maybe (DeviceListType), "PaginationToken" :: Maybe (SearchPaginationTokenType) } -> { "Devices" :: Maybe (DeviceListType), "PaginationToken" :: Maybe (SearchPaginationTokenType) }) -> AdminListDevicesResponse
 ```
 
 Constructs AdminListDevicesResponse's fields from required parameters
@@ -1006,7 +1006,7 @@ Constructs AdminListDevicesResponse's fields from required parameters
 
 ``` purescript
 newtype AdminListGroupsForUserRequest
-  = AdminListGroupsForUserRequest { "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType, "Limit" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) }
+  = AdminListGroupsForUserRequest { "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType, "Limit" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) }
 ```
 
 ##### Instances
@@ -1029,7 +1029,7 @@ Constructs AdminListGroupsForUserRequest from required parameters
 #### `newAdminListGroupsForUserRequest'`
 
 ``` purescript
-newAdminListGroupsForUserRequest' :: UserPoolIdType -> UsernameType -> ({ "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType, "Limit" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) } -> { "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType, "Limit" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) }) -> AdminListGroupsForUserRequest
+newAdminListGroupsForUserRequest' :: UserPoolIdType -> UsernameType -> ({ "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType, "Limit" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) } -> { "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType, "Limit" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) }) -> AdminListGroupsForUserRequest
 ```
 
 Constructs AdminListGroupsForUserRequest's fields from required parameters
@@ -1038,7 +1038,7 @@ Constructs AdminListGroupsForUserRequest's fields from required parameters
 
 ``` purescript
 newtype AdminListGroupsForUserResponse
-  = AdminListGroupsForUserResponse { "Groups" :: NullOrUndefined (GroupListType), "NextToken" :: NullOrUndefined (PaginationKey) }
+  = AdminListGroupsForUserResponse { "Groups" :: Maybe (GroupListType), "NextToken" :: Maybe (PaginationKey) }
 ```
 
 ##### Instances
@@ -1061,7 +1061,7 @@ Constructs AdminListGroupsForUserResponse from required parameters
 #### `newAdminListGroupsForUserResponse'`
 
 ``` purescript
-newAdminListGroupsForUserResponse' :: ({ "Groups" :: NullOrUndefined (GroupListType), "NextToken" :: NullOrUndefined (PaginationKey) } -> { "Groups" :: NullOrUndefined (GroupListType), "NextToken" :: NullOrUndefined (PaginationKey) }) -> AdminListGroupsForUserResponse
+newAdminListGroupsForUserResponse' :: ({ "Groups" :: Maybe (GroupListType), "NextToken" :: Maybe (PaginationKey) } -> { "Groups" :: Maybe (GroupListType), "NextToken" :: Maybe (PaginationKey) }) -> AdminListGroupsForUserResponse
 ```
 
 Constructs AdminListGroupsForUserResponse's fields from required parameters
@@ -1070,7 +1070,7 @@ Constructs AdminListGroupsForUserResponse's fields from required parameters
 
 ``` purescript
 newtype AdminListUserAuthEventsRequest
-  = AdminListUserAuthEventsRequest { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "MaxResults" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) }
+  = AdminListUserAuthEventsRequest { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "MaxResults" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) }
 ```
 
 ##### Instances
@@ -1093,7 +1093,7 @@ Constructs AdminListUserAuthEventsRequest from required parameters
 #### `newAdminListUserAuthEventsRequest'`
 
 ``` purescript
-newAdminListUserAuthEventsRequest' :: UserPoolIdType -> UsernameType -> ({ "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "MaxResults" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) } -> { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "MaxResults" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) }) -> AdminListUserAuthEventsRequest
+newAdminListUserAuthEventsRequest' :: UserPoolIdType -> UsernameType -> ({ "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "MaxResults" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) } -> { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "MaxResults" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) }) -> AdminListUserAuthEventsRequest
 ```
 
 Constructs AdminListUserAuthEventsRequest's fields from required parameters
@@ -1102,7 +1102,7 @@ Constructs AdminListUserAuthEventsRequest's fields from required parameters
 
 ``` purescript
 newtype AdminListUserAuthEventsResponse
-  = AdminListUserAuthEventsResponse { "AuthEvents" :: NullOrUndefined (AuthEventsType), "NextToken" :: NullOrUndefined (PaginationKey) }
+  = AdminListUserAuthEventsResponse { "AuthEvents" :: Maybe (AuthEventsType), "NextToken" :: Maybe (PaginationKey) }
 ```
 
 ##### Instances
@@ -1125,7 +1125,7 @@ Constructs AdminListUserAuthEventsResponse from required parameters
 #### `newAdminListUserAuthEventsResponse'`
 
 ``` purescript
-newAdminListUserAuthEventsResponse' :: ({ "AuthEvents" :: NullOrUndefined (AuthEventsType), "NextToken" :: NullOrUndefined (PaginationKey) } -> { "AuthEvents" :: NullOrUndefined (AuthEventsType), "NextToken" :: NullOrUndefined (PaginationKey) }) -> AdminListUserAuthEventsResponse
+newAdminListUserAuthEventsResponse' :: ({ "AuthEvents" :: Maybe (AuthEventsType), "NextToken" :: Maybe (PaginationKey) } -> { "AuthEvents" :: Maybe (AuthEventsType), "NextToken" :: Maybe (PaginationKey) }) -> AdminListUserAuthEventsResponse
 ```
 
 Constructs AdminListUserAuthEventsResponse's fields from required parameters
@@ -1218,7 +1218,7 @@ Encode AdminResetUserPasswordResponse
 
 ``` purescript
 newtype AdminRespondToAuthChallengeRequest
-  = AdminRespondToAuthChallengeRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "ChallengeResponses" :: NullOrUndefined (ChallengeResponsesType), "Session" :: NullOrUndefined (SessionType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "ContextData" :: NullOrUndefined (ContextDataType) }
+  = AdminRespondToAuthChallengeRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "ChallengeResponses" :: Maybe (ChallengeResponsesType), "Session" :: Maybe (SessionType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "ContextData" :: Maybe (ContextDataType) }
 ```
 
 <p>The request to respond to the authentication challenge, as an administrator.</p>
@@ -1243,7 +1243,7 @@ Constructs AdminRespondToAuthChallengeRequest from required parameters
 #### `newAdminRespondToAuthChallengeRequest'`
 
 ``` purescript
-newAdminRespondToAuthChallengeRequest' :: ChallengeNameType -> ClientIdType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "ChallengeResponses" :: NullOrUndefined (ChallengeResponsesType), "Session" :: NullOrUndefined (SessionType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "ContextData" :: NullOrUndefined (ContextDataType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "ChallengeResponses" :: NullOrUndefined (ChallengeResponsesType), "Session" :: NullOrUndefined (SessionType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "ContextData" :: NullOrUndefined (ContextDataType) }) -> AdminRespondToAuthChallengeRequest
+newAdminRespondToAuthChallengeRequest' :: ChallengeNameType -> ClientIdType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "ChallengeResponses" :: Maybe (ChallengeResponsesType), "Session" :: Maybe (SessionType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "ContextData" :: Maybe (ContextDataType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "ChallengeResponses" :: Maybe (ChallengeResponsesType), "Session" :: Maybe (SessionType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "ContextData" :: Maybe (ContextDataType) }) -> AdminRespondToAuthChallengeRequest
 ```
 
 Constructs AdminRespondToAuthChallengeRequest's fields from required parameters
@@ -1252,7 +1252,7 @@ Constructs AdminRespondToAuthChallengeRequest's fields from required parameters
 
 ``` purescript
 newtype AdminRespondToAuthChallengeResponse
-  = AdminRespondToAuthChallengeResponse { "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) }
+  = AdminRespondToAuthChallengeResponse { "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) }
 ```
 
 <p>Responds to the authentication challenge, as an administrator.</p>
@@ -1277,7 +1277,7 @@ Constructs AdminRespondToAuthChallengeResponse from required parameters
 #### `newAdminRespondToAuthChallengeResponse'`
 
 ``` purescript
-newAdminRespondToAuthChallengeResponse' :: ({ "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) } -> { "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) }) -> AdminRespondToAuthChallengeResponse
+newAdminRespondToAuthChallengeResponse' :: ({ "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) } -> { "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) }) -> AdminRespondToAuthChallengeResponse
 ```
 
 Constructs AdminRespondToAuthChallengeResponse's fields from required parameters
@@ -1286,7 +1286,7 @@ Constructs AdminRespondToAuthChallengeResponse's fields from required parameters
 
 ``` purescript
 newtype AdminSetUserMFAPreferenceRequest
-  = AdminSetUserMFAPreferenceRequest { "SMSMfaSettings" :: NullOrUndefined (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: NullOrUndefined (SoftwareTokenMfaSettingsType), "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType }
+  = AdminSetUserMFAPreferenceRequest { "SMSMfaSettings" :: Maybe (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: Maybe (SoftwareTokenMfaSettingsType), "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType }
 ```
 
 ##### Instances
@@ -1309,7 +1309,7 @@ Constructs AdminSetUserMFAPreferenceRequest from required parameters
 #### `newAdminSetUserMFAPreferenceRequest'`
 
 ``` purescript
-newAdminSetUserMFAPreferenceRequest' :: UserPoolIdType -> UsernameType -> ({ "SMSMfaSettings" :: NullOrUndefined (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: NullOrUndefined (SoftwareTokenMfaSettingsType), "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType } -> { "SMSMfaSettings" :: NullOrUndefined (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: NullOrUndefined (SoftwareTokenMfaSettingsType), "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType }) -> AdminSetUserMFAPreferenceRequest
+newAdminSetUserMFAPreferenceRequest' :: UserPoolIdType -> UsernameType -> ({ "SMSMfaSettings" :: Maybe (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: Maybe (SoftwareTokenMfaSettingsType), "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType } -> { "SMSMfaSettings" :: Maybe (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: Maybe (SoftwareTokenMfaSettingsType), "Username" :: UsernameType, "UserPoolId" :: UserPoolIdType }) -> AdminSetUserMFAPreferenceRequest
 ```
 
 Constructs AdminSetUserMFAPreferenceRequest's fields from required parameters
@@ -1434,7 +1434,7 @@ Encode AdminUpdateAuthEventFeedbackResponse
 
 ``` purescript
 newtype AdminUpdateDeviceStatusRequest
-  = AdminUpdateDeviceStatusRequest { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: NullOrUndefined (DeviceRememberedStatusType) }
+  = AdminUpdateDeviceStatusRequest { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: Maybe (DeviceRememberedStatusType) }
 ```
 
 <p>The request to update the device status, as an administrator.</p>
@@ -1459,7 +1459,7 @@ Constructs AdminUpdateDeviceStatusRequest from required parameters
 #### `newAdminUpdateDeviceStatusRequest'`
 
 ``` purescript
-newAdminUpdateDeviceStatusRequest' :: DeviceKeyType -> UserPoolIdType -> UsernameType -> ({ "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: NullOrUndefined (DeviceRememberedStatusType) } -> { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: NullOrUndefined (DeviceRememberedStatusType) }) -> AdminUpdateDeviceStatusRequest
+newAdminUpdateDeviceStatusRequest' :: DeviceKeyType -> UserPoolIdType -> UsernameType -> ({ "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: Maybe (DeviceRememberedStatusType) } -> { "UserPoolId" :: UserPoolIdType, "Username" :: UsernameType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: Maybe (DeviceRememberedStatusType) }) -> AdminUpdateDeviceStatusRequest
 ```
 
 Constructs AdminUpdateDeviceStatusRequest's fields from required parameters
@@ -1638,7 +1638,7 @@ Encode AliasAttributesListType
 
 ``` purescript
 newtype AliasExistsException
-  = AliasExistsException { message :: NullOrUndefined (MessageType) }
+  = AliasExistsException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when a user tries to confirm the account with an email or phone number that has already been supplied as an alias from a different account. This exception tells user that an account with this email or phone already exists.</p>
@@ -1663,7 +1663,7 @@ Constructs AliasExistsException from required parameters
 #### `newAliasExistsException'`
 
 ``` purescript
-newAliasExistsException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> AliasExistsException
+newAliasExistsException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> AliasExistsException
 ```
 
 Constructs AliasExistsException's fields from required parameters
@@ -1672,7 +1672,7 @@ Constructs AliasExistsException's fields from required parameters
 
 ``` purescript
 newtype AnalyticsConfigurationType
-  = AnalyticsConfigurationType { "ApplicationId" :: HexStringType, "RoleArn" :: ArnType, "ExternalId" :: StringType, "UserDataShared" :: NullOrUndefined (BooleanType) }
+  = AnalyticsConfigurationType { "ApplicationId" :: HexStringType, "RoleArn" :: ArnType, "ExternalId" :: StringType, "UserDataShared" :: Maybe (BooleanType) }
 ```
 
 <p>The Amazon Pinpoint analytics configuration for collecting metrics for a user pool.</p>
@@ -1697,7 +1697,7 @@ Constructs AnalyticsConfigurationType from required parameters
 #### `newAnalyticsConfigurationType'`
 
 ``` purescript
-newAnalyticsConfigurationType' :: HexStringType -> StringType -> ArnType -> ({ "ApplicationId" :: HexStringType, "RoleArn" :: ArnType, "ExternalId" :: StringType, "UserDataShared" :: NullOrUndefined (BooleanType) } -> { "ApplicationId" :: HexStringType, "RoleArn" :: ArnType, "ExternalId" :: StringType, "UserDataShared" :: NullOrUndefined (BooleanType) }) -> AnalyticsConfigurationType
+newAnalyticsConfigurationType' :: HexStringType -> StringType -> ArnType -> ({ "ApplicationId" :: HexStringType, "RoleArn" :: ArnType, "ExternalId" :: StringType, "UserDataShared" :: Maybe (BooleanType) } -> { "ApplicationId" :: HexStringType, "RoleArn" :: ArnType, "ExternalId" :: StringType, "UserDataShared" :: Maybe (BooleanType) }) -> AnalyticsConfigurationType
 ```
 
 Constructs AnalyticsConfigurationType's fields from required parameters
@@ -1706,7 +1706,7 @@ Constructs AnalyticsConfigurationType's fields from required parameters
 
 ``` purescript
 newtype AnalyticsMetadataType
-  = AnalyticsMetadataType { "AnalyticsEndpointId" :: NullOrUndefined (StringType) }
+  = AnalyticsMetadataType { "AnalyticsEndpointId" :: Maybe (StringType) }
 ```
 
 <p>An Amazon Pinpoint analytics endpoint.</p> <p>An endpoint uniquely identifies a mobile device, email address, or phone number that can receive messages from Amazon Pinpoint analytics.</p>
@@ -1731,7 +1731,7 @@ Constructs AnalyticsMetadataType from required parameters
 #### `newAnalyticsMetadataType'`
 
 ``` purescript
-newAnalyticsMetadataType' :: ({ "AnalyticsEndpointId" :: NullOrUndefined (StringType) } -> { "AnalyticsEndpointId" :: NullOrUndefined (StringType) }) -> AnalyticsMetadataType
+newAnalyticsMetadataType' :: ({ "AnalyticsEndpointId" :: Maybe (StringType) } -> { "AnalyticsEndpointId" :: Maybe (StringType) }) -> AnalyticsMetadataType
 ```
 
 Constructs AnalyticsMetadataType's fields from required parameters
@@ -1756,7 +1756,7 @@ Encode ArnType
 
 ``` purescript
 newtype AssociateSoftwareTokenRequest
-  = AssociateSoftwareTokenRequest { "AccessToken" :: NullOrUndefined (TokenModelType), "Session" :: NullOrUndefined (SessionType) }
+  = AssociateSoftwareTokenRequest { "AccessToken" :: Maybe (TokenModelType), "Session" :: Maybe (SessionType) }
 ```
 
 ##### Instances
@@ -1779,7 +1779,7 @@ Constructs AssociateSoftwareTokenRequest from required parameters
 #### `newAssociateSoftwareTokenRequest'`
 
 ``` purescript
-newAssociateSoftwareTokenRequest' :: ({ "AccessToken" :: NullOrUndefined (TokenModelType), "Session" :: NullOrUndefined (SessionType) } -> { "AccessToken" :: NullOrUndefined (TokenModelType), "Session" :: NullOrUndefined (SessionType) }) -> AssociateSoftwareTokenRequest
+newAssociateSoftwareTokenRequest' :: ({ "AccessToken" :: Maybe (TokenModelType), "Session" :: Maybe (SessionType) } -> { "AccessToken" :: Maybe (TokenModelType), "Session" :: Maybe (SessionType) }) -> AssociateSoftwareTokenRequest
 ```
 
 Constructs AssociateSoftwareTokenRequest's fields from required parameters
@@ -1788,7 +1788,7 @@ Constructs AssociateSoftwareTokenRequest's fields from required parameters
 
 ``` purescript
 newtype AssociateSoftwareTokenResponse
-  = AssociateSoftwareTokenResponse { "SecretCode" :: NullOrUndefined (SecretCodeType), "Session" :: NullOrUndefined (SessionType) }
+  = AssociateSoftwareTokenResponse { "SecretCode" :: Maybe (SecretCodeType), "Session" :: Maybe (SessionType) }
 ```
 
 ##### Instances
@@ -1811,7 +1811,7 @@ Constructs AssociateSoftwareTokenResponse from required parameters
 #### `newAssociateSoftwareTokenResponse'`
 
 ``` purescript
-newAssociateSoftwareTokenResponse' :: ({ "SecretCode" :: NullOrUndefined (SecretCodeType), "Session" :: NullOrUndefined (SessionType) } -> { "SecretCode" :: NullOrUndefined (SecretCodeType), "Session" :: NullOrUndefined (SessionType) }) -> AssociateSoftwareTokenResponse
+newAssociateSoftwareTokenResponse' :: ({ "SecretCode" :: Maybe (SecretCodeType), "Session" :: Maybe (SessionType) } -> { "SecretCode" :: Maybe (SecretCodeType), "Session" :: Maybe (SessionType) }) -> AssociateSoftwareTokenResponse
 ```
 
 Constructs AssociateSoftwareTokenResponse's fields from required parameters
@@ -1916,7 +1916,7 @@ Encode AttributeNameType
 
 ``` purescript
 newtype AttributeType
-  = AttributeType { "Name" :: AttributeNameType, "Value" :: NullOrUndefined (AttributeValueType) }
+  = AttributeType { "Name" :: AttributeNameType, "Value" :: Maybe (AttributeValueType) }
 ```
 
 <p>Specifies whether the attribute is standard or custom.</p>
@@ -1941,7 +1941,7 @@ Constructs AttributeType from required parameters
 #### `newAttributeType'`
 
 ``` purescript
-newAttributeType' :: AttributeNameType -> ({ "Name" :: AttributeNameType, "Value" :: NullOrUndefined (AttributeValueType) } -> { "Name" :: AttributeNameType, "Value" :: NullOrUndefined (AttributeValueType) }) -> AttributeType
+newAttributeType' :: AttributeNameType -> ({ "Name" :: AttributeNameType, "Value" :: Maybe (AttributeValueType) } -> { "Name" :: AttributeNameType, "Value" :: Maybe (AttributeValueType) }) -> AttributeType
 ```
 
 Constructs AttributeType's fields from required parameters
@@ -1966,7 +1966,7 @@ Encode AttributeValueType
 
 ``` purescript
 newtype AuthEventType
-  = AuthEventType { "EventId" :: NullOrUndefined (StringType), "EventType" :: NullOrUndefined (EventType), "CreationDate" :: NullOrUndefined (DateType), "EventResponse" :: NullOrUndefined (EventResponseType), "EventRisk" :: NullOrUndefined (EventRiskType), "ChallengeResponses" :: NullOrUndefined (ChallengeResponseListType), "EventContextData" :: NullOrUndefined (EventContextDataType), "EventFeedback" :: NullOrUndefined (EventFeedbackType) }
+  = AuthEventType { "EventId" :: Maybe (StringType), "EventType" :: Maybe (EventType), "CreationDate" :: Maybe (DateType), "EventResponse" :: Maybe (EventResponseType), "EventRisk" :: Maybe (EventRiskType), "ChallengeResponses" :: Maybe (ChallengeResponseListType), "EventContextData" :: Maybe (EventContextDataType), "EventFeedback" :: Maybe (EventFeedbackType) }
 ```
 
 <p>The authentication event type.</p>
@@ -1991,7 +1991,7 @@ Constructs AuthEventType from required parameters
 #### `newAuthEventType'`
 
 ``` purescript
-newAuthEventType' :: ({ "EventId" :: NullOrUndefined (StringType), "EventType" :: NullOrUndefined (EventType), "CreationDate" :: NullOrUndefined (DateType), "EventResponse" :: NullOrUndefined (EventResponseType), "EventRisk" :: NullOrUndefined (EventRiskType), "ChallengeResponses" :: NullOrUndefined (ChallengeResponseListType), "EventContextData" :: NullOrUndefined (EventContextDataType), "EventFeedback" :: NullOrUndefined (EventFeedbackType) } -> { "EventId" :: NullOrUndefined (StringType), "EventType" :: NullOrUndefined (EventType), "CreationDate" :: NullOrUndefined (DateType), "EventResponse" :: NullOrUndefined (EventResponseType), "EventRisk" :: NullOrUndefined (EventRiskType), "ChallengeResponses" :: NullOrUndefined (ChallengeResponseListType), "EventContextData" :: NullOrUndefined (EventContextDataType), "EventFeedback" :: NullOrUndefined (EventFeedbackType) }) -> AuthEventType
+newAuthEventType' :: ({ "EventId" :: Maybe (StringType), "EventType" :: Maybe (EventType), "CreationDate" :: Maybe (DateType), "EventResponse" :: Maybe (EventResponseType), "EventRisk" :: Maybe (EventRiskType), "ChallengeResponses" :: Maybe (ChallengeResponseListType), "EventContextData" :: Maybe (EventContextDataType), "EventFeedback" :: Maybe (EventFeedbackType) } -> { "EventId" :: Maybe (StringType), "EventType" :: Maybe (EventType), "CreationDate" :: Maybe (DateType), "EventResponse" :: Maybe (EventResponseType), "EventRisk" :: Maybe (EventRiskType), "ChallengeResponses" :: Maybe (ChallengeResponseListType), "EventContextData" :: Maybe (EventContextDataType), "EventFeedback" :: Maybe (EventFeedbackType) }) -> AuthEventType
 ```
 
 Constructs AuthEventType's fields from required parameters
@@ -2048,7 +2048,7 @@ Encode AuthParametersType
 
 ``` purescript
 newtype AuthenticationResultType
-  = AuthenticationResultType { "AccessToken" :: NullOrUndefined (TokenModelType), "ExpiresIn" :: NullOrUndefined (IntegerType), "TokenType" :: NullOrUndefined (StringType), "RefreshToken" :: NullOrUndefined (TokenModelType), "IdToken" :: NullOrUndefined (TokenModelType), "NewDeviceMetadata" :: NullOrUndefined (NewDeviceMetadataType) }
+  = AuthenticationResultType { "AccessToken" :: Maybe (TokenModelType), "ExpiresIn" :: Maybe (IntegerType), "TokenType" :: Maybe (StringType), "RefreshToken" :: Maybe (TokenModelType), "IdToken" :: Maybe (TokenModelType), "NewDeviceMetadata" :: Maybe (NewDeviceMetadataType) }
 ```
 
 <p>The authentication result.</p>
@@ -2073,7 +2073,7 @@ Constructs AuthenticationResultType from required parameters
 #### `newAuthenticationResultType'`
 
 ``` purescript
-newAuthenticationResultType' :: ({ "AccessToken" :: NullOrUndefined (TokenModelType), "ExpiresIn" :: NullOrUndefined (IntegerType), "TokenType" :: NullOrUndefined (StringType), "RefreshToken" :: NullOrUndefined (TokenModelType), "IdToken" :: NullOrUndefined (TokenModelType), "NewDeviceMetadata" :: NullOrUndefined (NewDeviceMetadataType) } -> { "AccessToken" :: NullOrUndefined (TokenModelType), "ExpiresIn" :: NullOrUndefined (IntegerType), "TokenType" :: NullOrUndefined (StringType), "RefreshToken" :: NullOrUndefined (TokenModelType), "IdToken" :: NullOrUndefined (TokenModelType), "NewDeviceMetadata" :: NullOrUndefined (NewDeviceMetadataType) }) -> AuthenticationResultType
+newAuthenticationResultType' :: ({ "AccessToken" :: Maybe (TokenModelType), "ExpiresIn" :: Maybe (IntegerType), "TokenType" :: Maybe (StringType), "RefreshToken" :: Maybe (TokenModelType), "IdToken" :: Maybe (TokenModelType), "NewDeviceMetadata" :: Maybe (NewDeviceMetadataType) } -> { "AccessToken" :: Maybe (TokenModelType), "ExpiresIn" :: Maybe (IntegerType), "TokenType" :: Maybe (StringType), "RefreshToken" :: Maybe (TokenModelType), "IdToken" :: Maybe (TokenModelType), "NewDeviceMetadata" :: Maybe (NewDeviceMetadataType) }) -> AuthenticationResultType
 ```
 
 Constructs AuthenticationResultType's fields from required parameters
@@ -2242,7 +2242,7 @@ Encode ChallengeResponseListType
 
 ``` purescript
 newtype ChallengeResponseType
-  = ChallengeResponseType { "ChallengeName" :: NullOrUndefined (ChallengeName), "ChallengeResponse" :: NullOrUndefined (ChallengeResponse) }
+  = ChallengeResponseType { "ChallengeName" :: Maybe (ChallengeName), "ChallengeResponse" :: Maybe (ChallengeResponse) }
 ```
 
 <p>The challenge response type.</p>
@@ -2267,7 +2267,7 @@ Constructs ChallengeResponseType from required parameters
 #### `newChallengeResponseType'`
 
 ``` purescript
-newChallengeResponseType' :: ({ "ChallengeName" :: NullOrUndefined (ChallengeName), "ChallengeResponse" :: NullOrUndefined (ChallengeResponse) } -> { "ChallengeName" :: NullOrUndefined (ChallengeName), "ChallengeResponse" :: NullOrUndefined (ChallengeResponse) }) -> ChallengeResponseType
+newChallengeResponseType' :: ({ "ChallengeName" :: Maybe (ChallengeName), "ChallengeResponse" :: Maybe (ChallengeResponse) } -> { "ChallengeName" :: Maybe (ChallengeName), "ChallengeResponse" :: Maybe (ChallengeResponse) }) -> ChallengeResponseType
 ```
 
 Constructs ChallengeResponseType's fields from required parameters
@@ -2456,7 +2456,7 @@ Encode CodeDeliveryDetailsListType
 
 ``` purescript
 newtype CodeDeliveryDetailsType
-  = CodeDeliveryDetailsType { "Destination" :: NullOrUndefined (StringType), "DeliveryMedium" :: NullOrUndefined (DeliveryMediumType), "AttributeName" :: NullOrUndefined (AttributeNameType) }
+  = CodeDeliveryDetailsType { "Destination" :: Maybe (StringType), "DeliveryMedium" :: Maybe (DeliveryMediumType), "AttributeName" :: Maybe (AttributeNameType) }
 ```
 
 <p>The code delivery details being returned from the server.</p>
@@ -2481,7 +2481,7 @@ Constructs CodeDeliveryDetailsType from required parameters
 #### `newCodeDeliveryDetailsType'`
 
 ``` purescript
-newCodeDeliveryDetailsType' :: ({ "Destination" :: NullOrUndefined (StringType), "DeliveryMedium" :: NullOrUndefined (DeliveryMediumType), "AttributeName" :: NullOrUndefined (AttributeNameType) } -> { "Destination" :: NullOrUndefined (StringType), "DeliveryMedium" :: NullOrUndefined (DeliveryMediumType), "AttributeName" :: NullOrUndefined (AttributeNameType) }) -> CodeDeliveryDetailsType
+newCodeDeliveryDetailsType' :: ({ "Destination" :: Maybe (StringType), "DeliveryMedium" :: Maybe (DeliveryMediumType), "AttributeName" :: Maybe (AttributeNameType) } -> { "Destination" :: Maybe (StringType), "DeliveryMedium" :: Maybe (DeliveryMediumType), "AttributeName" :: Maybe (AttributeNameType) }) -> CodeDeliveryDetailsType
 ```
 
 Constructs CodeDeliveryDetailsType's fields from required parameters
@@ -2490,7 +2490,7 @@ Constructs CodeDeliveryDetailsType's fields from required parameters
 
 ``` purescript
 newtype CodeDeliveryFailureException
-  = CodeDeliveryFailureException { message :: NullOrUndefined (MessageType) }
+  = CodeDeliveryFailureException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when a verification code fails to deliver successfully.</p>
@@ -2515,7 +2515,7 @@ Constructs CodeDeliveryFailureException from required parameters
 #### `newCodeDeliveryFailureException'`
 
 ``` purescript
-newCodeDeliveryFailureException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> CodeDeliveryFailureException
+newCodeDeliveryFailureException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> CodeDeliveryFailureException
 ```
 
 Constructs CodeDeliveryFailureException's fields from required parameters
@@ -2524,7 +2524,7 @@ Constructs CodeDeliveryFailureException's fields from required parameters
 
 ``` purescript
 newtype CodeMismatchException
-  = CodeMismatchException { message :: NullOrUndefined (MessageType) }
+  = CodeMismatchException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown if the provided code does not match what the server was expecting.</p>
@@ -2549,7 +2549,7 @@ Constructs CodeMismatchException from required parameters
 #### `newCodeMismatchException'`
 
 ``` purescript
-newCodeMismatchException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> CodeMismatchException
+newCodeMismatchException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> CodeMismatchException
 ```
 
 Constructs CodeMismatchException's fields from required parameters
@@ -2624,7 +2624,7 @@ Encode CompromisedCredentialsEventActionType
 
 ``` purescript
 newtype CompromisedCredentialsRiskConfigurationType
-  = CompromisedCredentialsRiskConfigurationType { "EventFilter" :: NullOrUndefined (EventFiltersType), "Actions" :: CompromisedCredentialsActionsType }
+  = CompromisedCredentialsRiskConfigurationType { "EventFilter" :: Maybe (EventFiltersType), "Actions" :: CompromisedCredentialsActionsType }
 ```
 
 <p>The compromised credentials risk configuration type.</p>
@@ -2649,7 +2649,7 @@ Constructs CompromisedCredentialsRiskConfigurationType from required parameters
 #### `newCompromisedCredentialsRiskConfigurationType'`
 
 ``` purescript
-newCompromisedCredentialsRiskConfigurationType' :: CompromisedCredentialsActionsType -> ({ "EventFilter" :: NullOrUndefined (EventFiltersType), "Actions" :: CompromisedCredentialsActionsType } -> { "EventFilter" :: NullOrUndefined (EventFiltersType), "Actions" :: CompromisedCredentialsActionsType }) -> CompromisedCredentialsRiskConfigurationType
+newCompromisedCredentialsRiskConfigurationType' :: CompromisedCredentialsActionsType -> ({ "EventFilter" :: Maybe (EventFiltersType), "Actions" :: CompromisedCredentialsActionsType } -> { "EventFilter" :: Maybe (EventFiltersType), "Actions" :: CompromisedCredentialsActionsType }) -> CompromisedCredentialsRiskConfigurationType
 ```
 
 Constructs CompromisedCredentialsRiskConfigurationType's fields from required parameters
@@ -2658,7 +2658,7 @@ Constructs CompromisedCredentialsRiskConfigurationType's fields from required pa
 
 ``` purescript
 newtype ConcurrentModificationException
-  = ConcurrentModificationException { message :: NullOrUndefined (MessageType) }
+  = ConcurrentModificationException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown if two or more modifications are happening concurrently.</p>
@@ -2683,7 +2683,7 @@ Constructs ConcurrentModificationException from required parameters
 #### `newConcurrentModificationException'`
 
 ``` purescript
-newConcurrentModificationException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> ConcurrentModificationException
+newConcurrentModificationException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> ConcurrentModificationException
 ```
 
 Constructs ConcurrentModificationException's fields from required parameters
@@ -2692,7 +2692,7 @@ Constructs ConcurrentModificationException's fields from required parameters
 
 ``` purescript
 newtype ConfirmDeviceRequest
-  = ConfirmDeviceRequest { "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceSecretVerifierConfig" :: NullOrUndefined (DeviceSecretVerifierConfigType), "DeviceName" :: NullOrUndefined (DeviceNameType) }
+  = ConfirmDeviceRequest { "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceSecretVerifierConfig" :: Maybe (DeviceSecretVerifierConfigType), "DeviceName" :: Maybe (DeviceNameType) }
 ```
 
 <p>Confirms the device request.</p>
@@ -2717,7 +2717,7 @@ Constructs ConfirmDeviceRequest from required parameters
 #### `newConfirmDeviceRequest'`
 
 ``` purescript
-newConfirmDeviceRequest' :: TokenModelType -> DeviceKeyType -> ({ "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceSecretVerifierConfig" :: NullOrUndefined (DeviceSecretVerifierConfigType), "DeviceName" :: NullOrUndefined (DeviceNameType) } -> { "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceSecretVerifierConfig" :: NullOrUndefined (DeviceSecretVerifierConfigType), "DeviceName" :: NullOrUndefined (DeviceNameType) }) -> ConfirmDeviceRequest
+newConfirmDeviceRequest' :: TokenModelType -> DeviceKeyType -> ({ "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceSecretVerifierConfig" :: Maybe (DeviceSecretVerifierConfigType), "DeviceName" :: Maybe (DeviceNameType) } -> { "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceSecretVerifierConfig" :: Maybe (DeviceSecretVerifierConfigType), "DeviceName" :: Maybe (DeviceNameType) }) -> ConfirmDeviceRequest
 ```
 
 Constructs ConfirmDeviceRequest's fields from required parameters
@@ -2726,7 +2726,7 @@ Constructs ConfirmDeviceRequest's fields from required parameters
 
 ``` purescript
 newtype ConfirmDeviceResponse
-  = ConfirmDeviceResponse { "UserConfirmationNecessary" :: NullOrUndefined (BooleanType) }
+  = ConfirmDeviceResponse { "UserConfirmationNecessary" :: Maybe (BooleanType) }
 ```
 
 <p>Confirms the device response.</p>
@@ -2751,7 +2751,7 @@ Constructs ConfirmDeviceResponse from required parameters
 #### `newConfirmDeviceResponse'`
 
 ``` purescript
-newConfirmDeviceResponse' :: ({ "UserConfirmationNecessary" :: NullOrUndefined (BooleanType) } -> { "UserConfirmationNecessary" :: NullOrUndefined (BooleanType) }) -> ConfirmDeviceResponse
+newConfirmDeviceResponse' :: ({ "UserConfirmationNecessary" :: Maybe (BooleanType) } -> { "UserConfirmationNecessary" :: Maybe (BooleanType) }) -> ConfirmDeviceResponse
 ```
 
 Constructs ConfirmDeviceResponse's fields from required parameters
@@ -2760,7 +2760,7 @@ Constructs ConfirmDeviceResponse's fields from required parameters
 
 ``` purescript
 newtype ConfirmForgotPasswordRequest
-  = ConfirmForgotPasswordRequest { "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "Password" :: PasswordType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) }
+  = ConfirmForgotPasswordRequest { "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "Password" :: PasswordType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) }
 ```
 
 <p>The request representing the confirmation for a password reset.</p>
@@ -2785,7 +2785,7 @@ Constructs ConfirmForgotPasswordRequest from required parameters
 #### `newConfirmForgotPasswordRequest'`
 
 ``` purescript
-newConfirmForgotPasswordRequest' :: ClientIdType -> ConfirmationCodeType -> PasswordType -> UsernameType -> ({ "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "Password" :: PasswordType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) } -> { "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "Password" :: PasswordType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) }) -> ConfirmForgotPasswordRequest
+newConfirmForgotPasswordRequest' :: ClientIdType -> ConfirmationCodeType -> PasswordType -> UsernameType -> ({ "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "Password" :: PasswordType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) } -> { "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "Password" :: PasswordType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) }) -> ConfirmForgotPasswordRequest
 ```
 
 Constructs ConfirmForgotPasswordRequest's fields from required parameters
@@ -2812,7 +2812,7 @@ Encode ConfirmForgotPasswordResponse
 
 ``` purescript
 newtype ConfirmSignUpRequest
-  = ConfirmSignUpRequest { "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "ForceAliasCreation" :: NullOrUndefined (ForceAliasCreation), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) }
+  = ConfirmSignUpRequest { "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "ForceAliasCreation" :: Maybe (ForceAliasCreation), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) }
 ```
 
 <p>Represents the request to confirm registration of a user.</p>
@@ -2837,7 +2837,7 @@ Constructs ConfirmSignUpRequest from required parameters
 #### `newConfirmSignUpRequest'`
 
 ``` purescript
-newConfirmSignUpRequest' :: ClientIdType -> ConfirmationCodeType -> UsernameType -> ({ "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "ForceAliasCreation" :: NullOrUndefined (ForceAliasCreation), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) } -> { "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "ForceAliasCreation" :: NullOrUndefined (ForceAliasCreation), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) }) -> ConfirmSignUpRequest
+newConfirmSignUpRequest' :: ClientIdType -> ConfirmationCodeType -> UsernameType -> ({ "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "ForceAliasCreation" :: Maybe (ForceAliasCreation), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) } -> { "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "Username" :: UsernameType, "ConfirmationCode" :: ConfirmationCodeType, "ForceAliasCreation" :: Maybe (ForceAliasCreation), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) }) -> ConfirmSignUpRequest
 ```
 
 Constructs ConfirmSignUpRequest's fields from required parameters
@@ -2880,7 +2880,7 @@ Encode ConfirmationCodeType
 
 ``` purescript
 newtype ContextDataType
-  = ContextDataType { "IpAddress" :: StringType, "ServerName" :: StringType, "ServerPath" :: StringType, "HttpHeaders" :: HttpHeaderList, "EncodedData" :: NullOrUndefined (StringType) }
+  = ContextDataType { "IpAddress" :: StringType, "ServerName" :: StringType, "ServerPath" :: StringType, "HttpHeaders" :: HttpHeaderList, "EncodedData" :: Maybe (StringType) }
 ```
 
 <p>Contextual user data type used for evaluating the risk of an unexpected event by Amazon Cognito advanced security.</p>
@@ -2905,7 +2905,7 @@ Constructs ContextDataType from required parameters
 #### `newContextDataType'`
 
 ``` purescript
-newContextDataType' :: HttpHeaderList -> StringType -> StringType -> StringType -> ({ "IpAddress" :: StringType, "ServerName" :: StringType, "ServerPath" :: StringType, "HttpHeaders" :: HttpHeaderList, "EncodedData" :: NullOrUndefined (StringType) } -> { "IpAddress" :: StringType, "ServerName" :: StringType, "ServerPath" :: StringType, "HttpHeaders" :: HttpHeaderList, "EncodedData" :: NullOrUndefined (StringType) }) -> ContextDataType
+newContextDataType' :: HttpHeaderList -> StringType -> StringType -> StringType -> ({ "IpAddress" :: StringType, "ServerName" :: StringType, "ServerPath" :: StringType, "HttpHeaders" :: HttpHeaderList, "EncodedData" :: Maybe (StringType) } -> { "IpAddress" :: StringType, "ServerName" :: StringType, "ServerPath" :: StringType, "HttpHeaders" :: HttpHeaderList, "EncodedData" :: Maybe (StringType) }) -> ContextDataType
 ```
 
 Constructs ContextDataType's fields from required parameters
@@ -2914,7 +2914,7 @@ Constructs ContextDataType's fields from required parameters
 
 ``` purescript
 newtype CreateGroupRequest
-  = CreateGroupRequest { "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: NullOrUndefined (DescriptionType), "RoleArn" :: NullOrUndefined (ArnType), "Precedence" :: NullOrUndefined (PrecedenceType) }
+  = CreateGroupRequest { "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: Maybe (DescriptionType), "RoleArn" :: Maybe (ArnType), "Precedence" :: Maybe (PrecedenceType) }
 ```
 
 ##### Instances
@@ -2937,7 +2937,7 @@ Constructs CreateGroupRequest from required parameters
 #### `newCreateGroupRequest'`
 
 ``` purescript
-newCreateGroupRequest' :: GroupNameType -> UserPoolIdType -> ({ "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: NullOrUndefined (DescriptionType), "RoleArn" :: NullOrUndefined (ArnType), "Precedence" :: NullOrUndefined (PrecedenceType) } -> { "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: NullOrUndefined (DescriptionType), "RoleArn" :: NullOrUndefined (ArnType), "Precedence" :: NullOrUndefined (PrecedenceType) }) -> CreateGroupRequest
+newCreateGroupRequest' :: GroupNameType -> UserPoolIdType -> ({ "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: Maybe (DescriptionType), "RoleArn" :: Maybe (ArnType), "Precedence" :: Maybe (PrecedenceType) } -> { "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: Maybe (DescriptionType), "RoleArn" :: Maybe (ArnType), "Precedence" :: Maybe (PrecedenceType) }) -> CreateGroupRequest
 ```
 
 Constructs CreateGroupRequest's fields from required parameters
@@ -2946,7 +2946,7 @@ Constructs CreateGroupRequest's fields from required parameters
 
 ``` purescript
 newtype CreateGroupResponse
-  = CreateGroupResponse { "Group" :: NullOrUndefined (GroupType) }
+  = CreateGroupResponse { "Group" :: Maybe (GroupType) }
 ```
 
 ##### Instances
@@ -2969,7 +2969,7 @@ Constructs CreateGroupResponse from required parameters
 #### `newCreateGroupResponse'`
 
 ``` purescript
-newCreateGroupResponse' :: ({ "Group" :: NullOrUndefined (GroupType) } -> { "Group" :: NullOrUndefined (GroupType) }) -> CreateGroupResponse
+newCreateGroupResponse' :: ({ "Group" :: Maybe (GroupType) } -> { "Group" :: Maybe (GroupType) }) -> CreateGroupResponse
 ```
 
 Constructs CreateGroupResponse's fields from required parameters
@@ -2978,7 +2978,7 @@ Constructs CreateGroupResponse's fields from required parameters
 
 ``` purescript
 newtype CreateIdentityProviderRequest
-  = CreateIdentityProviderRequest { "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameTypeV1, "ProviderType" :: IdentityProviderTypeType, "ProviderDetails" :: ProviderDetailsType, "AttributeMapping" :: NullOrUndefined (AttributeMappingType), "IdpIdentifiers" :: NullOrUndefined (IdpIdentifiersListType) }
+  = CreateIdentityProviderRequest { "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameTypeV1, "ProviderType" :: IdentityProviderTypeType, "ProviderDetails" :: ProviderDetailsType, "AttributeMapping" :: Maybe (AttributeMappingType), "IdpIdentifiers" :: Maybe (IdpIdentifiersListType) }
 ```
 
 ##### Instances
@@ -3001,7 +3001,7 @@ Constructs CreateIdentityProviderRequest from required parameters
 #### `newCreateIdentityProviderRequest'`
 
 ``` purescript
-newCreateIdentityProviderRequest' :: ProviderDetailsType -> ProviderNameTypeV1 -> IdentityProviderTypeType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameTypeV1, "ProviderType" :: IdentityProviderTypeType, "ProviderDetails" :: ProviderDetailsType, "AttributeMapping" :: NullOrUndefined (AttributeMappingType), "IdpIdentifiers" :: NullOrUndefined (IdpIdentifiersListType) } -> { "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameTypeV1, "ProviderType" :: IdentityProviderTypeType, "ProviderDetails" :: ProviderDetailsType, "AttributeMapping" :: NullOrUndefined (AttributeMappingType), "IdpIdentifiers" :: NullOrUndefined (IdpIdentifiersListType) }) -> CreateIdentityProviderRequest
+newCreateIdentityProviderRequest' :: ProviderDetailsType -> ProviderNameTypeV1 -> IdentityProviderTypeType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameTypeV1, "ProviderType" :: IdentityProviderTypeType, "ProviderDetails" :: ProviderDetailsType, "AttributeMapping" :: Maybe (AttributeMappingType), "IdpIdentifiers" :: Maybe (IdpIdentifiersListType) } -> { "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameTypeV1, "ProviderType" :: IdentityProviderTypeType, "ProviderDetails" :: ProviderDetailsType, "AttributeMapping" :: Maybe (AttributeMappingType), "IdpIdentifiers" :: Maybe (IdpIdentifiersListType) }) -> CreateIdentityProviderRequest
 ```
 
 Constructs CreateIdentityProviderRequest's fields from required parameters
@@ -3042,7 +3042,7 @@ Constructs CreateIdentityProviderResponse's fields from required parameters
 
 ``` purescript
 newtype CreateResourceServerRequest
-  = CreateResourceServerRequest { "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: NullOrUndefined (ResourceServerScopeListType) }
+  = CreateResourceServerRequest { "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: Maybe (ResourceServerScopeListType) }
 ```
 
 ##### Instances
@@ -3065,7 +3065,7 @@ Constructs CreateResourceServerRequest from required parameters
 #### `newCreateResourceServerRequest'`
 
 ``` purescript
-newCreateResourceServerRequest' :: ResourceServerIdentifierType -> ResourceServerNameType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: NullOrUndefined (ResourceServerScopeListType) } -> { "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: NullOrUndefined (ResourceServerScopeListType) }) -> CreateResourceServerRequest
+newCreateResourceServerRequest' :: ResourceServerIdentifierType -> ResourceServerNameType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: Maybe (ResourceServerScopeListType) } -> { "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: Maybe (ResourceServerScopeListType) }) -> CreateResourceServerRequest
 ```
 
 Constructs CreateResourceServerRequest's fields from required parameters
@@ -3140,7 +3140,7 @@ Constructs CreateUserImportJobRequest's fields from required parameters
 
 ``` purescript
 newtype CreateUserImportJobResponse
-  = CreateUserImportJobResponse { "UserImportJob" :: NullOrUndefined (UserImportJobType) }
+  = CreateUserImportJobResponse { "UserImportJob" :: Maybe (UserImportJobType) }
 ```
 
 <p>Represents the response from the server to the request to create the user import job.</p>
@@ -3165,7 +3165,7 @@ Constructs CreateUserImportJobResponse from required parameters
 #### `newCreateUserImportJobResponse'`
 
 ``` purescript
-newCreateUserImportJobResponse' :: ({ "UserImportJob" :: NullOrUndefined (UserImportJobType) } -> { "UserImportJob" :: NullOrUndefined (UserImportJobType) }) -> CreateUserImportJobResponse
+newCreateUserImportJobResponse' :: ({ "UserImportJob" :: Maybe (UserImportJobType) } -> { "UserImportJob" :: Maybe (UserImportJobType) }) -> CreateUserImportJobResponse
 ```
 
 Constructs CreateUserImportJobResponse's fields from required parameters
@@ -3174,7 +3174,7 @@ Constructs CreateUserImportJobResponse's fields from required parameters
 
 ``` purescript
 newtype CreateUserPoolClientRequest
-  = CreateUserPoolClientRequest { "UserPoolId" :: UserPoolIdType, "ClientName" :: ClientNameType, "GenerateSecret" :: NullOrUndefined (GenerateSecret), "RefreshTokenValidity" :: NullOrUndefined (RefreshTokenValidityType), "ReadAttributes" :: NullOrUndefined (ClientPermissionListType), "WriteAttributes" :: NullOrUndefined (ClientPermissionListType), "ExplicitAuthFlows" :: NullOrUndefined (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: NullOrUndefined (SupportedIdentityProvidersListType), "CallbackURLs" :: NullOrUndefined (CallbackURLsListType), "LogoutURLs" :: NullOrUndefined (LogoutURLsListType), "DefaultRedirectURI" :: NullOrUndefined (RedirectUrlType), "AllowedOAuthFlows" :: NullOrUndefined (OAuthFlowsType), "AllowedOAuthScopes" :: NullOrUndefined (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: NullOrUndefined (BooleanType), "AnalyticsConfiguration" :: NullOrUndefined (AnalyticsConfigurationType) }
+  = CreateUserPoolClientRequest { "UserPoolId" :: UserPoolIdType, "ClientName" :: ClientNameType, "GenerateSecret" :: Maybe (GenerateSecret), "RefreshTokenValidity" :: Maybe (RefreshTokenValidityType), "ReadAttributes" :: Maybe (ClientPermissionListType), "WriteAttributes" :: Maybe (ClientPermissionListType), "ExplicitAuthFlows" :: Maybe (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: Maybe (SupportedIdentityProvidersListType), "CallbackURLs" :: Maybe (CallbackURLsListType), "LogoutURLs" :: Maybe (LogoutURLsListType), "DefaultRedirectURI" :: Maybe (RedirectUrlType), "AllowedOAuthFlows" :: Maybe (OAuthFlowsType), "AllowedOAuthScopes" :: Maybe (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: Maybe (BooleanType), "AnalyticsConfiguration" :: Maybe (AnalyticsConfigurationType) }
 ```
 
 <p>Represents the request to create a user pool client.</p>
@@ -3199,7 +3199,7 @@ Constructs CreateUserPoolClientRequest from required parameters
 #### `newCreateUserPoolClientRequest'`
 
 ``` purescript
-newCreateUserPoolClientRequest' :: ClientNameType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientName" :: ClientNameType, "GenerateSecret" :: NullOrUndefined (GenerateSecret), "RefreshTokenValidity" :: NullOrUndefined (RefreshTokenValidityType), "ReadAttributes" :: NullOrUndefined (ClientPermissionListType), "WriteAttributes" :: NullOrUndefined (ClientPermissionListType), "ExplicitAuthFlows" :: NullOrUndefined (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: NullOrUndefined (SupportedIdentityProvidersListType), "CallbackURLs" :: NullOrUndefined (CallbackURLsListType), "LogoutURLs" :: NullOrUndefined (LogoutURLsListType), "DefaultRedirectURI" :: NullOrUndefined (RedirectUrlType), "AllowedOAuthFlows" :: NullOrUndefined (OAuthFlowsType), "AllowedOAuthScopes" :: NullOrUndefined (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: NullOrUndefined (BooleanType), "AnalyticsConfiguration" :: NullOrUndefined (AnalyticsConfigurationType) } -> { "UserPoolId" :: UserPoolIdType, "ClientName" :: ClientNameType, "GenerateSecret" :: NullOrUndefined (GenerateSecret), "RefreshTokenValidity" :: NullOrUndefined (RefreshTokenValidityType), "ReadAttributes" :: NullOrUndefined (ClientPermissionListType), "WriteAttributes" :: NullOrUndefined (ClientPermissionListType), "ExplicitAuthFlows" :: NullOrUndefined (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: NullOrUndefined (SupportedIdentityProvidersListType), "CallbackURLs" :: NullOrUndefined (CallbackURLsListType), "LogoutURLs" :: NullOrUndefined (LogoutURLsListType), "DefaultRedirectURI" :: NullOrUndefined (RedirectUrlType), "AllowedOAuthFlows" :: NullOrUndefined (OAuthFlowsType), "AllowedOAuthScopes" :: NullOrUndefined (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: NullOrUndefined (BooleanType), "AnalyticsConfiguration" :: NullOrUndefined (AnalyticsConfigurationType) }) -> CreateUserPoolClientRequest
+newCreateUserPoolClientRequest' :: ClientNameType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientName" :: ClientNameType, "GenerateSecret" :: Maybe (GenerateSecret), "RefreshTokenValidity" :: Maybe (RefreshTokenValidityType), "ReadAttributes" :: Maybe (ClientPermissionListType), "WriteAttributes" :: Maybe (ClientPermissionListType), "ExplicitAuthFlows" :: Maybe (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: Maybe (SupportedIdentityProvidersListType), "CallbackURLs" :: Maybe (CallbackURLsListType), "LogoutURLs" :: Maybe (LogoutURLsListType), "DefaultRedirectURI" :: Maybe (RedirectUrlType), "AllowedOAuthFlows" :: Maybe (OAuthFlowsType), "AllowedOAuthScopes" :: Maybe (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: Maybe (BooleanType), "AnalyticsConfiguration" :: Maybe (AnalyticsConfigurationType) } -> { "UserPoolId" :: UserPoolIdType, "ClientName" :: ClientNameType, "GenerateSecret" :: Maybe (GenerateSecret), "RefreshTokenValidity" :: Maybe (RefreshTokenValidityType), "ReadAttributes" :: Maybe (ClientPermissionListType), "WriteAttributes" :: Maybe (ClientPermissionListType), "ExplicitAuthFlows" :: Maybe (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: Maybe (SupportedIdentityProvidersListType), "CallbackURLs" :: Maybe (CallbackURLsListType), "LogoutURLs" :: Maybe (LogoutURLsListType), "DefaultRedirectURI" :: Maybe (RedirectUrlType), "AllowedOAuthFlows" :: Maybe (OAuthFlowsType), "AllowedOAuthScopes" :: Maybe (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: Maybe (BooleanType), "AnalyticsConfiguration" :: Maybe (AnalyticsConfigurationType) }) -> CreateUserPoolClientRequest
 ```
 
 Constructs CreateUserPoolClientRequest's fields from required parameters
@@ -3208,7 +3208,7 @@ Constructs CreateUserPoolClientRequest's fields from required parameters
 
 ``` purescript
 newtype CreateUserPoolClientResponse
-  = CreateUserPoolClientResponse { "UserPoolClient" :: NullOrUndefined (UserPoolClientType) }
+  = CreateUserPoolClientResponse { "UserPoolClient" :: Maybe (UserPoolClientType) }
 ```
 
 <p>Represents the response from the server to create a user pool client.</p>
@@ -3233,7 +3233,7 @@ Constructs CreateUserPoolClientResponse from required parameters
 #### `newCreateUserPoolClientResponse'`
 
 ``` purescript
-newCreateUserPoolClientResponse' :: ({ "UserPoolClient" :: NullOrUndefined (UserPoolClientType) } -> { "UserPoolClient" :: NullOrUndefined (UserPoolClientType) }) -> CreateUserPoolClientResponse
+newCreateUserPoolClientResponse' :: ({ "UserPoolClient" :: Maybe (UserPoolClientType) } -> { "UserPoolClient" :: Maybe (UserPoolClientType) }) -> CreateUserPoolClientResponse
 ```
 
 Constructs CreateUserPoolClientResponse's fields from required parameters
@@ -3290,7 +3290,7 @@ Encode CreateUserPoolDomainResponse
 
 ``` purescript
 newtype CreateUserPoolRequest
-  = CreateUserPoolRequest { "PoolName" :: UserPoolNameType, "Policies" :: NullOrUndefined (UserPoolPolicyType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "AutoVerifiedAttributes" :: NullOrUndefined (VerifiedAttributesListType), "AliasAttributes" :: NullOrUndefined (AliasAttributesListType), "UsernameAttributes" :: NullOrUndefined (UsernameAttributesListType), "SmsVerificationMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailVerificationMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailVerificationSubject" :: NullOrUndefined (EmailVerificationSubjectType), "VerificationMessageTemplate" :: NullOrUndefined (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType), "DeviceConfiguration" :: NullOrUndefined (DeviceConfigurationType), "EmailConfiguration" :: NullOrUndefined (EmailConfigurationType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType), "UserPoolTags" :: NullOrUndefined (UserPoolTagsType), "AdminCreateUserConfig" :: NullOrUndefined (AdminCreateUserConfigType), "Schema" :: NullOrUndefined (SchemaAttributesListType), "UserPoolAddOns" :: NullOrUndefined (UserPoolAddOnsType) }
+  = CreateUserPoolRequest { "PoolName" :: UserPoolNameType, "Policies" :: Maybe (UserPoolPolicyType), "LambdaConfig" :: Maybe (LambdaConfigType), "AutoVerifiedAttributes" :: Maybe (VerifiedAttributesListType), "AliasAttributes" :: Maybe (AliasAttributesListType), "UsernameAttributes" :: Maybe (UsernameAttributesListType), "SmsVerificationMessage" :: Maybe (SmsVerificationMessageType), "EmailVerificationMessage" :: Maybe (EmailVerificationMessageType), "EmailVerificationSubject" :: Maybe (EmailVerificationSubjectType), "VerificationMessageTemplate" :: Maybe (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "MfaConfiguration" :: Maybe (UserPoolMfaType), "DeviceConfiguration" :: Maybe (DeviceConfigurationType), "EmailConfiguration" :: Maybe (EmailConfigurationType), "SmsConfiguration" :: Maybe (SmsConfigurationType), "UserPoolTags" :: Maybe (UserPoolTagsType), "AdminCreateUserConfig" :: Maybe (AdminCreateUserConfigType), "Schema" :: Maybe (SchemaAttributesListType), "UserPoolAddOns" :: Maybe (UserPoolAddOnsType) }
 ```
 
 <p>Represents the request to create a user pool.</p>
@@ -3315,7 +3315,7 @@ Constructs CreateUserPoolRequest from required parameters
 #### `newCreateUserPoolRequest'`
 
 ``` purescript
-newCreateUserPoolRequest' :: UserPoolNameType -> ({ "PoolName" :: UserPoolNameType, "Policies" :: NullOrUndefined (UserPoolPolicyType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "AutoVerifiedAttributes" :: NullOrUndefined (VerifiedAttributesListType), "AliasAttributes" :: NullOrUndefined (AliasAttributesListType), "UsernameAttributes" :: NullOrUndefined (UsernameAttributesListType), "SmsVerificationMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailVerificationMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailVerificationSubject" :: NullOrUndefined (EmailVerificationSubjectType), "VerificationMessageTemplate" :: NullOrUndefined (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType), "DeviceConfiguration" :: NullOrUndefined (DeviceConfigurationType), "EmailConfiguration" :: NullOrUndefined (EmailConfigurationType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType), "UserPoolTags" :: NullOrUndefined (UserPoolTagsType), "AdminCreateUserConfig" :: NullOrUndefined (AdminCreateUserConfigType), "Schema" :: NullOrUndefined (SchemaAttributesListType), "UserPoolAddOns" :: NullOrUndefined (UserPoolAddOnsType) } -> { "PoolName" :: UserPoolNameType, "Policies" :: NullOrUndefined (UserPoolPolicyType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "AutoVerifiedAttributes" :: NullOrUndefined (VerifiedAttributesListType), "AliasAttributes" :: NullOrUndefined (AliasAttributesListType), "UsernameAttributes" :: NullOrUndefined (UsernameAttributesListType), "SmsVerificationMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailVerificationMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailVerificationSubject" :: NullOrUndefined (EmailVerificationSubjectType), "VerificationMessageTemplate" :: NullOrUndefined (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType), "DeviceConfiguration" :: NullOrUndefined (DeviceConfigurationType), "EmailConfiguration" :: NullOrUndefined (EmailConfigurationType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType), "UserPoolTags" :: NullOrUndefined (UserPoolTagsType), "AdminCreateUserConfig" :: NullOrUndefined (AdminCreateUserConfigType), "Schema" :: NullOrUndefined (SchemaAttributesListType), "UserPoolAddOns" :: NullOrUndefined (UserPoolAddOnsType) }) -> CreateUserPoolRequest
+newCreateUserPoolRequest' :: UserPoolNameType -> ({ "PoolName" :: UserPoolNameType, "Policies" :: Maybe (UserPoolPolicyType), "LambdaConfig" :: Maybe (LambdaConfigType), "AutoVerifiedAttributes" :: Maybe (VerifiedAttributesListType), "AliasAttributes" :: Maybe (AliasAttributesListType), "UsernameAttributes" :: Maybe (UsernameAttributesListType), "SmsVerificationMessage" :: Maybe (SmsVerificationMessageType), "EmailVerificationMessage" :: Maybe (EmailVerificationMessageType), "EmailVerificationSubject" :: Maybe (EmailVerificationSubjectType), "VerificationMessageTemplate" :: Maybe (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "MfaConfiguration" :: Maybe (UserPoolMfaType), "DeviceConfiguration" :: Maybe (DeviceConfigurationType), "EmailConfiguration" :: Maybe (EmailConfigurationType), "SmsConfiguration" :: Maybe (SmsConfigurationType), "UserPoolTags" :: Maybe (UserPoolTagsType), "AdminCreateUserConfig" :: Maybe (AdminCreateUserConfigType), "Schema" :: Maybe (SchemaAttributesListType), "UserPoolAddOns" :: Maybe (UserPoolAddOnsType) } -> { "PoolName" :: UserPoolNameType, "Policies" :: Maybe (UserPoolPolicyType), "LambdaConfig" :: Maybe (LambdaConfigType), "AutoVerifiedAttributes" :: Maybe (VerifiedAttributesListType), "AliasAttributes" :: Maybe (AliasAttributesListType), "UsernameAttributes" :: Maybe (UsernameAttributesListType), "SmsVerificationMessage" :: Maybe (SmsVerificationMessageType), "EmailVerificationMessage" :: Maybe (EmailVerificationMessageType), "EmailVerificationSubject" :: Maybe (EmailVerificationSubjectType), "VerificationMessageTemplate" :: Maybe (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "MfaConfiguration" :: Maybe (UserPoolMfaType), "DeviceConfiguration" :: Maybe (DeviceConfigurationType), "EmailConfiguration" :: Maybe (EmailConfigurationType), "SmsConfiguration" :: Maybe (SmsConfigurationType), "UserPoolTags" :: Maybe (UserPoolTagsType), "AdminCreateUserConfig" :: Maybe (AdminCreateUserConfigType), "Schema" :: Maybe (SchemaAttributesListType), "UserPoolAddOns" :: Maybe (UserPoolAddOnsType) }) -> CreateUserPoolRequest
 ```
 
 Constructs CreateUserPoolRequest's fields from required parameters
@@ -3324,7 +3324,7 @@ Constructs CreateUserPoolRequest's fields from required parameters
 
 ``` purescript
 newtype CreateUserPoolResponse
-  = CreateUserPoolResponse { "UserPool" :: NullOrUndefined (UserPoolType) }
+  = CreateUserPoolResponse { "UserPool" :: Maybe (UserPoolType) }
 ```
 
 <p>Represents the response from the server for the request to create a user pool.</p>
@@ -3349,7 +3349,7 @@ Constructs CreateUserPoolResponse from required parameters
 #### `newCreateUserPoolResponse'`
 
 ``` purescript
-newCreateUserPoolResponse' :: ({ "UserPool" :: NullOrUndefined (UserPoolType) } -> { "UserPool" :: NullOrUndefined (UserPoolType) }) -> CreateUserPoolResponse
+newCreateUserPoolResponse' :: ({ "UserPool" :: Maybe (UserPoolType) } -> { "UserPool" :: Maybe (UserPoolType) }) -> CreateUserPoolResponse
 ```
 
 Constructs CreateUserPoolResponse's fields from required parameters
@@ -3880,7 +3880,7 @@ Constructs DescribeResourceServerResponse's fields from required parameters
 
 ``` purescript
 newtype DescribeRiskConfigurationRequest
-  = DescribeRiskConfigurationRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType) }
+  = DescribeRiskConfigurationRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType) }
 ```
 
 ##### Instances
@@ -3903,7 +3903,7 @@ Constructs DescribeRiskConfigurationRequest from required parameters
 #### `newDescribeRiskConfigurationRequest'`
 
 ``` purescript
-newDescribeRiskConfigurationRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType) }) -> DescribeRiskConfigurationRequest
+newDescribeRiskConfigurationRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType) }) -> DescribeRiskConfigurationRequest
 ```
 
 Constructs DescribeRiskConfigurationRequest's fields from required parameters
@@ -3978,7 +3978,7 @@ Constructs DescribeUserImportJobRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeUserImportJobResponse
-  = DescribeUserImportJobResponse { "UserImportJob" :: NullOrUndefined (UserImportJobType) }
+  = DescribeUserImportJobResponse { "UserImportJob" :: Maybe (UserImportJobType) }
 ```
 
 <p>Represents the response from the server to the request to describe the user import job.</p>
@@ -4003,7 +4003,7 @@ Constructs DescribeUserImportJobResponse from required parameters
 #### `newDescribeUserImportJobResponse'`
 
 ``` purescript
-newDescribeUserImportJobResponse' :: ({ "UserImportJob" :: NullOrUndefined (UserImportJobType) } -> { "UserImportJob" :: NullOrUndefined (UserImportJobType) }) -> DescribeUserImportJobResponse
+newDescribeUserImportJobResponse' :: ({ "UserImportJob" :: Maybe (UserImportJobType) } -> { "UserImportJob" :: Maybe (UserImportJobType) }) -> DescribeUserImportJobResponse
 ```
 
 Constructs DescribeUserImportJobResponse's fields from required parameters
@@ -4046,7 +4046,7 @@ Constructs DescribeUserPoolClientRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeUserPoolClientResponse
-  = DescribeUserPoolClientResponse { "UserPoolClient" :: NullOrUndefined (UserPoolClientType) }
+  = DescribeUserPoolClientResponse { "UserPoolClient" :: Maybe (UserPoolClientType) }
 ```
 
 <p>Represents the response from the server from a request to describe the user pool client.</p>
@@ -4071,7 +4071,7 @@ Constructs DescribeUserPoolClientResponse from required parameters
 #### `newDescribeUserPoolClientResponse'`
 
 ``` purescript
-newDescribeUserPoolClientResponse' :: ({ "UserPoolClient" :: NullOrUndefined (UserPoolClientType) } -> { "UserPoolClient" :: NullOrUndefined (UserPoolClientType) }) -> DescribeUserPoolClientResponse
+newDescribeUserPoolClientResponse' :: ({ "UserPoolClient" :: Maybe (UserPoolClientType) } -> { "UserPoolClient" :: Maybe (UserPoolClientType) }) -> DescribeUserPoolClientResponse
 ```
 
 Constructs DescribeUserPoolClientResponse's fields from required parameters
@@ -4112,7 +4112,7 @@ Constructs DescribeUserPoolDomainRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeUserPoolDomainResponse
-  = DescribeUserPoolDomainResponse { "DomainDescription" :: NullOrUndefined (DomainDescriptionType) }
+  = DescribeUserPoolDomainResponse { "DomainDescription" :: Maybe (DomainDescriptionType) }
 ```
 
 ##### Instances
@@ -4135,7 +4135,7 @@ Constructs DescribeUserPoolDomainResponse from required parameters
 #### `newDescribeUserPoolDomainResponse'`
 
 ``` purescript
-newDescribeUserPoolDomainResponse' :: ({ "DomainDescription" :: NullOrUndefined (DomainDescriptionType) } -> { "DomainDescription" :: NullOrUndefined (DomainDescriptionType) }) -> DescribeUserPoolDomainResponse
+newDescribeUserPoolDomainResponse' :: ({ "DomainDescription" :: Maybe (DomainDescriptionType) } -> { "DomainDescription" :: Maybe (DomainDescriptionType) }) -> DescribeUserPoolDomainResponse
 ```
 
 Constructs DescribeUserPoolDomainResponse's fields from required parameters
@@ -4178,7 +4178,7 @@ Constructs DescribeUserPoolRequest's fields from required parameters
 
 ``` purescript
 newtype DescribeUserPoolResponse
-  = DescribeUserPoolResponse { "UserPool" :: NullOrUndefined (UserPoolType) }
+  = DescribeUserPoolResponse { "UserPool" :: Maybe (UserPoolType) }
 ```
 
 <p>Represents the response to describe the user pool.</p>
@@ -4203,7 +4203,7 @@ Constructs DescribeUserPoolResponse from required parameters
 #### `newDescribeUserPoolResponse'`
 
 ``` purescript
-newDescribeUserPoolResponse' :: ({ "UserPool" :: NullOrUndefined (UserPoolType) } -> { "UserPool" :: NullOrUndefined (UserPoolType) }) -> DescribeUserPoolResponse
+newDescribeUserPoolResponse' :: ({ "UserPool" :: Maybe (UserPoolType) } -> { "UserPool" :: Maybe (UserPoolType) }) -> DescribeUserPoolResponse
 ```
 
 Constructs DescribeUserPoolResponse's fields from required parameters
@@ -4228,7 +4228,7 @@ Encode DescriptionType
 
 ``` purescript
 newtype DeviceConfigurationType
-  = DeviceConfigurationType { "ChallengeRequiredOnNewDevice" :: NullOrUndefined (BooleanType), "DeviceOnlyRememberedOnUserPrompt" :: NullOrUndefined (BooleanType) }
+  = DeviceConfigurationType { "ChallengeRequiredOnNewDevice" :: Maybe (BooleanType), "DeviceOnlyRememberedOnUserPrompt" :: Maybe (BooleanType) }
 ```
 
 <p>The configuration for the user pool's device tracking.</p>
@@ -4253,7 +4253,7 @@ Constructs DeviceConfigurationType from required parameters
 #### `newDeviceConfigurationType'`
 
 ``` purescript
-newDeviceConfigurationType' :: ({ "ChallengeRequiredOnNewDevice" :: NullOrUndefined (BooleanType), "DeviceOnlyRememberedOnUserPrompt" :: NullOrUndefined (BooleanType) } -> { "ChallengeRequiredOnNewDevice" :: NullOrUndefined (BooleanType), "DeviceOnlyRememberedOnUserPrompt" :: NullOrUndefined (BooleanType) }) -> DeviceConfigurationType
+newDeviceConfigurationType' :: ({ "ChallengeRequiredOnNewDevice" :: Maybe (BooleanType), "DeviceOnlyRememberedOnUserPrompt" :: Maybe (BooleanType) } -> { "ChallengeRequiredOnNewDevice" :: Maybe (BooleanType), "DeviceOnlyRememberedOnUserPrompt" :: Maybe (BooleanType) }) -> DeviceConfigurationType
 ```
 
 Constructs DeviceConfigurationType's fields from required parameters
@@ -4326,7 +4326,7 @@ Encode DeviceRememberedStatusType
 
 ``` purescript
 newtype DeviceSecretVerifierConfigType
-  = DeviceSecretVerifierConfigType { "PasswordVerifier" :: NullOrUndefined (StringType), "Salt" :: NullOrUndefined (StringType) }
+  = DeviceSecretVerifierConfigType { "PasswordVerifier" :: Maybe (StringType), "Salt" :: Maybe (StringType) }
 ```
 
 <p>The device verifier against which it will be authenticated.</p>
@@ -4351,7 +4351,7 @@ Constructs DeviceSecretVerifierConfigType from required parameters
 #### `newDeviceSecretVerifierConfigType'`
 
 ``` purescript
-newDeviceSecretVerifierConfigType' :: ({ "PasswordVerifier" :: NullOrUndefined (StringType), "Salt" :: NullOrUndefined (StringType) } -> { "PasswordVerifier" :: NullOrUndefined (StringType), "Salt" :: NullOrUndefined (StringType) }) -> DeviceSecretVerifierConfigType
+newDeviceSecretVerifierConfigType' :: ({ "PasswordVerifier" :: Maybe (StringType), "Salt" :: Maybe (StringType) } -> { "PasswordVerifier" :: Maybe (StringType), "Salt" :: Maybe (StringType) }) -> DeviceSecretVerifierConfigType
 ```
 
 Constructs DeviceSecretVerifierConfigType's fields from required parameters
@@ -4360,7 +4360,7 @@ Constructs DeviceSecretVerifierConfigType's fields from required parameters
 
 ``` purescript
 newtype DeviceType
-  = DeviceType { "DeviceKey" :: NullOrUndefined (DeviceKeyType), "DeviceAttributes" :: NullOrUndefined (AttributeListType), "DeviceCreateDate" :: NullOrUndefined (DateType), "DeviceLastModifiedDate" :: NullOrUndefined (DateType), "DeviceLastAuthenticatedDate" :: NullOrUndefined (DateType) }
+  = DeviceType { "DeviceKey" :: Maybe (DeviceKeyType), "DeviceAttributes" :: Maybe (AttributeListType), "DeviceCreateDate" :: Maybe (DateType), "DeviceLastModifiedDate" :: Maybe (DateType), "DeviceLastAuthenticatedDate" :: Maybe (DateType) }
 ```
 
 <p>The device type.</p>
@@ -4385,7 +4385,7 @@ Constructs DeviceType from required parameters
 #### `newDeviceType'`
 
 ``` purescript
-newDeviceType' :: ({ "DeviceKey" :: NullOrUndefined (DeviceKeyType), "DeviceAttributes" :: NullOrUndefined (AttributeListType), "DeviceCreateDate" :: NullOrUndefined (DateType), "DeviceLastModifiedDate" :: NullOrUndefined (DateType), "DeviceLastAuthenticatedDate" :: NullOrUndefined (DateType) } -> { "DeviceKey" :: NullOrUndefined (DeviceKeyType), "DeviceAttributes" :: NullOrUndefined (AttributeListType), "DeviceCreateDate" :: NullOrUndefined (DateType), "DeviceLastModifiedDate" :: NullOrUndefined (DateType), "DeviceLastAuthenticatedDate" :: NullOrUndefined (DateType) }) -> DeviceType
+newDeviceType' :: ({ "DeviceKey" :: Maybe (DeviceKeyType), "DeviceAttributes" :: Maybe (AttributeListType), "DeviceCreateDate" :: Maybe (DateType), "DeviceLastModifiedDate" :: Maybe (DateType), "DeviceLastAuthenticatedDate" :: Maybe (DateType) } -> { "DeviceKey" :: Maybe (DeviceKeyType), "DeviceAttributes" :: Maybe (AttributeListType), "DeviceCreateDate" :: Maybe (DateType), "DeviceLastModifiedDate" :: Maybe (DateType), "DeviceLastAuthenticatedDate" :: Maybe (DateType) }) -> DeviceType
 ```
 
 Constructs DeviceType's fields from required parameters
@@ -4394,7 +4394,7 @@ Constructs DeviceType's fields from required parameters
 
 ``` purescript
 newtype DomainDescriptionType
-  = DomainDescriptionType { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "AWSAccountId" :: NullOrUndefined (AWSAccountIdType), "Domain" :: NullOrUndefined (DomainType), "S3Bucket" :: NullOrUndefined (S3BucketType), "CloudFrontDistribution" :: NullOrUndefined (ArnType), "Version" :: NullOrUndefined (DomainVersionType), "Status" :: NullOrUndefined (DomainStatusType) }
+  = DomainDescriptionType { "UserPoolId" :: Maybe (UserPoolIdType), "AWSAccountId" :: Maybe (AWSAccountIdType), "Domain" :: Maybe (DomainType), "S3Bucket" :: Maybe (S3BucketType), "CloudFrontDistribution" :: Maybe (ArnType), "Version" :: Maybe (DomainVersionType), "Status" :: Maybe (DomainStatusType) }
 ```
 
 <p>A container for information about a domain.</p>
@@ -4419,7 +4419,7 @@ Constructs DomainDescriptionType from required parameters
 #### `newDomainDescriptionType'`
 
 ``` purescript
-newDomainDescriptionType' :: ({ "UserPoolId" :: NullOrUndefined (UserPoolIdType), "AWSAccountId" :: NullOrUndefined (AWSAccountIdType), "Domain" :: NullOrUndefined (DomainType), "S3Bucket" :: NullOrUndefined (S3BucketType), "CloudFrontDistribution" :: NullOrUndefined (ArnType), "Version" :: NullOrUndefined (DomainVersionType), "Status" :: NullOrUndefined (DomainStatusType) } -> { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "AWSAccountId" :: NullOrUndefined (AWSAccountIdType), "Domain" :: NullOrUndefined (DomainType), "S3Bucket" :: NullOrUndefined (S3BucketType), "CloudFrontDistribution" :: NullOrUndefined (ArnType), "Version" :: NullOrUndefined (DomainVersionType), "Status" :: NullOrUndefined (DomainStatusType) }) -> DomainDescriptionType
+newDomainDescriptionType' :: ({ "UserPoolId" :: Maybe (UserPoolIdType), "AWSAccountId" :: Maybe (AWSAccountIdType), "Domain" :: Maybe (DomainType), "S3Bucket" :: Maybe (S3BucketType), "CloudFrontDistribution" :: Maybe (ArnType), "Version" :: Maybe (DomainVersionType), "Status" :: Maybe (DomainStatusType) } -> { "UserPoolId" :: Maybe (UserPoolIdType), "AWSAccountId" :: Maybe (AWSAccountIdType), "Domain" :: Maybe (DomainType), "S3Bucket" :: Maybe (S3BucketType), "CloudFrontDistribution" :: Maybe (ArnType), "Version" :: Maybe (DomainVersionType), "Status" :: Maybe (DomainStatusType) }) -> DomainDescriptionType
 ```
 
 Constructs DomainDescriptionType's fields from required parameters
@@ -4476,7 +4476,7 @@ Encode DomainVersionType
 
 ``` purescript
 newtype DuplicateProviderException
-  = DuplicateProviderException { message :: NullOrUndefined (MessageType) }
+  = DuplicateProviderException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the provider is already supported by the user pool.</p>
@@ -4501,7 +4501,7 @@ Constructs DuplicateProviderException from required parameters
 #### `newDuplicateProviderException'`
 
 ``` purescript
-newDuplicateProviderException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> DuplicateProviderException
+newDuplicateProviderException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> DuplicateProviderException
 ```
 
 Constructs DuplicateProviderException's fields from required parameters
@@ -4526,7 +4526,7 @@ Encode EmailAddressType
 
 ``` purescript
 newtype EmailConfigurationType
-  = EmailConfigurationType { "SourceArn" :: NullOrUndefined (ArnType), "ReplyToEmailAddress" :: NullOrUndefined (EmailAddressType) }
+  = EmailConfigurationType { "SourceArn" :: Maybe (ArnType), "ReplyToEmailAddress" :: Maybe (EmailAddressType) }
 ```
 
 <p>The email configuration type.</p>
@@ -4551,7 +4551,7 @@ Constructs EmailConfigurationType from required parameters
 #### `newEmailConfigurationType'`
 
 ``` purescript
-newEmailConfigurationType' :: ({ "SourceArn" :: NullOrUndefined (ArnType), "ReplyToEmailAddress" :: NullOrUndefined (EmailAddressType) } -> { "SourceArn" :: NullOrUndefined (ArnType), "ReplyToEmailAddress" :: NullOrUndefined (EmailAddressType) }) -> EmailConfigurationType
+newEmailConfigurationType' :: ({ "SourceArn" :: Maybe (ArnType), "ReplyToEmailAddress" :: Maybe (EmailAddressType) } -> { "SourceArn" :: Maybe (ArnType), "ReplyToEmailAddress" :: Maybe (EmailAddressType) }) -> EmailConfigurationType
 ```
 
 Constructs EmailConfigurationType's fields from required parameters
@@ -4656,7 +4656,7 @@ Encode EmailVerificationSubjectType
 
 ``` purescript
 newtype EnableSoftwareTokenMFAException
-  = EnableSoftwareTokenMFAException { message :: NullOrUndefined (MessageType) }
+  = EnableSoftwareTokenMFAException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when there is a code mismatch and the service fails to configure the software token TOTP multi-factor authentication (MFA).</p>
@@ -4681,7 +4681,7 @@ Constructs EnableSoftwareTokenMFAException from required parameters
 #### `newEnableSoftwareTokenMFAException'`
 
 ``` purescript
-newEnableSoftwareTokenMFAException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> EnableSoftwareTokenMFAException
+newEnableSoftwareTokenMFAException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> EnableSoftwareTokenMFAException
 ```
 
 Constructs EnableSoftwareTokenMFAException's fields from required parameters
@@ -4690,7 +4690,7 @@ Constructs EnableSoftwareTokenMFAException's fields from required parameters
 
 ``` purescript
 newtype EventContextDataType
-  = EventContextDataType { "IpAddress" :: NullOrUndefined (StringType), "DeviceName" :: NullOrUndefined (StringType), "Timezone" :: NullOrUndefined (StringType), "City" :: NullOrUndefined (StringType), "Country" :: NullOrUndefined (StringType) }
+  = EventContextDataType { "IpAddress" :: Maybe (StringType), "DeviceName" :: Maybe (StringType), "Timezone" :: Maybe (StringType), "City" :: Maybe (StringType), "Country" :: Maybe (StringType) }
 ```
 
 <p>Specifies the user context data captured at the time of an event request.</p>
@@ -4715,7 +4715,7 @@ Constructs EventContextDataType from required parameters
 #### `newEventContextDataType'`
 
 ``` purescript
-newEventContextDataType' :: ({ "IpAddress" :: NullOrUndefined (StringType), "DeviceName" :: NullOrUndefined (StringType), "Timezone" :: NullOrUndefined (StringType), "City" :: NullOrUndefined (StringType), "Country" :: NullOrUndefined (StringType) } -> { "IpAddress" :: NullOrUndefined (StringType), "DeviceName" :: NullOrUndefined (StringType), "Timezone" :: NullOrUndefined (StringType), "City" :: NullOrUndefined (StringType), "Country" :: NullOrUndefined (StringType) }) -> EventContextDataType
+newEventContextDataType' :: ({ "IpAddress" :: Maybe (StringType), "DeviceName" :: Maybe (StringType), "Timezone" :: Maybe (StringType), "City" :: Maybe (StringType), "Country" :: Maybe (StringType) } -> { "IpAddress" :: Maybe (StringType), "DeviceName" :: Maybe (StringType), "Timezone" :: Maybe (StringType), "City" :: Maybe (StringType), "Country" :: Maybe (StringType) }) -> EventContextDataType
 ```
 
 Constructs EventContextDataType's fields from required parameters
@@ -4724,7 +4724,7 @@ Constructs EventContextDataType's fields from required parameters
 
 ``` purescript
 newtype EventFeedbackType
-  = EventFeedbackType { "FeedbackValue" :: FeedbackValueType, "Provider" :: StringType, "FeedbackDate" :: NullOrUndefined (DateType) }
+  = EventFeedbackType { "FeedbackValue" :: FeedbackValueType, "Provider" :: StringType, "FeedbackDate" :: Maybe (DateType) }
 ```
 
 <p>Specifies the event feedback type.</p>
@@ -4749,7 +4749,7 @@ Constructs EventFeedbackType from required parameters
 #### `newEventFeedbackType'`
 
 ``` purescript
-newEventFeedbackType' :: FeedbackValueType -> StringType -> ({ "FeedbackValue" :: FeedbackValueType, "Provider" :: StringType, "FeedbackDate" :: NullOrUndefined (DateType) } -> { "FeedbackValue" :: FeedbackValueType, "Provider" :: StringType, "FeedbackDate" :: NullOrUndefined (DateType) }) -> EventFeedbackType
+newEventFeedbackType' :: FeedbackValueType -> StringType -> ({ "FeedbackValue" :: FeedbackValueType, "Provider" :: StringType, "FeedbackDate" :: Maybe (DateType) } -> { "FeedbackValue" :: FeedbackValueType, "Provider" :: StringType, "FeedbackDate" :: Maybe (DateType) }) -> EventFeedbackType
 ```
 
 Constructs EventFeedbackType's fields from required parameters
@@ -4822,7 +4822,7 @@ Encode EventResponseType
 
 ``` purescript
 newtype EventRiskType
-  = EventRiskType { "RiskDecision" :: NullOrUndefined (RiskDecisionType), "RiskLevel" :: NullOrUndefined (RiskLevelType) }
+  = EventRiskType { "RiskDecision" :: Maybe (RiskDecisionType), "RiskLevel" :: Maybe (RiskLevelType) }
 ```
 
 <p>The event risk type.</p>
@@ -4847,7 +4847,7 @@ Constructs EventRiskType from required parameters
 #### `newEventRiskType'`
 
 ``` purescript
-newEventRiskType' :: ({ "RiskDecision" :: NullOrUndefined (RiskDecisionType), "RiskLevel" :: NullOrUndefined (RiskLevelType) } -> { "RiskDecision" :: NullOrUndefined (RiskDecisionType), "RiskLevel" :: NullOrUndefined (RiskLevelType) }) -> EventRiskType
+newEventRiskType' :: ({ "RiskDecision" :: Maybe (RiskDecisionType), "RiskLevel" :: Maybe (RiskLevelType) } -> { "RiskDecision" :: Maybe (RiskDecisionType), "RiskLevel" :: Maybe (RiskLevelType) }) -> EventRiskType
 ```
 
 Constructs EventRiskType's fields from required parameters
@@ -4872,7 +4872,7 @@ Encode EventType
 
 ``` purescript
 newtype ExpiredCodeException
-  = ExpiredCodeException { message :: NullOrUndefined (MessageType) }
+  = ExpiredCodeException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown if a code has expired.</p>
@@ -4897,7 +4897,7 @@ Constructs ExpiredCodeException from required parameters
 #### `newExpiredCodeException'`
 
 ``` purescript
-newExpiredCodeException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> ExpiredCodeException
+newExpiredCodeException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> ExpiredCodeException
 ```
 
 Constructs ExpiredCodeException's fields from required parameters
@@ -4970,7 +4970,7 @@ Encode ForceAliasCreation
 
 ``` purescript
 newtype ForgetDeviceRequest
-  = ForgetDeviceRequest { "AccessToken" :: NullOrUndefined (TokenModelType), "DeviceKey" :: DeviceKeyType }
+  = ForgetDeviceRequest { "AccessToken" :: Maybe (TokenModelType), "DeviceKey" :: DeviceKeyType }
 ```
 
 <p>Represents the request to forget the device.</p>
@@ -4995,7 +4995,7 @@ Constructs ForgetDeviceRequest from required parameters
 #### `newForgetDeviceRequest'`
 
 ``` purescript
-newForgetDeviceRequest' :: DeviceKeyType -> ({ "AccessToken" :: NullOrUndefined (TokenModelType), "DeviceKey" :: DeviceKeyType } -> { "AccessToken" :: NullOrUndefined (TokenModelType), "DeviceKey" :: DeviceKeyType }) -> ForgetDeviceRequest
+newForgetDeviceRequest' :: DeviceKeyType -> ({ "AccessToken" :: Maybe (TokenModelType), "DeviceKey" :: DeviceKeyType } -> { "AccessToken" :: Maybe (TokenModelType), "DeviceKey" :: DeviceKeyType }) -> ForgetDeviceRequest
 ```
 
 Constructs ForgetDeviceRequest's fields from required parameters
@@ -5004,7 +5004,7 @@ Constructs ForgetDeviceRequest's fields from required parameters
 
 ``` purescript
 newtype ForgotPasswordRequest
-  = ForgotPasswordRequest { "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "UserContextData" :: NullOrUndefined (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType) }
+  = ForgotPasswordRequest { "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "UserContextData" :: Maybe (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType) }
 ```
 
 <p>Represents the request to reset a user's password.</p>
@@ -5029,7 +5029,7 @@ Constructs ForgotPasswordRequest from required parameters
 #### `newForgotPasswordRequest'`
 
 ``` purescript
-newForgotPasswordRequest' :: ClientIdType -> UsernameType -> ({ "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "UserContextData" :: NullOrUndefined (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType) } -> { "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "UserContextData" :: NullOrUndefined (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType) }) -> ForgotPasswordRequest
+newForgotPasswordRequest' :: ClientIdType -> UsernameType -> ({ "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "UserContextData" :: Maybe (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType) } -> { "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "UserContextData" :: Maybe (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType) }) -> ForgotPasswordRequest
 ```
 
 Constructs ForgotPasswordRequest's fields from required parameters
@@ -5038,7 +5038,7 @@ Constructs ForgotPasswordRequest's fields from required parameters
 
 ``` purescript
 newtype ForgotPasswordResponse
-  = ForgotPasswordResponse { "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType) }
+  = ForgotPasswordResponse { "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType) }
 ```
 
 <p>Respresents the response from the server regarding the request to reset a password.</p>
@@ -5063,7 +5063,7 @@ Constructs ForgotPasswordResponse from required parameters
 #### `newForgotPasswordResponse'`
 
 ``` purescript
-newForgotPasswordResponse' :: ({ "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType) } -> { "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType) }) -> ForgotPasswordResponse
+newForgotPasswordResponse' :: ({ "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType) } -> { "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType) }) -> ForgotPasswordResponse
 ```
 
 Constructs ForgotPasswordResponse's fields from required parameters
@@ -5122,7 +5122,7 @@ Constructs GetCSVHeaderRequest's fields from required parameters
 
 ``` purescript
 newtype GetCSVHeaderResponse
-  = GetCSVHeaderResponse { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "CSVHeader" :: NullOrUndefined (ListOfStringTypes) }
+  = GetCSVHeaderResponse { "UserPoolId" :: Maybe (UserPoolIdType), "CSVHeader" :: Maybe (ListOfStringTypes) }
 ```
 
 <p>Represents the response from the server to the request to get the header information for the .csv file for the user import job.</p>
@@ -5147,7 +5147,7 @@ Constructs GetCSVHeaderResponse from required parameters
 #### `newGetCSVHeaderResponse'`
 
 ``` purescript
-newGetCSVHeaderResponse' :: ({ "UserPoolId" :: NullOrUndefined (UserPoolIdType), "CSVHeader" :: NullOrUndefined (ListOfStringTypes) } -> { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "CSVHeader" :: NullOrUndefined (ListOfStringTypes) }) -> GetCSVHeaderResponse
+newGetCSVHeaderResponse' :: ({ "UserPoolId" :: Maybe (UserPoolIdType), "CSVHeader" :: Maybe (ListOfStringTypes) } -> { "UserPoolId" :: Maybe (UserPoolIdType), "CSVHeader" :: Maybe (ListOfStringTypes) }) -> GetCSVHeaderResponse
 ```
 
 Constructs GetCSVHeaderResponse's fields from required parameters
@@ -5156,7 +5156,7 @@ Constructs GetCSVHeaderResponse's fields from required parameters
 
 ``` purescript
 newtype GetDeviceRequest
-  = GetDeviceRequest { "DeviceKey" :: DeviceKeyType, "AccessToken" :: NullOrUndefined (TokenModelType) }
+  = GetDeviceRequest { "DeviceKey" :: DeviceKeyType, "AccessToken" :: Maybe (TokenModelType) }
 ```
 
 <p>Represents the request to get the device.</p>
@@ -5181,7 +5181,7 @@ Constructs GetDeviceRequest from required parameters
 #### `newGetDeviceRequest'`
 
 ``` purescript
-newGetDeviceRequest' :: DeviceKeyType -> ({ "DeviceKey" :: DeviceKeyType, "AccessToken" :: NullOrUndefined (TokenModelType) } -> { "DeviceKey" :: DeviceKeyType, "AccessToken" :: NullOrUndefined (TokenModelType) }) -> GetDeviceRequest
+newGetDeviceRequest' :: DeviceKeyType -> ({ "DeviceKey" :: DeviceKeyType, "AccessToken" :: Maybe (TokenModelType) } -> { "DeviceKey" :: DeviceKeyType, "AccessToken" :: Maybe (TokenModelType) }) -> GetDeviceRequest
 ```
 
 Constructs GetDeviceRequest's fields from required parameters
@@ -5256,7 +5256,7 @@ Constructs GetGroupRequest's fields from required parameters
 
 ``` purescript
 newtype GetGroupResponse
-  = GetGroupResponse { "Group" :: NullOrUndefined (GroupType) }
+  = GetGroupResponse { "Group" :: Maybe (GroupType) }
 ```
 
 ##### Instances
@@ -5279,7 +5279,7 @@ Constructs GetGroupResponse from required parameters
 #### `newGetGroupResponse'`
 
 ``` purescript
-newGetGroupResponse' :: ({ "Group" :: NullOrUndefined (GroupType) } -> { "Group" :: NullOrUndefined (GroupType) }) -> GetGroupResponse
+newGetGroupResponse' :: ({ "Group" :: Maybe (GroupType) } -> { "Group" :: Maybe (GroupType) }) -> GetGroupResponse
 ```
 
 Constructs GetGroupResponse's fields from required parameters
@@ -5386,7 +5386,7 @@ Constructs GetSigningCertificateRequest's fields from required parameters
 
 ``` purescript
 newtype GetSigningCertificateResponse
-  = GetSigningCertificateResponse { "Certificate" :: NullOrUndefined (StringType) }
+  = GetSigningCertificateResponse { "Certificate" :: Maybe (StringType) }
 ```
 
 <p>Response from Cognito for a signing certificate request.</p>
@@ -5411,7 +5411,7 @@ Constructs GetSigningCertificateResponse from required parameters
 #### `newGetSigningCertificateResponse'`
 
 ``` purescript
-newGetSigningCertificateResponse' :: ({ "Certificate" :: NullOrUndefined (StringType) } -> { "Certificate" :: NullOrUndefined (StringType) }) -> GetSigningCertificateResponse
+newGetSigningCertificateResponse' :: ({ "Certificate" :: Maybe (StringType) } -> { "Certificate" :: Maybe (StringType) }) -> GetSigningCertificateResponse
 ```
 
 Constructs GetSigningCertificateResponse's fields from required parameters
@@ -5420,7 +5420,7 @@ Constructs GetSigningCertificateResponse's fields from required parameters
 
 ``` purescript
 newtype GetUICustomizationRequest
-  = GetUICustomizationRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType) }
+  = GetUICustomizationRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType) }
 ```
 
 ##### Instances
@@ -5443,7 +5443,7 @@ Constructs GetUICustomizationRequest from required parameters
 #### `newGetUICustomizationRequest'`
 
 ``` purescript
-newGetUICustomizationRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType) }) -> GetUICustomizationRequest
+newGetUICustomizationRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType) }) -> GetUICustomizationRequest
 ```
 
 Constructs GetUICustomizationRequest's fields from required parameters
@@ -5518,7 +5518,7 @@ Constructs GetUserAttributeVerificationCodeRequest's fields from required parame
 
 ``` purescript
 newtype GetUserAttributeVerificationCodeResponse
-  = GetUserAttributeVerificationCodeResponse { "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType) }
+  = GetUserAttributeVerificationCodeResponse { "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType) }
 ```
 
 <p>The verification code response returned by the server response to get the user attribute verification code.</p>
@@ -5543,7 +5543,7 @@ Constructs GetUserAttributeVerificationCodeResponse from required parameters
 #### `newGetUserAttributeVerificationCodeResponse'`
 
 ``` purescript
-newGetUserAttributeVerificationCodeResponse' :: ({ "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType) } -> { "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType) }) -> GetUserAttributeVerificationCodeResponse
+newGetUserAttributeVerificationCodeResponse' :: ({ "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType) } -> { "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType) }) -> GetUserAttributeVerificationCodeResponse
 ```
 
 Constructs GetUserAttributeVerificationCodeResponse's fields from required parameters
@@ -5584,7 +5584,7 @@ Constructs GetUserPoolMfaConfigRequest's fields from required parameters
 
 ``` purescript
 newtype GetUserPoolMfaConfigResponse
-  = GetUserPoolMfaConfigResponse { "SmsMfaConfiguration" :: NullOrUndefined (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: NullOrUndefined (SoftwareTokenMfaConfigType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType) }
+  = GetUserPoolMfaConfigResponse { "SmsMfaConfiguration" :: Maybe (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: Maybe (SoftwareTokenMfaConfigType), "MfaConfiguration" :: Maybe (UserPoolMfaType) }
 ```
 
 ##### Instances
@@ -5607,7 +5607,7 @@ Constructs GetUserPoolMfaConfigResponse from required parameters
 #### `newGetUserPoolMfaConfigResponse'`
 
 ``` purescript
-newGetUserPoolMfaConfigResponse' :: ({ "SmsMfaConfiguration" :: NullOrUndefined (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: NullOrUndefined (SoftwareTokenMfaConfigType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType) } -> { "SmsMfaConfiguration" :: NullOrUndefined (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: NullOrUndefined (SoftwareTokenMfaConfigType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType) }) -> GetUserPoolMfaConfigResponse
+newGetUserPoolMfaConfigResponse' :: ({ "SmsMfaConfiguration" :: Maybe (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: Maybe (SoftwareTokenMfaConfigType), "MfaConfiguration" :: Maybe (UserPoolMfaType) } -> { "SmsMfaConfiguration" :: Maybe (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: Maybe (SoftwareTokenMfaConfigType), "MfaConfiguration" :: Maybe (UserPoolMfaType) }) -> GetUserPoolMfaConfigResponse
 ```
 
 Constructs GetUserPoolMfaConfigResponse's fields from required parameters
@@ -5650,7 +5650,7 @@ Constructs GetUserRequest's fields from required parameters
 
 ``` purescript
 newtype GetUserResponse
-  = GetUserResponse { "Username" :: UsernameType, "UserAttributes" :: AttributeListType, "MFAOptions" :: NullOrUndefined (MFAOptionListType), "PreferredMfaSetting" :: NullOrUndefined (StringType), "UserMFASettingList" :: NullOrUndefined (UserMFASettingListType) }
+  = GetUserResponse { "Username" :: UsernameType, "UserAttributes" :: AttributeListType, "MFAOptions" :: Maybe (MFAOptionListType), "PreferredMfaSetting" :: Maybe (StringType), "UserMFASettingList" :: Maybe (UserMFASettingListType) }
 ```
 
 <p>Represents the response from the server from the request to get information about the user.</p>
@@ -5675,7 +5675,7 @@ Constructs GetUserResponse from required parameters
 #### `newGetUserResponse'`
 
 ``` purescript
-newGetUserResponse' :: AttributeListType -> UsernameType -> ({ "Username" :: UsernameType, "UserAttributes" :: AttributeListType, "MFAOptions" :: NullOrUndefined (MFAOptionListType), "PreferredMfaSetting" :: NullOrUndefined (StringType), "UserMFASettingList" :: NullOrUndefined (UserMFASettingListType) } -> { "Username" :: UsernameType, "UserAttributes" :: AttributeListType, "MFAOptions" :: NullOrUndefined (MFAOptionListType), "PreferredMfaSetting" :: NullOrUndefined (StringType), "UserMFASettingList" :: NullOrUndefined (UserMFASettingListType) }) -> GetUserResponse
+newGetUserResponse' :: AttributeListType -> UsernameType -> ({ "Username" :: UsernameType, "UserAttributes" :: AttributeListType, "MFAOptions" :: Maybe (MFAOptionListType), "PreferredMfaSetting" :: Maybe (StringType), "UserMFASettingList" :: Maybe (UserMFASettingListType) } -> { "Username" :: UsernameType, "UserAttributes" :: AttributeListType, "MFAOptions" :: Maybe (MFAOptionListType), "PreferredMfaSetting" :: Maybe (StringType), "UserMFASettingList" :: Maybe (UserMFASettingListType) }) -> GetUserResponse
 ```
 
 Constructs GetUserResponse's fields from required parameters
@@ -5736,7 +5736,7 @@ Encode GlobalSignOutResponse
 
 ``` purescript
 newtype GroupExistsException
-  = GroupExistsException { message :: NullOrUndefined (MessageType) }
+  = GroupExistsException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when Amazon Cognito encounters a group that already exists in the user pool.</p>
@@ -5761,7 +5761,7 @@ Constructs GroupExistsException from required parameters
 #### `newGroupExistsException'`
 
 ``` purescript
-newGroupExistsException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> GroupExistsException
+newGroupExistsException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> GroupExistsException
 ```
 
 Constructs GroupExistsException's fields from required parameters
@@ -5802,7 +5802,7 @@ Encode GroupNameType
 
 ``` purescript
 newtype GroupType
-  = GroupType { "GroupName" :: NullOrUndefined (GroupNameType), "UserPoolId" :: NullOrUndefined (UserPoolIdType), "Description" :: NullOrUndefined (DescriptionType), "RoleArn" :: NullOrUndefined (ArnType), "Precedence" :: NullOrUndefined (PrecedenceType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) }
+  = GroupType { "GroupName" :: Maybe (GroupNameType), "UserPoolId" :: Maybe (UserPoolIdType), "Description" :: Maybe (DescriptionType), "RoleArn" :: Maybe (ArnType), "Precedence" :: Maybe (PrecedenceType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) }
 ```
 
 <p>The group type.</p>
@@ -5827,7 +5827,7 @@ Constructs GroupType from required parameters
 #### `newGroupType'`
 
 ``` purescript
-newGroupType' :: ({ "GroupName" :: NullOrUndefined (GroupNameType), "UserPoolId" :: NullOrUndefined (UserPoolIdType), "Description" :: NullOrUndefined (DescriptionType), "RoleArn" :: NullOrUndefined (ArnType), "Precedence" :: NullOrUndefined (PrecedenceType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) } -> { "GroupName" :: NullOrUndefined (GroupNameType), "UserPoolId" :: NullOrUndefined (UserPoolIdType), "Description" :: NullOrUndefined (DescriptionType), "RoleArn" :: NullOrUndefined (ArnType), "Precedence" :: NullOrUndefined (PrecedenceType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) }) -> GroupType
+newGroupType' :: ({ "GroupName" :: Maybe (GroupNameType), "UserPoolId" :: Maybe (UserPoolIdType), "Description" :: Maybe (DescriptionType), "RoleArn" :: Maybe (ArnType), "Precedence" :: Maybe (PrecedenceType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) } -> { "GroupName" :: Maybe (GroupNameType), "UserPoolId" :: Maybe (UserPoolIdType), "Description" :: Maybe (DescriptionType), "RoleArn" :: Maybe (ArnType), "Precedence" :: Maybe (PrecedenceType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) }) -> GroupType
 ```
 
 Constructs GroupType's fields from required parameters
@@ -5852,7 +5852,7 @@ Encode HexStringType
 
 ``` purescript
 newtype HttpHeader
-  = HttpHeader { headerName :: NullOrUndefined (StringType), headerValue :: NullOrUndefined (StringType) }
+  = HttpHeader { headerName :: Maybe (StringType), headerValue :: Maybe (StringType) }
 ```
 
 <p>The HTTP header.</p>
@@ -5877,7 +5877,7 @@ Constructs HttpHeader from required parameters
 #### `newHttpHeader'`
 
 ``` purescript
-newHttpHeader' :: ({ headerName :: NullOrUndefined (StringType), headerValue :: NullOrUndefined (StringType) } -> { headerName :: NullOrUndefined (StringType), headerValue :: NullOrUndefined (StringType) }) -> HttpHeader
+newHttpHeader' :: ({ headerName :: Maybe (StringType), headerValue :: Maybe (StringType) } -> { headerName :: Maybe (StringType), headerValue :: Maybe (StringType) }) -> HttpHeader
 ```
 
 Constructs HttpHeader's fields from required parameters
@@ -5902,7 +5902,7 @@ Encode HttpHeaderList
 
 ``` purescript
 newtype IdentityProviderType
-  = IdentityProviderType { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ProviderName" :: NullOrUndefined (ProviderNameType), "ProviderType" :: NullOrUndefined (IdentityProviderTypeType), "ProviderDetails" :: NullOrUndefined (ProviderDetailsType), "AttributeMapping" :: NullOrUndefined (AttributeMappingType), "IdpIdentifiers" :: NullOrUndefined (IdpIdentifiersListType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) }
+  = IdentityProviderType { "UserPoolId" :: Maybe (UserPoolIdType), "ProviderName" :: Maybe (ProviderNameType), "ProviderType" :: Maybe (IdentityProviderTypeType), "ProviderDetails" :: Maybe (ProviderDetailsType), "AttributeMapping" :: Maybe (AttributeMappingType), "IdpIdentifiers" :: Maybe (IdpIdentifiersListType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) }
 ```
 
 <p>A container for information about an identity provider.</p>
@@ -5927,7 +5927,7 @@ Constructs IdentityProviderType from required parameters
 #### `newIdentityProviderType'`
 
 ``` purescript
-newIdentityProviderType' :: ({ "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ProviderName" :: NullOrUndefined (ProviderNameType), "ProviderType" :: NullOrUndefined (IdentityProviderTypeType), "ProviderDetails" :: NullOrUndefined (ProviderDetailsType), "AttributeMapping" :: NullOrUndefined (AttributeMappingType), "IdpIdentifiers" :: NullOrUndefined (IdpIdentifiersListType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) } -> { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ProviderName" :: NullOrUndefined (ProviderNameType), "ProviderType" :: NullOrUndefined (IdentityProviderTypeType), "ProviderDetails" :: NullOrUndefined (ProviderDetailsType), "AttributeMapping" :: NullOrUndefined (AttributeMappingType), "IdpIdentifiers" :: NullOrUndefined (IdpIdentifiersListType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) }) -> IdentityProviderType
+newIdentityProviderType' :: ({ "UserPoolId" :: Maybe (UserPoolIdType), "ProviderName" :: Maybe (ProviderNameType), "ProviderType" :: Maybe (IdentityProviderTypeType), "ProviderDetails" :: Maybe (ProviderDetailsType), "AttributeMapping" :: Maybe (AttributeMappingType), "IdpIdentifiers" :: Maybe (IdpIdentifiersListType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) } -> { "UserPoolId" :: Maybe (UserPoolIdType), "ProviderName" :: Maybe (ProviderNameType), "ProviderType" :: Maybe (IdentityProviderTypeType), "ProviderDetails" :: Maybe (ProviderDetailsType), "AttributeMapping" :: Maybe (AttributeMappingType), "IdpIdentifiers" :: Maybe (IdpIdentifiersListType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) }) -> IdentityProviderType
 ```
 
 Constructs IdentityProviderType's fields from required parameters
@@ -6016,7 +6016,7 @@ Encode ImageUrlType
 
 ``` purescript
 newtype InitiateAuthRequest
-  = InitiateAuthRequest { "AuthFlow" :: AuthFlowType, "AuthParameters" :: NullOrUndefined (AuthParametersType), "ClientMetadata" :: NullOrUndefined (ClientMetadataType), "ClientId" :: ClientIdType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) }
+  = InitiateAuthRequest { "AuthFlow" :: AuthFlowType, "AuthParameters" :: Maybe (AuthParametersType), "ClientMetadata" :: Maybe (ClientMetadataType), "ClientId" :: ClientIdType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) }
 ```
 
 <p>Initiates the authentication request.</p>
@@ -6041,7 +6041,7 @@ Constructs InitiateAuthRequest from required parameters
 #### `newInitiateAuthRequest'`
 
 ``` purescript
-newInitiateAuthRequest' :: AuthFlowType -> ClientIdType -> ({ "AuthFlow" :: AuthFlowType, "AuthParameters" :: NullOrUndefined (AuthParametersType), "ClientMetadata" :: NullOrUndefined (ClientMetadataType), "ClientId" :: ClientIdType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) } -> { "AuthFlow" :: AuthFlowType, "AuthParameters" :: NullOrUndefined (AuthParametersType), "ClientMetadata" :: NullOrUndefined (ClientMetadataType), "ClientId" :: ClientIdType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) }) -> InitiateAuthRequest
+newInitiateAuthRequest' :: AuthFlowType -> ClientIdType -> ({ "AuthFlow" :: AuthFlowType, "AuthParameters" :: Maybe (AuthParametersType), "ClientMetadata" :: Maybe (ClientMetadataType), "ClientId" :: ClientIdType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) } -> { "AuthFlow" :: AuthFlowType, "AuthParameters" :: Maybe (AuthParametersType), "ClientMetadata" :: Maybe (ClientMetadataType), "ClientId" :: ClientIdType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) }) -> InitiateAuthRequest
 ```
 
 Constructs InitiateAuthRequest's fields from required parameters
@@ -6050,7 +6050,7 @@ Constructs InitiateAuthRequest's fields from required parameters
 
 ``` purescript
 newtype InitiateAuthResponse
-  = InitiateAuthResponse { "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) }
+  = InitiateAuthResponse { "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) }
 ```
 
 <p>Initiates the authentication response.</p>
@@ -6075,7 +6075,7 @@ Constructs InitiateAuthResponse from required parameters
 #### `newInitiateAuthResponse'`
 
 ``` purescript
-newInitiateAuthResponse' :: ({ "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) } -> { "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) }) -> InitiateAuthResponse
+newInitiateAuthResponse' :: ({ "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) } -> { "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) }) -> InitiateAuthResponse
 ```
 
 Constructs InitiateAuthResponse's fields from required parameters
@@ -6100,7 +6100,7 @@ Encode IntegerType
 
 ``` purescript
 newtype InternalErrorException
-  = InternalErrorException { message :: NullOrUndefined (MessageType) }
+  = InternalErrorException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when Amazon Cognito encounters an internal error.</p>
@@ -6125,7 +6125,7 @@ Constructs InternalErrorException from required parameters
 #### `newInternalErrorException'`
 
 ``` purescript
-newInternalErrorException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> InternalErrorException
+newInternalErrorException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> InternalErrorException
 ```
 
 Constructs InternalErrorException's fields from required parameters
@@ -6134,7 +6134,7 @@ Constructs InternalErrorException's fields from required parameters
 
 ``` purescript
 newtype InvalidEmailRoleAccessPolicyException
-  = InvalidEmailRoleAccessPolicyException { message :: NullOrUndefined (MessageType) }
+  = InvalidEmailRoleAccessPolicyException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when Amazon Cognito is not allowed to use your email identity. HTTP status code: 400.</p>
@@ -6159,7 +6159,7 @@ Constructs InvalidEmailRoleAccessPolicyException from required parameters
 #### `newInvalidEmailRoleAccessPolicyException'`
 
 ``` purescript
-newInvalidEmailRoleAccessPolicyException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> InvalidEmailRoleAccessPolicyException
+newInvalidEmailRoleAccessPolicyException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> InvalidEmailRoleAccessPolicyException
 ```
 
 Constructs InvalidEmailRoleAccessPolicyException's fields from required parameters
@@ -6168,7 +6168,7 @@ Constructs InvalidEmailRoleAccessPolicyException's fields from required paramete
 
 ``` purescript
 newtype InvalidLambdaResponseException
-  = InvalidLambdaResponseException { message :: NullOrUndefined (MessageType) }
+  = InvalidLambdaResponseException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the Amazon Cognito service encounters an invalid AWS Lambda response.</p>
@@ -6193,7 +6193,7 @@ Constructs InvalidLambdaResponseException from required parameters
 #### `newInvalidLambdaResponseException'`
 
 ``` purescript
-newInvalidLambdaResponseException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> InvalidLambdaResponseException
+newInvalidLambdaResponseException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> InvalidLambdaResponseException
 ```
 
 Constructs InvalidLambdaResponseException's fields from required parameters
@@ -6202,7 +6202,7 @@ Constructs InvalidLambdaResponseException's fields from required parameters
 
 ``` purescript
 newtype InvalidOAuthFlowException
-  = InvalidOAuthFlowException { message :: NullOrUndefined (MessageType) }
+  = InvalidOAuthFlowException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the specified OAuth flow is invalid.</p>
@@ -6227,7 +6227,7 @@ Constructs InvalidOAuthFlowException from required parameters
 #### `newInvalidOAuthFlowException'`
 
 ``` purescript
-newInvalidOAuthFlowException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> InvalidOAuthFlowException
+newInvalidOAuthFlowException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> InvalidOAuthFlowException
 ```
 
 Constructs InvalidOAuthFlowException's fields from required parameters
@@ -6236,7 +6236,7 @@ Constructs InvalidOAuthFlowException's fields from required parameters
 
 ``` purescript
 newtype InvalidParameterException
-  = InvalidParameterException { message :: NullOrUndefined (MessageType) }
+  = InvalidParameterException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the Amazon Cognito service encounters an invalid parameter.</p>
@@ -6261,7 +6261,7 @@ Constructs InvalidParameterException from required parameters
 #### `newInvalidParameterException'`
 
 ``` purescript
-newInvalidParameterException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> InvalidParameterException
+newInvalidParameterException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> InvalidParameterException
 ```
 
 Constructs InvalidParameterException's fields from required parameters
@@ -6270,7 +6270,7 @@ Constructs InvalidParameterException's fields from required parameters
 
 ``` purescript
 newtype InvalidPasswordException
-  = InvalidPasswordException { message :: NullOrUndefined (MessageType) }
+  = InvalidPasswordException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the Amazon Cognito service encounters an invalid password.</p>
@@ -6295,7 +6295,7 @@ Constructs InvalidPasswordException from required parameters
 #### `newInvalidPasswordException'`
 
 ``` purescript
-newInvalidPasswordException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> InvalidPasswordException
+newInvalidPasswordException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> InvalidPasswordException
 ```
 
 Constructs InvalidPasswordException's fields from required parameters
@@ -6304,7 +6304,7 @@ Constructs InvalidPasswordException's fields from required parameters
 
 ``` purescript
 newtype InvalidSmsRoleAccessPolicyException
-  = InvalidSmsRoleAccessPolicyException { message :: NullOrUndefined (MessageType) }
+  = InvalidSmsRoleAccessPolicyException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is returned when the role provided for SMS configuration does not have permission to publish using Amazon SNS.</p>
@@ -6329,7 +6329,7 @@ Constructs InvalidSmsRoleAccessPolicyException from required parameters
 #### `newInvalidSmsRoleAccessPolicyException'`
 
 ``` purescript
-newInvalidSmsRoleAccessPolicyException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> InvalidSmsRoleAccessPolicyException
+newInvalidSmsRoleAccessPolicyException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> InvalidSmsRoleAccessPolicyException
 ```
 
 Constructs InvalidSmsRoleAccessPolicyException's fields from required parameters
@@ -6338,7 +6338,7 @@ Constructs InvalidSmsRoleAccessPolicyException's fields from required parameters
 
 ``` purescript
 newtype InvalidSmsRoleTrustRelationshipException
-  = InvalidSmsRoleTrustRelationshipException { message :: NullOrUndefined (MessageType) }
+  = InvalidSmsRoleTrustRelationshipException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the trust relationship is invalid for the role provided for SMS configuration. This can happen if you do not trust <b>cognito-idp.amazonaws.com</b> or the external ID provided in the role does not match what is provided in the SMS configuration for the user pool.</p>
@@ -6363,7 +6363,7 @@ Constructs InvalidSmsRoleTrustRelationshipException from required parameters
 #### `newInvalidSmsRoleTrustRelationshipException'`
 
 ``` purescript
-newInvalidSmsRoleTrustRelationshipException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> InvalidSmsRoleTrustRelationshipException
+newInvalidSmsRoleTrustRelationshipException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> InvalidSmsRoleTrustRelationshipException
 ```
 
 Constructs InvalidSmsRoleTrustRelationshipException's fields from required parameters
@@ -6372,7 +6372,7 @@ Constructs InvalidSmsRoleTrustRelationshipException's fields from required param
 
 ``` purescript
 newtype InvalidUserPoolConfigurationException
-  = InvalidUserPoolConfigurationException { message :: NullOrUndefined (MessageType) }
+  = InvalidUserPoolConfigurationException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the user pool configuration is invalid.</p>
@@ -6397,7 +6397,7 @@ Constructs InvalidUserPoolConfigurationException from required parameters
 #### `newInvalidUserPoolConfigurationException'`
 
 ``` purescript
-newInvalidUserPoolConfigurationException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> InvalidUserPoolConfigurationException
+newInvalidUserPoolConfigurationException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> InvalidUserPoolConfigurationException
 ```
 
 Constructs InvalidUserPoolConfigurationException's fields from required parameters
@@ -6406,7 +6406,7 @@ Constructs InvalidUserPoolConfigurationException's fields from required paramete
 
 ``` purescript
 newtype LambdaConfigType
-  = LambdaConfigType { "PreSignUp" :: NullOrUndefined (ArnType), "CustomMessage" :: NullOrUndefined (ArnType), "PostConfirmation" :: NullOrUndefined (ArnType), "PreAuthentication" :: NullOrUndefined (ArnType), "PostAuthentication" :: NullOrUndefined (ArnType), "DefineAuthChallenge" :: NullOrUndefined (ArnType), "CreateAuthChallenge" :: NullOrUndefined (ArnType), "VerifyAuthChallengeResponse" :: NullOrUndefined (ArnType), "PreTokenGeneration" :: NullOrUndefined (ArnType), "UserMigration" :: NullOrUndefined (ArnType) }
+  = LambdaConfigType { "PreSignUp" :: Maybe (ArnType), "CustomMessage" :: Maybe (ArnType), "PostConfirmation" :: Maybe (ArnType), "PreAuthentication" :: Maybe (ArnType), "PostAuthentication" :: Maybe (ArnType), "DefineAuthChallenge" :: Maybe (ArnType), "CreateAuthChallenge" :: Maybe (ArnType), "VerifyAuthChallengeResponse" :: Maybe (ArnType), "PreTokenGeneration" :: Maybe (ArnType), "UserMigration" :: Maybe (ArnType) }
 ```
 
 <p>Specifies the configuration for AWS Lambda triggers.</p>
@@ -6431,7 +6431,7 @@ Constructs LambdaConfigType from required parameters
 #### `newLambdaConfigType'`
 
 ``` purescript
-newLambdaConfigType' :: ({ "PreSignUp" :: NullOrUndefined (ArnType), "CustomMessage" :: NullOrUndefined (ArnType), "PostConfirmation" :: NullOrUndefined (ArnType), "PreAuthentication" :: NullOrUndefined (ArnType), "PostAuthentication" :: NullOrUndefined (ArnType), "DefineAuthChallenge" :: NullOrUndefined (ArnType), "CreateAuthChallenge" :: NullOrUndefined (ArnType), "VerifyAuthChallengeResponse" :: NullOrUndefined (ArnType), "PreTokenGeneration" :: NullOrUndefined (ArnType), "UserMigration" :: NullOrUndefined (ArnType) } -> { "PreSignUp" :: NullOrUndefined (ArnType), "CustomMessage" :: NullOrUndefined (ArnType), "PostConfirmation" :: NullOrUndefined (ArnType), "PreAuthentication" :: NullOrUndefined (ArnType), "PostAuthentication" :: NullOrUndefined (ArnType), "DefineAuthChallenge" :: NullOrUndefined (ArnType), "CreateAuthChallenge" :: NullOrUndefined (ArnType), "VerifyAuthChallengeResponse" :: NullOrUndefined (ArnType), "PreTokenGeneration" :: NullOrUndefined (ArnType), "UserMigration" :: NullOrUndefined (ArnType) }) -> LambdaConfigType
+newLambdaConfigType' :: ({ "PreSignUp" :: Maybe (ArnType), "CustomMessage" :: Maybe (ArnType), "PostConfirmation" :: Maybe (ArnType), "PreAuthentication" :: Maybe (ArnType), "PostAuthentication" :: Maybe (ArnType), "DefineAuthChallenge" :: Maybe (ArnType), "CreateAuthChallenge" :: Maybe (ArnType), "VerifyAuthChallengeResponse" :: Maybe (ArnType), "PreTokenGeneration" :: Maybe (ArnType), "UserMigration" :: Maybe (ArnType) } -> { "PreSignUp" :: Maybe (ArnType), "CustomMessage" :: Maybe (ArnType), "PostConfirmation" :: Maybe (ArnType), "PreAuthentication" :: Maybe (ArnType), "PostAuthentication" :: Maybe (ArnType), "DefineAuthChallenge" :: Maybe (ArnType), "CreateAuthChallenge" :: Maybe (ArnType), "VerifyAuthChallengeResponse" :: Maybe (ArnType), "PreTokenGeneration" :: Maybe (ArnType), "UserMigration" :: Maybe (ArnType) }) -> LambdaConfigType
 ```
 
 Constructs LambdaConfigType's fields from required parameters
@@ -6440,7 +6440,7 @@ Constructs LambdaConfigType's fields from required parameters
 
 ``` purescript
 newtype LimitExceededException
-  = LimitExceededException { message :: NullOrUndefined (MessageType) }
+  = LimitExceededException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when a user exceeds the limit for a requested AWS resource.</p>
@@ -6465,7 +6465,7 @@ Constructs LimitExceededException from required parameters
 #### `newLimitExceededException'`
 
 ``` purescript
-newLimitExceededException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> LimitExceededException
+newLimitExceededException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> LimitExceededException
 ```
 
 Constructs LimitExceededException's fields from required parameters
@@ -6474,7 +6474,7 @@ Constructs LimitExceededException's fields from required parameters
 
 ``` purescript
 newtype ListDevicesRequest
-  = ListDevicesRequest { "AccessToken" :: TokenModelType, "Limit" :: NullOrUndefined (QueryLimitType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) }
+  = ListDevicesRequest { "AccessToken" :: TokenModelType, "Limit" :: Maybe (QueryLimitType), "PaginationToken" :: Maybe (SearchPaginationTokenType) }
 ```
 
 <p>Represents the request to list the devices.</p>
@@ -6499,7 +6499,7 @@ Constructs ListDevicesRequest from required parameters
 #### `newListDevicesRequest'`
 
 ``` purescript
-newListDevicesRequest' :: TokenModelType -> ({ "AccessToken" :: TokenModelType, "Limit" :: NullOrUndefined (QueryLimitType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) } -> { "AccessToken" :: TokenModelType, "Limit" :: NullOrUndefined (QueryLimitType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) }) -> ListDevicesRequest
+newListDevicesRequest' :: TokenModelType -> ({ "AccessToken" :: TokenModelType, "Limit" :: Maybe (QueryLimitType), "PaginationToken" :: Maybe (SearchPaginationTokenType) } -> { "AccessToken" :: TokenModelType, "Limit" :: Maybe (QueryLimitType), "PaginationToken" :: Maybe (SearchPaginationTokenType) }) -> ListDevicesRequest
 ```
 
 Constructs ListDevicesRequest's fields from required parameters
@@ -6508,7 +6508,7 @@ Constructs ListDevicesRequest's fields from required parameters
 
 ``` purescript
 newtype ListDevicesResponse
-  = ListDevicesResponse { "Devices" :: NullOrUndefined (DeviceListType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) }
+  = ListDevicesResponse { "Devices" :: Maybe (DeviceListType), "PaginationToken" :: Maybe (SearchPaginationTokenType) }
 ```
 
 <p>Represents the response to list devices.</p>
@@ -6533,7 +6533,7 @@ Constructs ListDevicesResponse from required parameters
 #### `newListDevicesResponse'`
 
 ``` purescript
-newListDevicesResponse' :: ({ "Devices" :: NullOrUndefined (DeviceListType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) } -> { "Devices" :: NullOrUndefined (DeviceListType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) }) -> ListDevicesResponse
+newListDevicesResponse' :: ({ "Devices" :: Maybe (DeviceListType), "PaginationToken" :: Maybe (SearchPaginationTokenType) } -> { "Devices" :: Maybe (DeviceListType), "PaginationToken" :: Maybe (SearchPaginationTokenType) }) -> ListDevicesResponse
 ```
 
 Constructs ListDevicesResponse's fields from required parameters
@@ -6542,7 +6542,7 @@ Constructs ListDevicesResponse's fields from required parameters
 
 ``` purescript
 newtype ListGroupsRequest
-  = ListGroupsRequest { "UserPoolId" :: UserPoolIdType, "Limit" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) }
+  = ListGroupsRequest { "UserPoolId" :: UserPoolIdType, "Limit" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) }
 ```
 
 ##### Instances
@@ -6565,7 +6565,7 @@ Constructs ListGroupsRequest from required parameters
 #### `newListGroupsRequest'`
 
 ``` purescript
-newListGroupsRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "Limit" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) } -> { "UserPoolId" :: UserPoolIdType, "Limit" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) }) -> ListGroupsRequest
+newListGroupsRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "Limit" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) } -> { "UserPoolId" :: UserPoolIdType, "Limit" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) }) -> ListGroupsRequest
 ```
 
 Constructs ListGroupsRequest's fields from required parameters
@@ -6574,7 +6574,7 @@ Constructs ListGroupsRequest's fields from required parameters
 
 ``` purescript
 newtype ListGroupsResponse
-  = ListGroupsResponse { "Groups" :: NullOrUndefined (GroupListType), "NextToken" :: NullOrUndefined (PaginationKey) }
+  = ListGroupsResponse { "Groups" :: Maybe (GroupListType), "NextToken" :: Maybe (PaginationKey) }
 ```
 
 ##### Instances
@@ -6597,7 +6597,7 @@ Constructs ListGroupsResponse from required parameters
 #### `newListGroupsResponse'`
 
 ``` purescript
-newListGroupsResponse' :: ({ "Groups" :: NullOrUndefined (GroupListType), "NextToken" :: NullOrUndefined (PaginationKey) } -> { "Groups" :: NullOrUndefined (GroupListType), "NextToken" :: NullOrUndefined (PaginationKey) }) -> ListGroupsResponse
+newListGroupsResponse' :: ({ "Groups" :: Maybe (GroupListType), "NextToken" :: Maybe (PaginationKey) } -> { "Groups" :: Maybe (GroupListType), "NextToken" :: Maybe (PaginationKey) }) -> ListGroupsResponse
 ```
 
 Constructs ListGroupsResponse's fields from required parameters
@@ -6606,7 +6606,7 @@ Constructs ListGroupsResponse's fields from required parameters
 
 ``` purescript
 newtype ListIdentityProvidersRequest
-  = ListIdentityProvidersRequest { "UserPoolId" :: UserPoolIdType, "MaxResults" :: NullOrUndefined (ListProvidersLimitType), "NextToken" :: NullOrUndefined (PaginationKeyType) }
+  = ListIdentityProvidersRequest { "UserPoolId" :: UserPoolIdType, "MaxResults" :: Maybe (ListProvidersLimitType), "NextToken" :: Maybe (PaginationKeyType) }
 ```
 
 ##### Instances
@@ -6629,7 +6629,7 @@ Constructs ListIdentityProvidersRequest from required parameters
 #### `newListIdentityProvidersRequest'`
 
 ``` purescript
-newListIdentityProvidersRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "MaxResults" :: NullOrUndefined (ListProvidersLimitType), "NextToken" :: NullOrUndefined (PaginationKeyType) } -> { "UserPoolId" :: UserPoolIdType, "MaxResults" :: NullOrUndefined (ListProvidersLimitType), "NextToken" :: NullOrUndefined (PaginationKeyType) }) -> ListIdentityProvidersRequest
+newListIdentityProvidersRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "MaxResults" :: Maybe (ListProvidersLimitType), "NextToken" :: Maybe (PaginationKeyType) } -> { "UserPoolId" :: UserPoolIdType, "MaxResults" :: Maybe (ListProvidersLimitType), "NextToken" :: Maybe (PaginationKeyType) }) -> ListIdentityProvidersRequest
 ```
 
 Constructs ListIdentityProvidersRequest's fields from required parameters
@@ -6638,7 +6638,7 @@ Constructs ListIdentityProvidersRequest's fields from required parameters
 
 ``` purescript
 newtype ListIdentityProvidersResponse
-  = ListIdentityProvidersResponse { "Providers" :: ProvidersListType, "NextToken" :: NullOrUndefined (PaginationKeyType) }
+  = ListIdentityProvidersResponse { "Providers" :: ProvidersListType, "NextToken" :: Maybe (PaginationKeyType) }
 ```
 
 ##### Instances
@@ -6661,7 +6661,7 @@ Constructs ListIdentityProvidersResponse from required parameters
 #### `newListIdentityProvidersResponse'`
 
 ``` purescript
-newListIdentityProvidersResponse' :: ProvidersListType -> ({ "Providers" :: ProvidersListType, "NextToken" :: NullOrUndefined (PaginationKeyType) } -> { "Providers" :: ProvidersListType, "NextToken" :: NullOrUndefined (PaginationKeyType) }) -> ListIdentityProvidersResponse
+newListIdentityProvidersResponse' :: ProvidersListType -> ({ "Providers" :: ProvidersListType, "NextToken" :: Maybe (PaginationKeyType) } -> { "Providers" :: ProvidersListType, "NextToken" :: Maybe (PaginationKeyType) }) -> ListIdentityProvidersResponse
 ```
 
 Constructs ListIdentityProvidersResponse's fields from required parameters
@@ -6718,7 +6718,7 @@ Encode ListResourceServersLimitType
 
 ``` purescript
 newtype ListResourceServersRequest
-  = ListResourceServersRequest { "UserPoolId" :: UserPoolIdType, "MaxResults" :: NullOrUndefined (ListResourceServersLimitType), "NextToken" :: NullOrUndefined (PaginationKeyType) }
+  = ListResourceServersRequest { "UserPoolId" :: UserPoolIdType, "MaxResults" :: Maybe (ListResourceServersLimitType), "NextToken" :: Maybe (PaginationKeyType) }
 ```
 
 ##### Instances
@@ -6741,7 +6741,7 @@ Constructs ListResourceServersRequest from required parameters
 #### `newListResourceServersRequest'`
 
 ``` purescript
-newListResourceServersRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "MaxResults" :: NullOrUndefined (ListResourceServersLimitType), "NextToken" :: NullOrUndefined (PaginationKeyType) } -> { "UserPoolId" :: UserPoolIdType, "MaxResults" :: NullOrUndefined (ListResourceServersLimitType), "NextToken" :: NullOrUndefined (PaginationKeyType) }) -> ListResourceServersRequest
+newListResourceServersRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "MaxResults" :: Maybe (ListResourceServersLimitType), "NextToken" :: Maybe (PaginationKeyType) } -> { "UserPoolId" :: UserPoolIdType, "MaxResults" :: Maybe (ListResourceServersLimitType), "NextToken" :: Maybe (PaginationKeyType) }) -> ListResourceServersRequest
 ```
 
 Constructs ListResourceServersRequest's fields from required parameters
@@ -6750,7 +6750,7 @@ Constructs ListResourceServersRequest's fields from required parameters
 
 ``` purescript
 newtype ListResourceServersResponse
-  = ListResourceServersResponse { "ResourceServers" :: ResourceServersListType, "NextToken" :: NullOrUndefined (PaginationKeyType) }
+  = ListResourceServersResponse { "ResourceServers" :: ResourceServersListType, "NextToken" :: Maybe (PaginationKeyType) }
 ```
 
 ##### Instances
@@ -6773,7 +6773,7 @@ Constructs ListResourceServersResponse from required parameters
 #### `newListResourceServersResponse'`
 
 ``` purescript
-newListResourceServersResponse' :: ResourceServersListType -> ({ "ResourceServers" :: ResourceServersListType, "NextToken" :: NullOrUndefined (PaginationKeyType) } -> { "ResourceServers" :: ResourceServersListType, "NextToken" :: NullOrUndefined (PaginationKeyType) }) -> ListResourceServersResponse
+newListResourceServersResponse' :: ResourceServersListType -> ({ "ResourceServers" :: ResourceServersListType, "NextToken" :: Maybe (PaginationKeyType) } -> { "ResourceServers" :: ResourceServersListType, "NextToken" :: Maybe (PaginationKeyType) }) -> ListResourceServersResponse
 ```
 
 Constructs ListResourceServersResponse's fields from required parameters
@@ -6782,7 +6782,7 @@ Constructs ListResourceServersResponse's fields from required parameters
 
 ``` purescript
 newtype ListUserImportJobsRequest
-  = ListUserImportJobsRequest { "UserPoolId" :: UserPoolIdType, "MaxResults" :: PoolQueryLimitType, "PaginationToken" :: NullOrUndefined (PaginationKeyType) }
+  = ListUserImportJobsRequest { "UserPoolId" :: UserPoolIdType, "MaxResults" :: PoolQueryLimitType, "PaginationToken" :: Maybe (PaginationKeyType) }
 ```
 
 <p>Represents the request to list the user import jobs.</p>
@@ -6807,7 +6807,7 @@ Constructs ListUserImportJobsRequest from required parameters
 #### `newListUserImportJobsRequest'`
 
 ``` purescript
-newListUserImportJobsRequest' :: PoolQueryLimitType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "MaxResults" :: PoolQueryLimitType, "PaginationToken" :: NullOrUndefined (PaginationKeyType) } -> { "UserPoolId" :: UserPoolIdType, "MaxResults" :: PoolQueryLimitType, "PaginationToken" :: NullOrUndefined (PaginationKeyType) }) -> ListUserImportJobsRequest
+newListUserImportJobsRequest' :: PoolQueryLimitType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "MaxResults" :: PoolQueryLimitType, "PaginationToken" :: Maybe (PaginationKeyType) } -> { "UserPoolId" :: UserPoolIdType, "MaxResults" :: PoolQueryLimitType, "PaginationToken" :: Maybe (PaginationKeyType) }) -> ListUserImportJobsRequest
 ```
 
 Constructs ListUserImportJobsRequest's fields from required parameters
@@ -6816,7 +6816,7 @@ Constructs ListUserImportJobsRequest's fields from required parameters
 
 ``` purescript
 newtype ListUserImportJobsResponse
-  = ListUserImportJobsResponse { "UserImportJobs" :: NullOrUndefined (UserImportJobsListType), "PaginationToken" :: NullOrUndefined (PaginationKeyType) }
+  = ListUserImportJobsResponse { "UserImportJobs" :: Maybe (UserImportJobsListType), "PaginationToken" :: Maybe (PaginationKeyType) }
 ```
 
 <p>Represents the response from the server to the request to list the user import jobs.</p>
@@ -6841,7 +6841,7 @@ Constructs ListUserImportJobsResponse from required parameters
 #### `newListUserImportJobsResponse'`
 
 ``` purescript
-newListUserImportJobsResponse' :: ({ "UserImportJobs" :: NullOrUndefined (UserImportJobsListType), "PaginationToken" :: NullOrUndefined (PaginationKeyType) } -> { "UserImportJobs" :: NullOrUndefined (UserImportJobsListType), "PaginationToken" :: NullOrUndefined (PaginationKeyType) }) -> ListUserImportJobsResponse
+newListUserImportJobsResponse' :: ({ "UserImportJobs" :: Maybe (UserImportJobsListType), "PaginationToken" :: Maybe (PaginationKeyType) } -> { "UserImportJobs" :: Maybe (UserImportJobsListType), "PaginationToken" :: Maybe (PaginationKeyType) }) -> ListUserImportJobsResponse
 ```
 
 Constructs ListUserImportJobsResponse's fields from required parameters
@@ -6850,7 +6850,7 @@ Constructs ListUserImportJobsResponse's fields from required parameters
 
 ``` purescript
 newtype ListUserPoolClientsRequest
-  = ListUserPoolClientsRequest { "UserPoolId" :: UserPoolIdType, "MaxResults" :: NullOrUndefined (QueryLimit), "NextToken" :: NullOrUndefined (PaginationKey) }
+  = ListUserPoolClientsRequest { "UserPoolId" :: UserPoolIdType, "MaxResults" :: Maybe (QueryLimit), "NextToken" :: Maybe (PaginationKey) }
 ```
 
 <p>Represents the request to list the user pool clients.</p>
@@ -6875,7 +6875,7 @@ Constructs ListUserPoolClientsRequest from required parameters
 #### `newListUserPoolClientsRequest'`
 
 ``` purescript
-newListUserPoolClientsRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "MaxResults" :: NullOrUndefined (QueryLimit), "NextToken" :: NullOrUndefined (PaginationKey) } -> { "UserPoolId" :: UserPoolIdType, "MaxResults" :: NullOrUndefined (QueryLimit), "NextToken" :: NullOrUndefined (PaginationKey) }) -> ListUserPoolClientsRequest
+newListUserPoolClientsRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "MaxResults" :: Maybe (QueryLimit), "NextToken" :: Maybe (PaginationKey) } -> { "UserPoolId" :: UserPoolIdType, "MaxResults" :: Maybe (QueryLimit), "NextToken" :: Maybe (PaginationKey) }) -> ListUserPoolClientsRequest
 ```
 
 Constructs ListUserPoolClientsRequest's fields from required parameters
@@ -6884,7 +6884,7 @@ Constructs ListUserPoolClientsRequest's fields from required parameters
 
 ``` purescript
 newtype ListUserPoolClientsResponse
-  = ListUserPoolClientsResponse { "UserPoolClients" :: NullOrUndefined (UserPoolClientListType), "NextToken" :: NullOrUndefined (PaginationKey) }
+  = ListUserPoolClientsResponse { "UserPoolClients" :: Maybe (UserPoolClientListType), "NextToken" :: Maybe (PaginationKey) }
 ```
 
 <p>Represents the response from the server that lists user pool clients.</p>
@@ -6909,7 +6909,7 @@ Constructs ListUserPoolClientsResponse from required parameters
 #### `newListUserPoolClientsResponse'`
 
 ``` purescript
-newListUserPoolClientsResponse' :: ({ "UserPoolClients" :: NullOrUndefined (UserPoolClientListType), "NextToken" :: NullOrUndefined (PaginationKey) } -> { "UserPoolClients" :: NullOrUndefined (UserPoolClientListType), "NextToken" :: NullOrUndefined (PaginationKey) }) -> ListUserPoolClientsResponse
+newListUserPoolClientsResponse' :: ({ "UserPoolClients" :: Maybe (UserPoolClientListType), "NextToken" :: Maybe (PaginationKey) } -> { "UserPoolClients" :: Maybe (UserPoolClientListType), "NextToken" :: Maybe (PaginationKey) }) -> ListUserPoolClientsResponse
 ```
 
 Constructs ListUserPoolClientsResponse's fields from required parameters
@@ -6918,7 +6918,7 @@ Constructs ListUserPoolClientsResponse's fields from required parameters
 
 ``` purescript
 newtype ListUserPoolsRequest
-  = ListUserPoolsRequest { "NextToken" :: NullOrUndefined (PaginationKeyType), "MaxResults" :: PoolQueryLimitType }
+  = ListUserPoolsRequest { "NextToken" :: Maybe (PaginationKeyType), "MaxResults" :: PoolQueryLimitType }
 ```
 
 <p>Represents the request to list user pools.</p>
@@ -6943,7 +6943,7 @@ Constructs ListUserPoolsRequest from required parameters
 #### `newListUserPoolsRequest'`
 
 ``` purescript
-newListUserPoolsRequest' :: PoolQueryLimitType -> ({ "NextToken" :: NullOrUndefined (PaginationKeyType), "MaxResults" :: PoolQueryLimitType } -> { "NextToken" :: NullOrUndefined (PaginationKeyType), "MaxResults" :: PoolQueryLimitType }) -> ListUserPoolsRequest
+newListUserPoolsRequest' :: PoolQueryLimitType -> ({ "NextToken" :: Maybe (PaginationKeyType), "MaxResults" :: PoolQueryLimitType } -> { "NextToken" :: Maybe (PaginationKeyType), "MaxResults" :: PoolQueryLimitType }) -> ListUserPoolsRequest
 ```
 
 Constructs ListUserPoolsRequest's fields from required parameters
@@ -6952,7 +6952,7 @@ Constructs ListUserPoolsRequest's fields from required parameters
 
 ``` purescript
 newtype ListUserPoolsResponse
-  = ListUserPoolsResponse { "UserPools" :: NullOrUndefined (UserPoolListType), "NextToken" :: NullOrUndefined (PaginationKeyType) }
+  = ListUserPoolsResponse { "UserPools" :: Maybe (UserPoolListType), "NextToken" :: Maybe (PaginationKeyType) }
 ```
 
 <p>Represents the response to list user pools.</p>
@@ -6977,7 +6977,7 @@ Constructs ListUserPoolsResponse from required parameters
 #### `newListUserPoolsResponse'`
 
 ``` purescript
-newListUserPoolsResponse' :: ({ "UserPools" :: NullOrUndefined (UserPoolListType), "NextToken" :: NullOrUndefined (PaginationKeyType) } -> { "UserPools" :: NullOrUndefined (UserPoolListType), "NextToken" :: NullOrUndefined (PaginationKeyType) }) -> ListUserPoolsResponse
+newListUserPoolsResponse' :: ({ "UserPools" :: Maybe (UserPoolListType), "NextToken" :: Maybe (PaginationKeyType) } -> { "UserPools" :: Maybe (UserPoolListType), "NextToken" :: Maybe (PaginationKeyType) }) -> ListUserPoolsResponse
 ```
 
 Constructs ListUserPoolsResponse's fields from required parameters
@@ -6986,7 +6986,7 @@ Constructs ListUserPoolsResponse's fields from required parameters
 
 ``` purescript
 newtype ListUsersInGroupRequest
-  = ListUsersInGroupRequest { "UserPoolId" :: UserPoolIdType, "GroupName" :: GroupNameType, "Limit" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) }
+  = ListUsersInGroupRequest { "UserPoolId" :: UserPoolIdType, "GroupName" :: GroupNameType, "Limit" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) }
 ```
 
 ##### Instances
@@ -7009,7 +7009,7 @@ Constructs ListUsersInGroupRequest from required parameters
 #### `newListUsersInGroupRequest'`
 
 ``` purescript
-newListUsersInGroupRequest' :: GroupNameType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "GroupName" :: GroupNameType, "Limit" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) } -> { "UserPoolId" :: UserPoolIdType, "GroupName" :: GroupNameType, "Limit" :: NullOrUndefined (QueryLimitType), "NextToken" :: NullOrUndefined (PaginationKey) }) -> ListUsersInGroupRequest
+newListUsersInGroupRequest' :: GroupNameType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "GroupName" :: GroupNameType, "Limit" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) } -> { "UserPoolId" :: UserPoolIdType, "GroupName" :: GroupNameType, "Limit" :: Maybe (QueryLimitType), "NextToken" :: Maybe (PaginationKey) }) -> ListUsersInGroupRequest
 ```
 
 Constructs ListUsersInGroupRequest's fields from required parameters
@@ -7018,7 +7018,7 @@ Constructs ListUsersInGroupRequest's fields from required parameters
 
 ``` purescript
 newtype ListUsersInGroupResponse
-  = ListUsersInGroupResponse { "Users" :: NullOrUndefined (UsersListType), "NextToken" :: NullOrUndefined (PaginationKey) }
+  = ListUsersInGroupResponse { "Users" :: Maybe (UsersListType), "NextToken" :: Maybe (PaginationKey) }
 ```
 
 ##### Instances
@@ -7041,7 +7041,7 @@ Constructs ListUsersInGroupResponse from required parameters
 #### `newListUsersInGroupResponse'`
 
 ``` purescript
-newListUsersInGroupResponse' :: ({ "Users" :: NullOrUndefined (UsersListType), "NextToken" :: NullOrUndefined (PaginationKey) } -> { "Users" :: NullOrUndefined (UsersListType), "NextToken" :: NullOrUndefined (PaginationKey) }) -> ListUsersInGroupResponse
+newListUsersInGroupResponse' :: ({ "Users" :: Maybe (UsersListType), "NextToken" :: Maybe (PaginationKey) } -> { "Users" :: Maybe (UsersListType), "NextToken" :: Maybe (PaginationKey) }) -> ListUsersInGroupResponse
 ```
 
 Constructs ListUsersInGroupResponse's fields from required parameters
@@ -7050,7 +7050,7 @@ Constructs ListUsersInGroupResponse's fields from required parameters
 
 ``` purescript
 newtype ListUsersRequest
-  = ListUsersRequest { "UserPoolId" :: UserPoolIdType, "AttributesToGet" :: NullOrUndefined (SearchedAttributeNamesListType), "Limit" :: NullOrUndefined (QueryLimitType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType), "Filter" :: NullOrUndefined (UserFilterType) }
+  = ListUsersRequest { "UserPoolId" :: UserPoolIdType, "AttributesToGet" :: Maybe (SearchedAttributeNamesListType), "Limit" :: Maybe (QueryLimitType), "PaginationToken" :: Maybe (SearchPaginationTokenType), "Filter" :: Maybe (UserFilterType) }
 ```
 
 <p>Represents the request to list users.</p>
@@ -7075,7 +7075,7 @@ Constructs ListUsersRequest from required parameters
 #### `newListUsersRequest'`
 
 ``` purescript
-newListUsersRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "AttributesToGet" :: NullOrUndefined (SearchedAttributeNamesListType), "Limit" :: NullOrUndefined (QueryLimitType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType), "Filter" :: NullOrUndefined (UserFilterType) } -> { "UserPoolId" :: UserPoolIdType, "AttributesToGet" :: NullOrUndefined (SearchedAttributeNamesListType), "Limit" :: NullOrUndefined (QueryLimitType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType), "Filter" :: NullOrUndefined (UserFilterType) }) -> ListUsersRequest
+newListUsersRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "AttributesToGet" :: Maybe (SearchedAttributeNamesListType), "Limit" :: Maybe (QueryLimitType), "PaginationToken" :: Maybe (SearchPaginationTokenType), "Filter" :: Maybe (UserFilterType) } -> { "UserPoolId" :: UserPoolIdType, "AttributesToGet" :: Maybe (SearchedAttributeNamesListType), "Limit" :: Maybe (QueryLimitType), "PaginationToken" :: Maybe (SearchPaginationTokenType), "Filter" :: Maybe (UserFilterType) }) -> ListUsersRequest
 ```
 
 Constructs ListUsersRequest's fields from required parameters
@@ -7084,7 +7084,7 @@ Constructs ListUsersRequest's fields from required parameters
 
 ``` purescript
 newtype ListUsersResponse
-  = ListUsersResponse { "Users" :: NullOrUndefined (UsersListType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) }
+  = ListUsersResponse { "Users" :: Maybe (UsersListType), "PaginationToken" :: Maybe (SearchPaginationTokenType) }
 ```
 
 <p>The response from the request to list users.</p>
@@ -7109,7 +7109,7 @@ Constructs ListUsersResponse from required parameters
 #### `newListUsersResponse'`
 
 ``` purescript
-newListUsersResponse' :: ({ "Users" :: NullOrUndefined (UsersListType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) } -> { "Users" :: NullOrUndefined (UsersListType), "PaginationToken" :: NullOrUndefined (SearchPaginationTokenType) }) -> ListUsersResponse
+newListUsersResponse' :: ({ "Users" :: Maybe (UsersListType), "PaginationToken" :: Maybe (SearchPaginationTokenType) } -> { "Users" :: Maybe (UsersListType), "PaginationToken" :: Maybe (SearchPaginationTokenType) }) -> ListUsersResponse
 ```
 
 Constructs ListUsersResponse's fields from required parameters
@@ -7150,7 +7150,7 @@ Encode LongType
 
 ``` purescript
 newtype MFAMethodNotFoundException
-  = MFAMethodNotFoundException { message :: NullOrUndefined (MessageType) }
+  = MFAMethodNotFoundException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when Amazon Cognito cannot find a multi-factor authentication (MFA) method.</p>
@@ -7175,7 +7175,7 @@ Constructs MFAMethodNotFoundException from required parameters
 #### `newMFAMethodNotFoundException'`
 
 ``` purescript
-newMFAMethodNotFoundException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> MFAMethodNotFoundException
+newMFAMethodNotFoundException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> MFAMethodNotFoundException
 ```
 
 Constructs MFAMethodNotFoundException's fields from required parameters
@@ -7200,7 +7200,7 @@ Encode MFAOptionListType
 
 ``` purescript
 newtype MFAOptionType
-  = MFAOptionType { "DeliveryMedium" :: NullOrUndefined (DeliveryMediumType), "AttributeName" :: NullOrUndefined (AttributeNameType) }
+  = MFAOptionType { "DeliveryMedium" :: Maybe (DeliveryMediumType), "AttributeName" :: Maybe (AttributeNameType) }
 ```
 
 <p>Specifies the different settings for multi-factor authentication (MFA).</p>
@@ -7225,7 +7225,7 @@ Constructs MFAOptionType from required parameters
 #### `newMFAOptionType'`
 
 ``` purescript
-newMFAOptionType' :: ({ "DeliveryMedium" :: NullOrUndefined (DeliveryMediumType), "AttributeName" :: NullOrUndefined (AttributeNameType) } -> { "DeliveryMedium" :: NullOrUndefined (DeliveryMediumType), "AttributeName" :: NullOrUndefined (AttributeNameType) }) -> MFAOptionType
+newMFAOptionType' :: ({ "DeliveryMedium" :: Maybe (DeliveryMediumType), "AttributeName" :: Maybe (AttributeNameType) } -> { "DeliveryMedium" :: Maybe (DeliveryMediumType), "AttributeName" :: Maybe (AttributeNameType) }) -> MFAOptionType
 ```
 
 Constructs MFAOptionType's fields from required parameters
@@ -7250,7 +7250,7 @@ Encode MessageActionType
 
 ``` purescript
 newtype MessageTemplateType
-  = MessageTemplateType { "SMSMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailSubject" :: NullOrUndefined (EmailVerificationSubjectType) }
+  = MessageTemplateType { "SMSMessage" :: Maybe (SmsVerificationMessageType), "EmailMessage" :: Maybe (EmailVerificationMessageType), "EmailSubject" :: Maybe (EmailVerificationSubjectType) }
 ```
 
 <p>The message template structure.</p>
@@ -7275,7 +7275,7 @@ Constructs MessageTemplateType from required parameters
 #### `newMessageTemplateType'`
 
 ``` purescript
-newMessageTemplateType' :: ({ "SMSMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailSubject" :: NullOrUndefined (EmailVerificationSubjectType) } -> { "SMSMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailSubject" :: NullOrUndefined (EmailVerificationSubjectType) }) -> MessageTemplateType
+newMessageTemplateType' :: ({ "SMSMessage" :: Maybe (SmsVerificationMessageType), "EmailMessage" :: Maybe (EmailVerificationMessageType), "EmailSubject" :: Maybe (EmailVerificationSubjectType) } -> { "SMSMessage" :: Maybe (SmsVerificationMessageType), "EmailMessage" :: Maybe (EmailVerificationMessageType), "EmailSubject" :: Maybe (EmailVerificationSubjectType) }) -> MessageTemplateType
 ```
 
 Constructs MessageTemplateType's fields from required parameters
@@ -7300,7 +7300,7 @@ Encode MessageType
 
 ``` purescript
 newtype NewDeviceMetadataType
-  = NewDeviceMetadataType { "DeviceKey" :: NullOrUndefined (DeviceKeyType), "DeviceGroupKey" :: NullOrUndefined (StringType) }
+  = NewDeviceMetadataType { "DeviceKey" :: Maybe (DeviceKeyType), "DeviceGroupKey" :: Maybe (StringType) }
 ```
 
 <p>The new device metadata type.</p>
@@ -7325,7 +7325,7 @@ Constructs NewDeviceMetadataType from required parameters
 #### `newNewDeviceMetadataType'`
 
 ``` purescript
-newNewDeviceMetadataType' :: ({ "DeviceKey" :: NullOrUndefined (DeviceKeyType), "DeviceGroupKey" :: NullOrUndefined (StringType) } -> { "DeviceKey" :: NullOrUndefined (DeviceKeyType), "DeviceGroupKey" :: NullOrUndefined (StringType) }) -> NewDeviceMetadataType
+newNewDeviceMetadataType' :: ({ "DeviceKey" :: Maybe (DeviceKeyType), "DeviceGroupKey" :: Maybe (StringType) } -> { "DeviceKey" :: Maybe (DeviceKeyType), "DeviceGroupKey" :: Maybe (StringType) }) -> NewDeviceMetadataType
 ```
 
 Constructs NewDeviceMetadataType's fields from required parameters
@@ -7334,7 +7334,7 @@ Constructs NewDeviceMetadataType's fields from required parameters
 
 ``` purescript
 newtype NotAuthorizedException
-  = NotAuthorizedException { message :: NullOrUndefined (MessageType) }
+  = NotAuthorizedException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when a user is not authorized.</p>
@@ -7359,7 +7359,7 @@ Constructs NotAuthorizedException from required parameters
 #### `newNotAuthorizedException'`
 
 ``` purescript
-newNotAuthorizedException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> NotAuthorizedException
+newNotAuthorizedException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> NotAuthorizedException
 ```
 
 Constructs NotAuthorizedException's fields from required parameters
@@ -7368,7 +7368,7 @@ Constructs NotAuthorizedException's fields from required parameters
 
 ``` purescript
 newtype NotifyConfigurationType
-  = NotifyConfigurationType { "From" :: NullOrUndefined (StringType), "ReplyTo" :: NullOrUndefined (StringType), "SourceArn" :: ArnType, "BlockEmail" :: NullOrUndefined (NotifyEmailType), "NoActionEmail" :: NullOrUndefined (NotifyEmailType), "MfaEmail" :: NullOrUndefined (NotifyEmailType) }
+  = NotifyConfigurationType { "From" :: Maybe (StringType), "ReplyTo" :: Maybe (StringType), "SourceArn" :: ArnType, "BlockEmail" :: Maybe (NotifyEmailType), "NoActionEmail" :: Maybe (NotifyEmailType), "MfaEmail" :: Maybe (NotifyEmailType) }
 ```
 
 <p>The notify configuration type.</p>
@@ -7393,7 +7393,7 @@ Constructs NotifyConfigurationType from required parameters
 #### `newNotifyConfigurationType'`
 
 ``` purescript
-newNotifyConfigurationType' :: ArnType -> ({ "From" :: NullOrUndefined (StringType), "ReplyTo" :: NullOrUndefined (StringType), "SourceArn" :: ArnType, "BlockEmail" :: NullOrUndefined (NotifyEmailType), "NoActionEmail" :: NullOrUndefined (NotifyEmailType), "MfaEmail" :: NullOrUndefined (NotifyEmailType) } -> { "From" :: NullOrUndefined (StringType), "ReplyTo" :: NullOrUndefined (StringType), "SourceArn" :: ArnType, "BlockEmail" :: NullOrUndefined (NotifyEmailType), "NoActionEmail" :: NullOrUndefined (NotifyEmailType), "MfaEmail" :: NullOrUndefined (NotifyEmailType) }) -> NotifyConfigurationType
+newNotifyConfigurationType' :: ArnType -> ({ "From" :: Maybe (StringType), "ReplyTo" :: Maybe (StringType), "SourceArn" :: ArnType, "BlockEmail" :: Maybe (NotifyEmailType), "NoActionEmail" :: Maybe (NotifyEmailType), "MfaEmail" :: Maybe (NotifyEmailType) } -> { "From" :: Maybe (StringType), "ReplyTo" :: Maybe (StringType), "SourceArn" :: ArnType, "BlockEmail" :: Maybe (NotifyEmailType), "NoActionEmail" :: Maybe (NotifyEmailType), "MfaEmail" :: Maybe (NotifyEmailType) }) -> NotifyConfigurationType
 ```
 
 Constructs NotifyConfigurationType's fields from required parameters
@@ -7402,7 +7402,7 @@ Constructs NotifyConfigurationType's fields from required parameters
 
 ``` purescript
 newtype NotifyEmailType
-  = NotifyEmailType { "Subject" :: EmailNotificationSubjectType, "HtmlBody" :: NullOrUndefined (EmailNotificationBodyType), "TextBody" :: NullOrUndefined (EmailNotificationBodyType) }
+  = NotifyEmailType { "Subject" :: EmailNotificationSubjectType, "HtmlBody" :: Maybe (EmailNotificationBodyType), "TextBody" :: Maybe (EmailNotificationBodyType) }
 ```
 
 <p>The notify email type.</p>
@@ -7427,7 +7427,7 @@ Constructs NotifyEmailType from required parameters
 #### `newNotifyEmailType'`
 
 ``` purescript
-newNotifyEmailType' :: EmailNotificationSubjectType -> ({ "Subject" :: EmailNotificationSubjectType, "HtmlBody" :: NullOrUndefined (EmailNotificationBodyType), "TextBody" :: NullOrUndefined (EmailNotificationBodyType) } -> { "Subject" :: EmailNotificationSubjectType, "HtmlBody" :: NullOrUndefined (EmailNotificationBodyType), "TextBody" :: NullOrUndefined (EmailNotificationBodyType) }) -> NotifyEmailType
+newNotifyEmailType' :: EmailNotificationSubjectType -> ({ "Subject" :: EmailNotificationSubjectType, "HtmlBody" :: Maybe (EmailNotificationBodyType), "TextBody" :: Maybe (EmailNotificationBodyType) } -> { "Subject" :: EmailNotificationSubjectType, "HtmlBody" :: Maybe (EmailNotificationBodyType), "TextBody" :: Maybe (EmailNotificationBodyType) }) -> NotifyEmailType
 ```
 
 Constructs NotifyEmailType's fields from required parameters
@@ -7436,7 +7436,7 @@ Constructs NotifyEmailType's fields from required parameters
 
 ``` purescript
 newtype NumberAttributeConstraintsType
-  = NumberAttributeConstraintsType { "MinValue" :: NullOrUndefined (StringType), "MaxValue" :: NullOrUndefined (StringType) }
+  = NumberAttributeConstraintsType { "MinValue" :: Maybe (StringType), "MaxValue" :: Maybe (StringType) }
 ```
 
 <p>The minimum and maximum value of an attribute that is of the number data type.</p>
@@ -7461,7 +7461,7 @@ Constructs NumberAttributeConstraintsType from required parameters
 #### `newNumberAttributeConstraintsType'`
 
 ``` purescript
-newNumberAttributeConstraintsType' :: ({ "MinValue" :: NullOrUndefined (StringType), "MaxValue" :: NullOrUndefined (StringType) } -> { "MinValue" :: NullOrUndefined (StringType), "MaxValue" :: NullOrUndefined (StringType) }) -> NumberAttributeConstraintsType
+newNumberAttributeConstraintsType' :: ({ "MinValue" :: Maybe (StringType), "MaxValue" :: Maybe (StringType) } -> { "MinValue" :: Maybe (StringType), "MaxValue" :: Maybe (StringType) }) -> NumberAttributeConstraintsType
 ```
 
 Constructs NumberAttributeConstraintsType's fields from required parameters
@@ -7550,7 +7550,7 @@ Encode PasswordPolicyMinLengthType
 
 ``` purescript
 newtype PasswordPolicyType
-  = PasswordPolicyType { "MinimumLength" :: NullOrUndefined (PasswordPolicyMinLengthType), "RequireUppercase" :: NullOrUndefined (BooleanType), "RequireLowercase" :: NullOrUndefined (BooleanType), "RequireNumbers" :: NullOrUndefined (BooleanType), "RequireSymbols" :: NullOrUndefined (BooleanType) }
+  = PasswordPolicyType { "MinimumLength" :: Maybe (PasswordPolicyMinLengthType), "RequireUppercase" :: Maybe (BooleanType), "RequireLowercase" :: Maybe (BooleanType), "RequireNumbers" :: Maybe (BooleanType), "RequireSymbols" :: Maybe (BooleanType) }
 ```
 
 <p>The password policy type.</p>
@@ -7575,7 +7575,7 @@ Constructs PasswordPolicyType from required parameters
 #### `newPasswordPolicyType'`
 
 ``` purescript
-newPasswordPolicyType' :: ({ "MinimumLength" :: NullOrUndefined (PasswordPolicyMinLengthType), "RequireUppercase" :: NullOrUndefined (BooleanType), "RequireLowercase" :: NullOrUndefined (BooleanType), "RequireNumbers" :: NullOrUndefined (BooleanType), "RequireSymbols" :: NullOrUndefined (BooleanType) } -> { "MinimumLength" :: NullOrUndefined (PasswordPolicyMinLengthType), "RequireUppercase" :: NullOrUndefined (BooleanType), "RequireLowercase" :: NullOrUndefined (BooleanType), "RequireNumbers" :: NullOrUndefined (BooleanType), "RequireSymbols" :: NullOrUndefined (BooleanType) }) -> PasswordPolicyType
+newPasswordPolicyType' :: ({ "MinimumLength" :: Maybe (PasswordPolicyMinLengthType), "RequireUppercase" :: Maybe (BooleanType), "RequireLowercase" :: Maybe (BooleanType), "RequireNumbers" :: Maybe (BooleanType), "RequireSymbols" :: Maybe (BooleanType) } -> { "MinimumLength" :: Maybe (PasswordPolicyMinLengthType), "RequireUppercase" :: Maybe (BooleanType), "RequireLowercase" :: Maybe (BooleanType), "RequireNumbers" :: Maybe (BooleanType), "RequireSymbols" :: Maybe (BooleanType) }) -> PasswordPolicyType
 ```
 
 Constructs PasswordPolicyType's fields from required parameters
@@ -7584,7 +7584,7 @@ Constructs PasswordPolicyType's fields from required parameters
 
 ``` purescript
 newtype PasswordResetRequiredException
-  = PasswordResetRequiredException { message :: NullOrUndefined (MessageType) }
+  = PasswordResetRequiredException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when a password reset is required.</p>
@@ -7609,7 +7609,7 @@ Constructs PasswordResetRequiredException from required parameters
 #### `newPasswordResetRequiredException'`
 
 ``` purescript
-newPasswordResetRequiredException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> PasswordResetRequiredException
+newPasswordResetRequiredException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> PasswordResetRequiredException
 ```
 
 Constructs PasswordResetRequiredException's fields from required parameters
@@ -7682,7 +7682,7 @@ Encode PrecedenceType
 
 ``` purescript
 newtype PreconditionNotMetException
-  = PreconditionNotMetException { message :: NullOrUndefined (MessageType) }
+  = PreconditionNotMetException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when a precondition is not met.</p>
@@ -7707,7 +7707,7 @@ Constructs PreconditionNotMetException from required parameters
 #### `newPreconditionNotMetException'`
 
 ``` purescript
-newPreconditionNotMetException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> PreconditionNotMetException
+newPreconditionNotMetException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> PreconditionNotMetException
 ```
 
 Constructs PreconditionNotMetException's fields from required parameters
@@ -7716,7 +7716,7 @@ Constructs PreconditionNotMetException's fields from required parameters
 
 ``` purescript
 newtype ProviderDescription
-  = ProviderDescription { "ProviderName" :: NullOrUndefined (ProviderNameType), "ProviderType" :: NullOrUndefined (IdentityProviderTypeType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) }
+  = ProviderDescription { "ProviderName" :: Maybe (ProviderNameType), "ProviderType" :: Maybe (IdentityProviderTypeType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) }
 ```
 
 <p>A container for identity provider details.</p>
@@ -7741,7 +7741,7 @@ Constructs ProviderDescription from required parameters
 #### `newProviderDescription'`
 
 ``` purescript
-newProviderDescription' :: ({ "ProviderName" :: NullOrUndefined (ProviderNameType), "ProviderType" :: NullOrUndefined (IdentityProviderTypeType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) } -> { "ProviderName" :: NullOrUndefined (ProviderNameType), "ProviderType" :: NullOrUndefined (IdentityProviderTypeType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) }) -> ProviderDescription
+newProviderDescription' :: ({ "ProviderName" :: Maybe (ProviderNameType), "ProviderType" :: Maybe (IdentityProviderTypeType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) } -> { "ProviderName" :: Maybe (ProviderNameType), "ProviderType" :: Maybe (IdentityProviderTypeType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) }) -> ProviderDescription
 ```
 
 Constructs ProviderDescription's fields from required parameters
@@ -7798,7 +7798,7 @@ Encode ProviderNameTypeV1
 
 ``` purescript
 newtype ProviderUserIdentifierType
-  = ProviderUserIdentifierType { "ProviderName" :: NullOrUndefined (ProviderNameType), "ProviderAttributeName" :: NullOrUndefined (StringType), "ProviderAttributeValue" :: NullOrUndefined (StringType) }
+  = ProviderUserIdentifierType { "ProviderName" :: Maybe (ProviderNameType), "ProviderAttributeName" :: Maybe (StringType), "ProviderAttributeValue" :: Maybe (StringType) }
 ```
 
 <p>A container for information about an identity provider for a user pool.</p>
@@ -7823,7 +7823,7 @@ Constructs ProviderUserIdentifierType from required parameters
 #### `newProviderUserIdentifierType'`
 
 ``` purescript
-newProviderUserIdentifierType' :: ({ "ProviderName" :: NullOrUndefined (ProviderNameType), "ProviderAttributeName" :: NullOrUndefined (StringType), "ProviderAttributeValue" :: NullOrUndefined (StringType) } -> { "ProviderName" :: NullOrUndefined (ProviderNameType), "ProviderAttributeName" :: NullOrUndefined (StringType), "ProviderAttributeValue" :: NullOrUndefined (StringType) }) -> ProviderUserIdentifierType
+newProviderUserIdentifierType' :: ({ "ProviderName" :: Maybe (ProviderNameType), "ProviderAttributeName" :: Maybe (StringType), "ProviderAttributeValue" :: Maybe (StringType) } -> { "ProviderName" :: Maybe (ProviderNameType), "ProviderAttributeName" :: Maybe (StringType), "ProviderAttributeValue" :: Maybe (StringType) }) -> ProviderUserIdentifierType
 ```
 
 Constructs ProviderUserIdentifierType's fields from required parameters
@@ -7912,7 +7912,7 @@ Encode RefreshTokenValidityType
 
 ``` purescript
 newtype ResendConfirmationCodeRequest
-  = ResendConfirmationCodeRequest { "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "UserContextData" :: NullOrUndefined (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType) }
+  = ResendConfirmationCodeRequest { "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "UserContextData" :: Maybe (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType) }
 ```
 
 <p>Represents the request to resend the confirmation code.</p>
@@ -7937,7 +7937,7 @@ Constructs ResendConfirmationCodeRequest from required parameters
 #### `newResendConfirmationCodeRequest'`
 
 ``` purescript
-newResendConfirmationCodeRequest' :: ClientIdType -> UsernameType -> ({ "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "UserContextData" :: NullOrUndefined (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType) } -> { "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "UserContextData" :: NullOrUndefined (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType) }) -> ResendConfirmationCodeRequest
+newResendConfirmationCodeRequest' :: ClientIdType -> UsernameType -> ({ "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "UserContextData" :: Maybe (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType) } -> { "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "UserContextData" :: Maybe (UserContextDataType), "Username" :: UsernameType, "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType) }) -> ResendConfirmationCodeRequest
 ```
 
 Constructs ResendConfirmationCodeRequest's fields from required parameters
@@ -7946,7 +7946,7 @@ Constructs ResendConfirmationCodeRequest's fields from required parameters
 
 ``` purescript
 newtype ResendConfirmationCodeResponse
-  = ResendConfirmationCodeResponse { "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType) }
+  = ResendConfirmationCodeResponse { "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType) }
 ```
 
 <p>The response from the server when the Amazon Cognito Your User Pools service makes the request to resend a confirmation code.</p>
@@ -7971,7 +7971,7 @@ Constructs ResendConfirmationCodeResponse from required parameters
 #### `newResendConfirmationCodeResponse'`
 
 ``` purescript
-newResendConfirmationCodeResponse' :: ({ "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType) } -> { "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType) }) -> ResendConfirmationCodeResponse
+newResendConfirmationCodeResponse' :: ({ "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType) } -> { "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType) }) -> ResendConfirmationCodeResponse
 ```
 
 Constructs ResendConfirmationCodeResponse's fields from required parameters
@@ -7980,7 +7980,7 @@ Constructs ResendConfirmationCodeResponse's fields from required parameters
 
 ``` purescript
 newtype ResourceNotFoundException
-  = ResourceNotFoundException { message :: NullOrUndefined (MessageType) }
+  = ResourceNotFoundException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the Amazon Cognito service cannot find the requested resource.</p>
@@ -8005,7 +8005,7 @@ Constructs ResourceNotFoundException from required parameters
 #### `newResourceNotFoundException'`
 
 ``` purescript
-newResourceNotFoundException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> ResourceNotFoundException
+newResourceNotFoundException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> ResourceNotFoundException
 ```
 
 Constructs ResourceNotFoundException's fields from required parameters
@@ -8128,7 +8128,7 @@ Constructs ResourceServerScopeType's fields from required parameters
 
 ``` purescript
 newtype ResourceServerType
-  = ResourceServerType { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "Identifier" :: NullOrUndefined (ResourceServerIdentifierType), "Name" :: NullOrUndefined (ResourceServerNameType), "Scopes" :: NullOrUndefined (ResourceServerScopeListType) }
+  = ResourceServerType { "UserPoolId" :: Maybe (UserPoolIdType), "Identifier" :: Maybe (ResourceServerIdentifierType), "Name" :: Maybe (ResourceServerNameType), "Scopes" :: Maybe (ResourceServerScopeListType) }
 ```
 
 <p>A container for information about a resource server for a user pool.</p>
@@ -8153,7 +8153,7 @@ Constructs ResourceServerType from required parameters
 #### `newResourceServerType'`
 
 ``` purescript
-newResourceServerType' :: ({ "UserPoolId" :: NullOrUndefined (UserPoolIdType), "Identifier" :: NullOrUndefined (ResourceServerIdentifierType), "Name" :: NullOrUndefined (ResourceServerNameType), "Scopes" :: NullOrUndefined (ResourceServerScopeListType) } -> { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "Identifier" :: NullOrUndefined (ResourceServerIdentifierType), "Name" :: NullOrUndefined (ResourceServerNameType), "Scopes" :: NullOrUndefined (ResourceServerScopeListType) }) -> ResourceServerType
+newResourceServerType' :: ({ "UserPoolId" :: Maybe (UserPoolIdType), "Identifier" :: Maybe (ResourceServerIdentifierType), "Name" :: Maybe (ResourceServerNameType), "Scopes" :: Maybe (ResourceServerScopeListType) } -> { "UserPoolId" :: Maybe (UserPoolIdType), "Identifier" :: Maybe (ResourceServerIdentifierType), "Name" :: Maybe (ResourceServerNameType), "Scopes" :: Maybe (ResourceServerScopeListType) }) -> ResourceServerType
 ```
 
 Constructs ResourceServerType's fields from required parameters
@@ -8178,7 +8178,7 @@ Encode ResourceServersListType
 
 ``` purescript
 newtype RespondToAuthChallengeRequest
-  = RespondToAuthChallengeRequest { "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "Session" :: NullOrUndefined (SessionType), "ChallengeResponses" :: NullOrUndefined (ChallengeResponsesType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) }
+  = RespondToAuthChallengeRequest { "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "Session" :: Maybe (SessionType), "ChallengeResponses" :: Maybe (ChallengeResponsesType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) }
 ```
 
 <p>The request to respond to an authentication challenge.</p>
@@ -8203,7 +8203,7 @@ Constructs RespondToAuthChallengeRequest from required parameters
 #### `newRespondToAuthChallengeRequest'`
 
 ``` purescript
-newRespondToAuthChallengeRequest' :: ChallengeNameType -> ClientIdType -> ({ "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "Session" :: NullOrUndefined (SessionType), "ChallengeResponses" :: NullOrUndefined (ChallengeResponsesType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) } -> { "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "Session" :: NullOrUndefined (SessionType), "ChallengeResponses" :: NullOrUndefined (ChallengeResponsesType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) }) -> RespondToAuthChallengeRequest
+newRespondToAuthChallengeRequest' :: ChallengeNameType -> ClientIdType -> ({ "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "Session" :: Maybe (SessionType), "ChallengeResponses" :: Maybe (ChallengeResponsesType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) } -> { "ClientId" :: ClientIdType, "ChallengeName" :: ChallengeNameType, "Session" :: Maybe (SessionType), "ChallengeResponses" :: Maybe (ChallengeResponsesType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) }) -> RespondToAuthChallengeRequest
 ```
 
 Constructs RespondToAuthChallengeRequest's fields from required parameters
@@ -8212,7 +8212,7 @@ Constructs RespondToAuthChallengeRequest's fields from required parameters
 
 ``` purescript
 newtype RespondToAuthChallengeResponse
-  = RespondToAuthChallengeResponse { "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) }
+  = RespondToAuthChallengeResponse { "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) }
 ```
 
 <p>The response to respond to the authentication challenge.</p>
@@ -8237,7 +8237,7 @@ Constructs RespondToAuthChallengeResponse from required parameters
 #### `newRespondToAuthChallengeResponse'`
 
 ``` purescript
-newRespondToAuthChallengeResponse' :: ({ "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) } -> { "ChallengeName" :: NullOrUndefined (ChallengeNameType), "Session" :: NullOrUndefined (SessionType), "ChallengeParameters" :: NullOrUndefined (ChallengeParametersType), "AuthenticationResult" :: NullOrUndefined (AuthenticationResultType) }) -> RespondToAuthChallengeResponse
+newRespondToAuthChallengeResponse' :: ({ "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) } -> { "ChallengeName" :: Maybe (ChallengeNameType), "Session" :: Maybe (SessionType), "ChallengeParameters" :: Maybe (ChallengeParametersType), "AuthenticationResult" :: Maybe (AuthenticationResultType) }) -> RespondToAuthChallengeResponse
 ```
 
 Constructs RespondToAuthChallengeResponse's fields from required parameters
@@ -8246,7 +8246,7 @@ Constructs RespondToAuthChallengeResponse's fields from required parameters
 
 ``` purescript
 newtype RiskConfigurationType
-  = RiskConfigurationType { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientId" :: NullOrUndefined (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: NullOrUndefined (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: NullOrUndefined (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: NullOrUndefined (RiskExceptionConfigurationType), "LastModifiedDate" :: NullOrUndefined (DateType) }
+  = RiskConfigurationType { "UserPoolId" :: Maybe (UserPoolIdType), "ClientId" :: Maybe (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: Maybe (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: Maybe (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: Maybe (RiskExceptionConfigurationType), "LastModifiedDate" :: Maybe (DateType) }
 ```
 
 <p>The risk configuration type.</p>
@@ -8271,7 +8271,7 @@ Constructs RiskConfigurationType from required parameters
 #### `newRiskConfigurationType'`
 
 ``` purescript
-newRiskConfigurationType' :: ({ "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientId" :: NullOrUndefined (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: NullOrUndefined (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: NullOrUndefined (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: NullOrUndefined (RiskExceptionConfigurationType), "LastModifiedDate" :: NullOrUndefined (DateType) } -> { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientId" :: NullOrUndefined (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: NullOrUndefined (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: NullOrUndefined (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: NullOrUndefined (RiskExceptionConfigurationType), "LastModifiedDate" :: NullOrUndefined (DateType) }) -> RiskConfigurationType
+newRiskConfigurationType' :: ({ "UserPoolId" :: Maybe (UserPoolIdType), "ClientId" :: Maybe (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: Maybe (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: Maybe (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: Maybe (RiskExceptionConfigurationType), "LastModifiedDate" :: Maybe (DateType) } -> { "UserPoolId" :: Maybe (UserPoolIdType), "ClientId" :: Maybe (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: Maybe (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: Maybe (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: Maybe (RiskExceptionConfigurationType), "LastModifiedDate" :: Maybe (DateType) }) -> RiskConfigurationType
 ```
 
 Constructs RiskConfigurationType's fields from required parameters
@@ -8296,7 +8296,7 @@ Encode RiskDecisionType
 
 ``` purescript
 newtype RiskExceptionConfigurationType
-  = RiskExceptionConfigurationType { "BlockedIPRangeList" :: NullOrUndefined (BlockedIPRangeListType), "SkippedIPRangeList" :: NullOrUndefined (SkippedIPRangeListType) }
+  = RiskExceptionConfigurationType { "BlockedIPRangeList" :: Maybe (BlockedIPRangeListType), "SkippedIPRangeList" :: Maybe (SkippedIPRangeListType) }
 ```
 
 <p>The type of the configuration to override the risk decision.</p>
@@ -8321,7 +8321,7 @@ Constructs RiskExceptionConfigurationType from required parameters
 #### `newRiskExceptionConfigurationType'`
 
 ``` purescript
-newRiskExceptionConfigurationType' :: ({ "BlockedIPRangeList" :: NullOrUndefined (BlockedIPRangeListType), "SkippedIPRangeList" :: NullOrUndefined (SkippedIPRangeListType) } -> { "BlockedIPRangeList" :: NullOrUndefined (BlockedIPRangeListType), "SkippedIPRangeList" :: NullOrUndefined (SkippedIPRangeListType) }) -> RiskExceptionConfigurationType
+newRiskExceptionConfigurationType' :: ({ "BlockedIPRangeList" :: Maybe (BlockedIPRangeListType), "SkippedIPRangeList" :: Maybe (SkippedIPRangeListType) } -> { "BlockedIPRangeList" :: Maybe (BlockedIPRangeListType), "SkippedIPRangeList" :: Maybe (SkippedIPRangeListType) }) -> RiskExceptionConfigurationType
 ```
 
 Constructs RiskExceptionConfigurationType's fields from required parameters
@@ -8362,7 +8362,7 @@ Encode S3BucketType
 
 ``` purescript
 newtype SMSMfaSettingsType
-  = SMSMfaSettingsType { "Enabled" :: NullOrUndefined (BooleanType), "PreferredMfa" :: NullOrUndefined (BooleanType) }
+  = SMSMfaSettingsType { "Enabled" :: Maybe (BooleanType), "PreferredMfa" :: Maybe (BooleanType) }
 ```
 
 <p>The SMS multi-factor authentication (MFA) settings type.</p>
@@ -8387,7 +8387,7 @@ Constructs SMSMfaSettingsType from required parameters
 #### `newSMSMfaSettingsType'`
 
 ``` purescript
-newSMSMfaSettingsType' :: ({ "Enabled" :: NullOrUndefined (BooleanType), "PreferredMfa" :: NullOrUndefined (BooleanType) } -> { "Enabled" :: NullOrUndefined (BooleanType), "PreferredMfa" :: NullOrUndefined (BooleanType) }) -> SMSMfaSettingsType
+newSMSMfaSettingsType' :: ({ "Enabled" :: Maybe (BooleanType), "PreferredMfa" :: Maybe (BooleanType) } -> { "Enabled" :: Maybe (BooleanType), "PreferredMfa" :: Maybe (BooleanType) }) -> SMSMfaSettingsType
 ```
 
 Constructs SMSMfaSettingsType's fields from required parameters
@@ -8396,7 +8396,7 @@ Constructs SMSMfaSettingsType's fields from required parameters
 
 ``` purescript
 newtype SchemaAttributeType
-  = SchemaAttributeType { "Name" :: NullOrUndefined (CustomAttributeNameType), "AttributeDataType" :: NullOrUndefined (AttributeDataType), "DeveloperOnlyAttribute" :: NullOrUndefined (BooleanType), "Mutable" :: NullOrUndefined (BooleanType), "Required" :: NullOrUndefined (BooleanType), "NumberAttributeConstraints" :: NullOrUndefined (NumberAttributeConstraintsType), "StringAttributeConstraints" :: NullOrUndefined (StringAttributeConstraintsType) }
+  = SchemaAttributeType { "Name" :: Maybe (CustomAttributeNameType), "AttributeDataType" :: Maybe (AttributeDataType), "DeveloperOnlyAttribute" :: Maybe (BooleanType), "Mutable" :: Maybe (BooleanType), "Required" :: Maybe (BooleanType), "NumberAttributeConstraints" :: Maybe (NumberAttributeConstraintsType), "StringAttributeConstraints" :: Maybe (StringAttributeConstraintsType) }
 ```
 
 <p>Contains information about the schema attribute.</p>
@@ -8421,7 +8421,7 @@ Constructs SchemaAttributeType from required parameters
 #### `newSchemaAttributeType'`
 
 ``` purescript
-newSchemaAttributeType' :: ({ "Name" :: NullOrUndefined (CustomAttributeNameType), "AttributeDataType" :: NullOrUndefined (AttributeDataType), "DeveloperOnlyAttribute" :: NullOrUndefined (BooleanType), "Mutable" :: NullOrUndefined (BooleanType), "Required" :: NullOrUndefined (BooleanType), "NumberAttributeConstraints" :: NullOrUndefined (NumberAttributeConstraintsType), "StringAttributeConstraints" :: NullOrUndefined (StringAttributeConstraintsType) } -> { "Name" :: NullOrUndefined (CustomAttributeNameType), "AttributeDataType" :: NullOrUndefined (AttributeDataType), "DeveloperOnlyAttribute" :: NullOrUndefined (BooleanType), "Mutable" :: NullOrUndefined (BooleanType), "Required" :: NullOrUndefined (BooleanType), "NumberAttributeConstraints" :: NullOrUndefined (NumberAttributeConstraintsType), "StringAttributeConstraints" :: NullOrUndefined (StringAttributeConstraintsType) }) -> SchemaAttributeType
+newSchemaAttributeType' :: ({ "Name" :: Maybe (CustomAttributeNameType), "AttributeDataType" :: Maybe (AttributeDataType), "DeveloperOnlyAttribute" :: Maybe (BooleanType), "Mutable" :: Maybe (BooleanType), "Required" :: Maybe (BooleanType), "NumberAttributeConstraints" :: Maybe (NumberAttributeConstraintsType), "StringAttributeConstraints" :: Maybe (StringAttributeConstraintsType) } -> { "Name" :: Maybe (CustomAttributeNameType), "AttributeDataType" :: Maybe (AttributeDataType), "DeveloperOnlyAttribute" :: Maybe (BooleanType), "Mutable" :: Maybe (BooleanType), "Required" :: Maybe (BooleanType), "NumberAttributeConstraints" :: Maybe (NumberAttributeConstraintsType), "StringAttributeConstraints" :: Maybe (StringAttributeConstraintsType) }) -> SchemaAttributeType
 ```
 
 Constructs SchemaAttributeType's fields from required parameters
@@ -8446,7 +8446,7 @@ Encode SchemaAttributesListType
 
 ``` purescript
 newtype ScopeDoesNotExistException
-  = ScopeDoesNotExistException { message :: NullOrUndefined (MessageType) }
+  = ScopeDoesNotExistException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the specified scope does not exist.</p>
@@ -8471,7 +8471,7 @@ Constructs ScopeDoesNotExistException from required parameters
 #### `newScopeDoesNotExistException'`
 
 ``` purescript
-newScopeDoesNotExistException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> ScopeDoesNotExistException
+newScopeDoesNotExistException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> ScopeDoesNotExistException
 ```
 
 Constructs ScopeDoesNotExistException's fields from required parameters
@@ -8592,7 +8592,7 @@ Encode SessionType
 
 ``` purescript
 newtype SetRiskConfigurationRequest
-  = SetRiskConfigurationRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: NullOrUndefined (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: NullOrUndefined (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: NullOrUndefined (RiskExceptionConfigurationType) }
+  = SetRiskConfigurationRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: Maybe (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: Maybe (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: Maybe (RiskExceptionConfigurationType) }
 ```
 
 ##### Instances
@@ -8615,7 +8615,7 @@ Constructs SetRiskConfigurationRequest from required parameters
 #### `newSetRiskConfigurationRequest'`
 
 ``` purescript
-newSetRiskConfigurationRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: NullOrUndefined (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: NullOrUndefined (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: NullOrUndefined (RiskExceptionConfigurationType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: NullOrUndefined (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: NullOrUndefined (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: NullOrUndefined (RiskExceptionConfigurationType) }) -> SetRiskConfigurationRequest
+newSetRiskConfigurationRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: Maybe (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: Maybe (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: Maybe (RiskExceptionConfigurationType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType), "CompromisedCredentialsRiskConfiguration" :: Maybe (CompromisedCredentialsRiskConfigurationType), "AccountTakeoverRiskConfiguration" :: Maybe (AccountTakeoverRiskConfigurationType), "RiskExceptionConfiguration" :: Maybe (RiskExceptionConfigurationType) }) -> SetRiskConfigurationRequest
 ```
 
 Constructs SetRiskConfigurationRequest's fields from required parameters
@@ -8656,7 +8656,7 @@ Constructs SetRiskConfigurationResponse's fields from required parameters
 
 ``` purescript
 newtype SetUICustomizationRequest
-  = SetUICustomizationRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType), "CSS" :: NullOrUndefined (CSSType), "ImageFile" :: NullOrUndefined (ImageFileType) }
+  = SetUICustomizationRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType), "CSS" :: Maybe (CSSType), "ImageFile" :: Maybe (ImageFileType) }
 ```
 
 ##### Instances
@@ -8679,7 +8679,7 @@ Constructs SetUICustomizationRequest from required parameters
 #### `newSetUICustomizationRequest'`
 
 ``` purescript
-newSetUICustomizationRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType), "CSS" :: NullOrUndefined (CSSType), "ImageFile" :: NullOrUndefined (ImageFileType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: NullOrUndefined (ClientIdType), "CSS" :: NullOrUndefined (CSSType), "ImageFile" :: NullOrUndefined (ImageFileType) }) -> SetUICustomizationRequest
+newSetUICustomizationRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType), "CSS" :: Maybe (CSSType), "ImageFile" :: Maybe (ImageFileType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: Maybe (ClientIdType), "CSS" :: Maybe (CSSType), "ImageFile" :: Maybe (ImageFileType) }) -> SetUICustomizationRequest
 ```
 
 Constructs SetUICustomizationRequest's fields from required parameters
@@ -8720,7 +8720,7 @@ Constructs SetUICustomizationResponse's fields from required parameters
 
 ``` purescript
 newtype SetUserMFAPreferenceRequest
-  = SetUserMFAPreferenceRequest { "SMSMfaSettings" :: NullOrUndefined (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: NullOrUndefined (SoftwareTokenMfaSettingsType), "AccessToken" :: TokenModelType }
+  = SetUserMFAPreferenceRequest { "SMSMfaSettings" :: Maybe (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: Maybe (SoftwareTokenMfaSettingsType), "AccessToken" :: TokenModelType }
 ```
 
 ##### Instances
@@ -8743,7 +8743,7 @@ Constructs SetUserMFAPreferenceRequest from required parameters
 #### `newSetUserMFAPreferenceRequest'`
 
 ``` purescript
-newSetUserMFAPreferenceRequest' :: TokenModelType -> ({ "SMSMfaSettings" :: NullOrUndefined (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: NullOrUndefined (SoftwareTokenMfaSettingsType), "AccessToken" :: TokenModelType } -> { "SMSMfaSettings" :: NullOrUndefined (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: NullOrUndefined (SoftwareTokenMfaSettingsType), "AccessToken" :: TokenModelType }) -> SetUserMFAPreferenceRequest
+newSetUserMFAPreferenceRequest' :: TokenModelType -> ({ "SMSMfaSettings" :: Maybe (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: Maybe (SoftwareTokenMfaSettingsType), "AccessToken" :: TokenModelType } -> { "SMSMfaSettings" :: Maybe (SMSMfaSettingsType), "SoftwareTokenMfaSettings" :: Maybe (SoftwareTokenMfaSettingsType), "AccessToken" :: TokenModelType }) -> SetUserMFAPreferenceRequest
 ```
 
 Constructs SetUserMFAPreferenceRequest's fields from required parameters
@@ -8768,7 +8768,7 @@ Encode SetUserMFAPreferenceResponse
 
 ``` purescript
 newtype SetUserPoolMfaConfigRequest
-  = SetUserPoolMfaConfigRequest { "UserPoolId" :: UserPoolIdType, "SmsMfaConfiguration" :: NullOrUndefined (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: NullOrUndefined (SoftwareTokenMfaConfigType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType) }
+  = SetUserPoolMfaConfigRequest { "UserPoolId" :: UserPoolIdType, "SmsMfaConfiguration" :: Maybe (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: Maybe (SoftwareTokenMfaConfigType), "MfaConfiguration" :: Maybe (UserPoolMfaType) }
 ```
 
 ##### Instances
@@ -8791,7 +8791,7 @@ Constructs SetUserPoolMfaConfigRequest from required parameters
 #### `newSetUserPoolMfaConfigRequest'`
 
 ``` purescript
-newSetUserPoolMfaConfigRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "SmsMfaConfiguration" :: NullOrUndefined (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: NullOrUndefined (SoftwareTokenMfaConfigType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType) } -> { "UserPoolId" :: UserPoolIdType, "SmsMfaConfiguration" :: NullOrUndefined (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: NullOrUndefined (SoftwareTokenMfaConfigType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType) }) -> SetUserPoolMfaConfigRequest
+newSetUserPoolMfaConfigRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "SmsMfaConfiguration" :: Maybe (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: Maybe (SoftwareTokenMfaConfigType), "MfaConfiguration" :: Maybe (UserPoolMfaType) } -> { "UserPoolId" :: UserPoolIdType, "SmsMfaConfiguration" :: Maybe (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: Maybe (SoftwareTokenMfaConfigType), "MfaConfiguration" :: Maybe (UserPoolMfaType) }) -> SetUserPoolMfaConfigRequest
 ```
 
 Constructs SetUserPoolMfaConfigRequest's fields from required parameters
@@ -8800,7 +8800,7 @@ Constructs SetUserPoolMfaConfigRequest's fields from required parameters
 
 ``` purescript
 newtype SetUserPoolMfaConfigResponse
-  = SetUserPoolMfaConfigResponse { "SmsMfaConfiguration" :: NullOrUndefined (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: NullOrUndefined (SoftwareTokenMfaConfigType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType) }
+  = SetUserPoolMfaConfigResponse { "SmsMfaConfiguration" :: Maybe (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: Maybe (SoftwareTokenMfaConfigType), "MfaConfiguration" :: Maybe (UserPoolMfaType) }
 ```
 
 ##### Instances
@@ -8823,7 +8823,7 @@ Constructs SetUserPoolMfaConfigResponse from required parameters
 #### `newSetUserPoolMfaConfigResponse'`
 
 ``` purescript
-newSetUserPoolMfaConfigResponse' :: ({ "SmsMfaConfiguration" :: NullOrUndefined (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: NullOrUndefined (SoftwareTokenMfaConfigType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType) } -> { "SmsMfaConfiguration" :: NullOrUndefined (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: NullOrUndefined (SoftwareTokenMfaConfigType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType) }) -> SetUserPoolMfaConfigResponse
+newSetUserPoolMfaConfigResponse' :: ({ "SmsMfaConfiguration" :: Maybe (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: Maybe (SoftwareTokenMfaConfigType), "MfaConfiguration" :: Maybe (UserPoolMfaType) } -> { "SmsMfaConfiguration" :: Maybe (SmsMfaConfigType), "SoftwareTokenMfaConfiguration" :: Maybe (SoftwareTokenMfaConfigType), "MfaConfiguration" :: Maybe (UserPoolMfaType) }) -> SetUserPoolMfaConfigResponse
 ```
 
 Constructs SetUserPoolMfaConfigResponse's fields from required parameters
@@ -8884,7 +8884,7 @@ Encode SetUserSettingsResponse
 
 ``` purescript
 newtype SignUpRequest
-  = SignUpRequest { "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "Username" :: UsernameType, "Password" :: PasswordType, "UserAttributes" :: NullOrUndefined (AttributeListType), "ValidationData" :: NullOrUndefined (AttributeListType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) }
+  = SignUpRequest { "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "Username" :: UsernameType, "Password" :: PasswordType, "UserAttributes" :: Maybe (AttributeListType), "ValidationData" :: Maybe (AttributeListType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) }
 ```
 
 <p>Represents the request to register a user.</p>
@@ -8909,7 +8909,7 @@ Constructs SignUpRequest from required parameters
 #### `newSignUpRequest'`
 
 ``` purescript
-newSignUpRequest' :: ClientIdType -> PasswordType -> UsernameType -> ({ "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "Username" :: UsernameType, "Password" :: PasswordType, "UserAttributes" :: NullOrUndefined (AttributeListType), "ValidationData" :: NullOrUndefined (AttributeListType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) } -> { "ClientId" :: ClientIdType, "SecretHash" :: NullOrUndefined (SecretHashType), "Username" :: UsernameType, "Password" :: PasswordType, "UserAttributes" :: NullOrUndefined (AttributeListType), "ValidationData" :: NullOrUndefined (AttributeListType), "AnalyticsMetadata" :: NullOrUndefined (AnalyticsMetadataType), "UserContextData" :: NullOrUndefined (UserContextDataType) }) -> SignUpRequest
+newSignUpRequest' :: ClientIdType -> PasswordType -> UsernameType -> ({ "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "Username" :: UsernameType, "Password" :: PasswordType, "UserAttributes" :: Maybe (AttributeListType), "ValidationData" :: Maybe (AttributeListType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) } -> { "ClientId" :: ClientIdType, "SecretHash" :: Maybe (SecretHashType), "Username" :: UsernameType, "Password" :: PasswordType, "UserAttributes" :: Maybe (AttributeListType), "ValidationData" :: Maybe (AttributeListType), "AnalyticsMetadata" :: Maybe (AnalyticsMetadataType), "UserContextData" :: Maybe (UserContextDataType) }) -> SignUpRequest
 ```
 
 Constructs SignUpRequest's fields from required parameters
@@ -8918,7 +8918,7 @@ Constructs SignUpRequest's fields from required parameters
 
 ``` purescript
 newtype SignUpResponse
-  = SignUpResponse { "UserConfirmed" :: BooleanType, "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType), "UserSub" :: StringType }
+  = SignUpResponse { "UserConfirmed" :: BooleanType, "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType), "UserSub" :: StringType }
 ```
 
 <p>The response from the server for a registration request.</p>
@@ -8943,7 +8943,7 @@ Constructs SignUpResponse from required parameters
 #### `newSignUpResponse'`
 
 ``` purescript
-newSignUpResponse' :: BooleanType -> StringType -> ({ "UserConfirmed" :: BooleanType, "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType), "UserSub" :: StringType } -> { "UserConfirmed" :: BooleanType, "CodeDeliveryDetails" :: NullOrUndefined (CodeDeliveryDetailsType), "UserSub" :: StringType }) -> SignUpResponse
+newSignUpResponse' :: BooleanType -> StringType -> ({ "UserConfirmed" :: BooleanType, "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType), "UserSub" :: StringType } -> { "UserConfirmed" :: BooleanType, "CodeDeliveryDetails" :: Maybe (CodeDeliveryDetailsType), "UserSub" :: StringType }) -> SignUpResponse
 ```
 
 Constructs SignUpResponse's fields from required parameters
@@ -8968,7 +8968,7 @@ Encode SkippedIPRangeListType
 
 ``` purescript
 newtype SmsConfigurationType
-  = SmsConfigurationType { "SnsCallerArn" :: ArnType, "ExternalId" :: NullOrUndefined (StringType) }
+  = SmsConfigurationType { "SnsCallerArn" :: ArnType, "ExternalId" :: Maybe (StringType) }
 ```
 
 <p>The SMS configuration type.</p>
@@ -8993,7 +8993,7 @@ Constructs SmsConfigurationType from required parameters
 #### `newSmsConfigurationType'`
 
 ``` purescript
-newSmsConfigurationType' :: ArnType -> ({ "SnsCallerArn" :: ArnType, "ExternalId" :: NullOrUndefined (StringType) } -> { "SnsCallerArn" :: ArnType, "ExternalId" :: NullOrUndefined (StringType) }) -> SmsConfigurationType
+newSmsConfigurationType' :: ArnType -> ({ "SnsCallerArn" :: ArnType, "ExternalId" :: Maybe (StringType) } -> { "SnsCallerArn" :: ArnType, "ExternalId" :: Maybe (StringType) }) -> SmsConfigurationType
 ```
 
 Constructs SmsConfigurationType's fields from required parameters
@@ -9002,7 +9002,7 @@ Constructs SmsConfigurationType's fields from required parameters
 
 ``` purescript
 newtype SmsMfaConfigType
-  = SmsMfaConfigType { "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType) }
+  = SmsMfaConfigType { "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "SmsConfiguration" :: Maybe (SmsConfigurationType) }
 ```
 
 <p>The SMS text message multi-factor authentication (MFA) configuration type.</p>
@@ -9027,7 +9027,7 @@ Constructs SmsMfaConfigType from required parameters
 #### `newSmsMfaConfigType'`
 
 ``` purescript
-newSmsMfaConfigType' :: ({ "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType) } -> { "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType) }) -> SmsMfaConfigType
+newSmsMfaConfigType' :: ({ "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "SmsConfiguration" :: Maybe (SmsConfigurationType) } -> { "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "SmsConfiguration" :: Maybe (SmsConfigurationType) }) -> SmsMfaConfigType
 ```
 
 Constructs SmsMfaConfigType's fields from required parameters
@@ -9052,7 +9052,7 @@ Encode SmsVerificationMessageType
 
 ``` purescript
 newtype SoftwareTokenMFANotFoundException
-  = SoftwareTokenMFANotFoundException { message :: NullOrUndefined (MessageType) }
+  = SoftwareTokenMFANotFoundException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the software token TOTP multi-factor authentication (MFA) is not enabled for the user pool.</p>
@@ -9077,7 +9077,7 @@ Constructs SoftwareTokenMFANotFoundException from required parameters
 #### `newSoftwareTokenMFANotFoundException'`
 
 ``` purescript
-newSoftwareTokenMFANotFoundException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> SoftwareTokenMFANotFoundException
+newSoftwareTokenMFANotFoundException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> SoftwareTokenMFANotFoundException
 ```
 
 Constructs SoftwareTokenMFANotFoundException's fields from required parameters
@@ -9102,7 +9102,7 @@ Encode SoftwareTokenMFAUserCodeType
 
 ``` purescript
 newtype SoftwareTokenMfaConfigType
-  = SoftwareTokenMfaConfigType { "Enabled" :: NullOrUndefined (BooleanType) }
+  = SoftwareTokenMfaConfigType { "Enabled" :: Maybe (BooleanType) }
 ```
 
 <p>The type used for enabling software token MFA at the user pool level.</p>
@@ -9127,7 +9127,7 @@ Constructs SoftwareTokenMfaConfigType from required parameters
 #### `newSoftwareTokenMfaConfigType'`
 
 ``` purescript
-newSoftwareTokenMfaConfigType' :: ({ "Enabled" :: NullOrUndefined (BooleanType) } -> { "Enabled" :: NullOrUndefined (BooleanType) }) -> SoftwareTokenMfaConfigType
+newSoftwareTokenMfaConfigType' :: ({ "Enabled" :: Maybe (BooleanType) } -> { "Enabled" :: Maybe (BooleanType) }) -> SoftwareTokenMfaConfigType
 ```
 
 Constructs SoftwareTokenMfaConfigType's fields from required parameters
@@ -9136,7 +9136,7 @@ Constructs SoftwareTokenMfaConfigType's fields from required parameters
 
 ``` purescript
 newtype SoftwareTokenMfaSettingsType
-  = SoftwareTokenMfaSettingsType { "Enabled" :: NullOrUndefined (BooleanType), "PreferredMfa" :: NullOrUndefined (BooleanType) }
+  = SoftwareTokenMfaSettingsType { "Enabled" :: Maybe (BooleanType), "PreferredMfa" :: Maybe (BooleanType) }
 ```
 
 <p>The type used for enabling software token MFA at the user level.</p>
@@ -9161,7 +9161,7 @@ Constructs SoftwareTokenMfaSettingsType from required parameters
 #### `newSoftwareTokenMfaSettingsType'`
 
 ``` purescript
-newSoftwareTokenMfaSettingsType' :: ({ "Enabled" :: NullOrUndefined (BooleanType), "PreferredMfa" :: NullOrUndefined (BooleanType) } -> { "Enabled" :: NullOrUndefined (BooleanType), "PreferredMfa" :: NullOrUndefined (BooleanType) }) -> SoftwareTokenMfaSettingsType
+newSoftwareTokenMfaSettingsType' :: ({ "Enabled" :: Maybe (BooleanType), "PreferredMfa" :: Maybe (BooleanType) } -> { "Enabled" :: Maybe (BooleanType), "PreferredMfa" :: Maybe (BooleanType) }) -> SoftwareTokenMfaSettingsType
 ```
 
 Constructs SoftwareTokenMfaSettingsType's fields from required parameters
@@ -9204,7 +9204,7 @@ Constructs StartUserImportJobRequest's fields from required parameters
 
 ``` purescript
 newtype StartUserImportJobResponse
-  = StartUserImportJobResponse { "UserImportJob" :: NullOrUndefined (UserImportJobType) }
+  = StartUserImportJobResponse { "UserImportJob" :: Maybe (UserImportJobType) }
 ```
 
 <p>Represents the response from the server to the request to start the user import job.</p>
@@ -9229,7 +9229,7 @@ Constructs StartUserImportJobResponse from required parameters
 #### `newStartUserImportJobResponse'`
 
 ``` purescript
-newStartUserImportJobResponse' :: ({ "UserImportJob" :: NullOrUndefined (UserImportJobType) } -> { "UserImportJob" :: NullOrUndefined (UserImportJobType) }) -> StartUserImportJobResponse
+newStartUserImportJobResponse' :: ({ "UserImportJob" :: Maybe (UserImportJobType) } -> { "UserImportJob" :: Maybe (UserImportJobType) }) -> StartUserImportJobResponse
 ```
 
 Constructs StartUserImportJobResponse's fields from required parameters
@@ -9288,7 +9288,7 @@ Constructs StopUserImportJobRequest's fields from required parameters
 
 ``` purescript
 newtype StopUserImportJobResponse
-  = StopUserImportJobResponse { "UserImportJob" :: NullOrUndefined (UserImportJobType) }
+  = StopUserImportJobResponse { "UserImportJob" :: Maybe (UserImportJobType) }
 ```
 
 <p>Represents the response from the server to the request to stop the user import job.</p>
@@ -9313,7 +9313,7 @@ Constructs StopUserImportJobResponse from required parameters
 #### `newStopUserImportJobResponse'`
 
 ``` purescript
-newStopUserImportJobResponse' :: ({ "UserImportJob" :: NullOrUndefined (UserImportJobType) } -> { "UserImportJob" :: NullOrUndefined (UserImportJobType) }) -> StopUserImportJobResponse
+newStopUserImportJobResponse' :: ({ "UserImportJob" :: Maybe (UserImportJobType) } -> { "UserImportJob" :: Maybe (UserImportJobType) }) -> StopUserImportJobResponse
 ```
 
 Constructs StopUserImportJobResponse's fields from required parameters
@@ -9322,7 +9322,7 @@ Constructs StopUserImportJobResponse's fields from required parameters
 
 ``` purescript
 newtype StringAttributeConstraintsType
-  = StringAttributeConstraintsType { "MinLength" :: NullOrUndefined (StringType), "MaxLength" :: NullOrUndefined (StringType) }
+  = StringAttributeConstraintsType { "MinLength" :: Maybe (StringType), "MaxLength" :: Maybe (StringType) }
 ```
 
 <p>The constraints associated with a string attribute.</p>
@@ -9347,7 +9347,7 @@ Constructs StringAttributeConstraintsType from required parameters
 #### `newStringAttributeConstraintsType'`
 
 ``` purescript
-newStringAttributeConstraintsType' :: ({ "MinLength" :: NullOrUndefined (StringType), "MaxLength" :: NullOrUndefined (StringType) } -> { "MinLength" :: NullOrUndefined (StringType), "MaxLength" :: NullOrUndefined (StringType) }) -> StringAttributeConstraintsType
+newStringAttributeConstraintsType' :: ({ "MinLength" :: Maybe (StringType), "MaxLength" :: Maybe (StringType) } -> { "MinLength" :: Maybe (StringType), "MaxLength" :: Maybe (StringType) }) -> StringAttributeConstraintsType
 ```
 
 Constructs StringAttributeConstraintsType's fields from required parameters
@@ -9404,7 +9404,7 @@ Encode TokenModelType
 
 ``` purescript
 newtype TooManyFailedAttemptsException
-  = TooManyFailedAttemptsException { message :: NullOrUndefined (MessageType) }
+  = TooManyFailedAttemptsException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the user has made too many failed attempts for a given action (e.g., sign in).</p>
@@ -9429,7 +9429,7 @@ Constructs TooManyFailedAttemptsException from required parameters
 #### `newTooManyFailedAttemptsException'`
 
 ``` purescript
-newTooManyFailedAttemptsException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> TooManyFailedAttemptsException
+newTooManyFailedAttemptsException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> TooManyFailedAttemptsException
 ```
 
 Constructs TooManyFailedAttemptsException's fields from required parameters
@@ -9438,7 +9438,7 @@ Constructs TooManyFailedAttemptsException's fields from required parameters
 
 ``` purescript
 newtype TooManyRequestsException
-  = TooManyRequestsException { message :: NullOrUndefined (MessageType) }
+  = TooManyRequestsException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the user has made too many requests for a given operation.</p>
@@ -9463,7 +9463,7 @@ Constructs TooManyRequestsException from required parameters
 #### `newTooManyRequestsException'`
 
 ``` purescript
-newTooManyRequestsException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> TooManyRequestsException
+newTooManyRequestsException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> TooManyRequestsException
 ```
 
 Constructs TooManyRequestsException's fields from required parameters
@@ -9472,7 +9472,7 @@ Constructs TooManyRequestsException's fields from required parameters
 
 ``` purescript
 newtype UICustomizationType
-  = UICustomizationType { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientId" :: NullOrUndefined (ClientIdType), "ImageUrl" :: NullOrUndefined (ImageUrlType), "CSS" :: NullOrUndefined (CSSType), "CSSVersion" :: NullOrUndefined (CSSVersionType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) }
+  = UICustomizationType { "UserPoolId" :: Maybe (UserPoolIdType), "ClientId" :: Maybe (ClientIdType), "ImageUrl" :: Maybe (ImageUrlType), "CSS" :: Maybe (CSSType), "CSSVersion" :: Maybe (CSSVersionType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) }
 ```
 
 <p>A container for the UI customization information for a user pool's built-in app UI.</p>
@@ -9497,7 +9497,7 @@ Constructs UICustomizationType from required parameters
 #### `newUICustomizationType'`
 
 ``` purescript
-newUICustomizationType' :: ({ "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientId" :: NullOrUndefined (ClientIdType), "ImageUrl" :: NullOrUndefined (ImageUrlType), "CSS" :: NullOrUndefined (CSSType), "CSSVersion" :: NullOrUndefined (CSSVersionType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) } -> { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientId" :: NullOrUndefined (ClientIdType), "ImageUrl" :: NullOrUndefined (ImageUrlType), "CSS" :: NullOrUndefined (CSSType), "CSSVersion" :: NullOrUndefined (CSSVersionType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) }) -> UICustomizationType
+newUICustomizationType' :: ({ "UserPoolId" :: Maybe (UserPoolIdType), "ClientId" :: Maybe (ClientIdType), "ImageUrl" :: Maybe (ImageUrlType), "CSS" :: Maybe (CSSType), "CSSVersion" :: Maybe (CSSVersionType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) } -> { "UserPoolId" :: Maybe (UserPoolIdType), "ClientId" :: Maybe (ClientIdType), "ImageUrl" :: Maybe (ImageUrlType), "CSS" :: Maybe (CSSType), "CSSVersion" :: Maybe (CSSVersionType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) }) -> UICustomizationType
 ```
 
 Constructs UICustomizationType's fields from required parameters
@@ -9506,7 +9506,7 @@ Constructs UICustomizationType's fields from required parameters
 
 ``` purescript
 newtype UnexpectedLambdaException
-  = UnexpectedLambdaException { message :: NullOrUndefined (MessageType) }
+  = UnexpectedLambdaException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the Amazon Cognito service encounters an unexpected exception with the AWS Lambda service.</p>
@@ -9531,7 +9531,7 @@ Constructs UnexpectedLambdaException from required parameters
 #### `newUnexpectedLambdaException'`
 
 ``` purescript
-newUnexpectedLambdaException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> UnexpectedLambdaException
+newUnexpectedLambdaException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> UnexpectedLambdaException
 ```
 
 Constructs UnexpectedLambdaException's fields from required parameters
@@ -9540,7 +9540,7 @@ Constructs UnexpectedLambdaException's fields from required parameters
 
 ``` purescript
 newtype UnsupportedIdentityProviderException
-  = UnsupportedIdentityProviderException { message :: NullOrUndefined (MessageType) }
+  = UnsupportedIdentityProviderException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the specified identifier is not supported.</p>
@@ -9565,7 +9565,7 @@ Constructs UnsupportedIdentityProviderException from required parameters
 #### `newUnsupportedIdentityProviderException'`
 
 ``` purescript
-newUnsupportedIdentityProviderException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> UnsupportedIdentityProviderException
+newUnsupportedIdentityProviderException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> UnsupportedIdentityProviderException
 ```
 
 Constructs UnsupportedIdentityProviderException's fields from required parameters
@@ -9574,7 +9574,7 @@ Constructs UnsupportedIdentityProviderException's fields from required parameter
 
 ``` purescript
 newtype UnsupportedUserStateException
-  = UnsupportedUserStateException { message :: NullOrUndefined (MessageType) }
+  = UnsupportedUserStateException { message :: Maybe (MessageType) }
 ```
 
 <p>The request failed because the user is in an unsupported state.</p>
@@ -9599,7 +9599,7 @@ Constructs UnsupportedUserStateException from required parameters
 #### `newUnsupportedUserStateException'`
 
 ``` purescript
-newUnsupportedUserStateException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> UnsupportedUserStateException
+newUnsupportedUserStateException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> UnsupportedUserStateException
 ```
 
 Constructs UnsupportedUserStateException's fields from required parameters
@@ -9656,7 +9656,7 @@ Encode UpdateAuthEventFeedbackResponse
 
 ``` purescript
 newtype UpdateDeviceStatusRequest
-  = UpdateDeviceStatusRequest { "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: NullOrUndefined (DeviceRememberedStatusType) }
+  = UpdateDeviceStatusRequest { "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: Maybe (DeviceRememberedStatusType) }
 ```
 
 <p>Represents the request to update the device status.</p>
@@ -9681,7 +9681,7 @@ Constructs UpdateDeviceStatusRequest from required parameters
 #### `newUpdateDeviceStatusRequest'`
 
 ``` purescript
-newUpdateDeviceStatusRequest' :: TokenModelType -> DeviceKeyType -> ({ "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: NullOrUndefined (DeviceRememberedStatusType) } -> { "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: NullOrUndefined (DeviceRememberedStatusType) }) -> UpdateDeviceStatusRequest
+newUpdateDeviceStatusRequest' :: TokenModelType -> DeviceKeyType -> ({ "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: Maybe (DeviceRememberedStatusType) } -> { "AccessToken" :: TokenModelType, "DeviceKey" :: DeviceKeyType, "DeviceRememberedStatus" :: Maybe (DeviceRememberedStatusType) }) -> UpdateDeviceStatusRequest
 ```
 
 Constructs UpdateDeviceStatusRequest's fields from required parameters
@@ -9708,7 +9708,7 @@ Encode UpdateDeviceStatusResponse
 
 ``` purescript
 newtype UpdateGroupRequest
-  = UpdateGroupRequest { "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: NullOrUndefined (DescriptionType), "RoleArn" :: NullOrUndefined (ArnType), "Precedence" :: NullOrUndefined (PrecedenceType) }
+  = UpdateGroupRequest { "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: Maybe (DescriptionType), "RoleArn" :: Maybe (ArnType), "Precedence" :: Maybe (PrecedenceType) }
 ```
 
 ##### Instances
@@ -9731,7 +9731,7 @@ Constructs UpdateGroupRequest from required parameters
 #### `newUpdateGroupRequest'`
 
 ``` purescript
-newUpdateGroupRequest' :: GroupNameType -> UserPoolIdType -> ({ "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: NullOrUndefined (DescriptionType), "RoleArn" :: NullOrUndefined (ArnType), "Precedence" :: NullOrUndefined (PrecedenceType) } -> { "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: NullOrUndefined (DescriptionType), "RoleArn" :: NullOrUndefined (ArnType), "Precedence" :: NullOrUndefined (PrecedenceType) }) -> UpdateGroupRequest
+newUpdateGroupRequest' :: GroupNameType -> UserPoolIdType -> ({ "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: Maybe (DescriptionType), "RoleArn" :: Maybe (ArnType), "Precedence" :: Maybe (PrecedenceType) } -> { "GroupName" :: GroupNameType, "UserPoolId" :: UserPoolIdType, "Description" :: Maybe (DescriptionType), "RoleArn" :: Maybe (ArnType), "Precedence" :: Maybe (PrecedenceType) }) -> UpdateGroupRequest
 ```
 
 Constructs UpdateGroupRequest's fields from required parameters
@@ -9740,7 +9740,7 @@ Constructs UpdateGroupRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateGroupResponse
-  = UpdateGroupResponse { "Group" :: NullOrUndefined (GroupType) }
+  = UpdateGroupResponse { "Group" :: Maybe (GroupType) }
 ```
 
 ##### Instances
@@ -9763,7 +9763,7 @@ Constructs UpdateGroupResponse from required parameters
 #### `newUpdateGroupResponse'`
 
 ``` purescript
-newUpdateGroupResponse' :: ({ "Group" :: NullOrUndefined (GroupType) } -> { "Group" :: NullOrUndefined (GroupType) }) -> UpdateGroupResponse
+newUpdateGroupResponse' :: ({ "Group" :: Maybe (GroupType) } -> { "Group" :: Maybe (GroupType) }) -> UpdateGroupResponse
 ```
 
 Constructs UpdateGroupResponse's fields from required parameters
@@ -9772,7 +9772,7 @@ Constructs UpdateGroupResponse's fields from required parameters
 
 ``` purescript
 newtype UpdateIdentityProviderRequest
-  = UpdateIdentityProviderRequest { "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameType, "ProviderDetails" :: NullOrUndefined (ProviderDetailsType), "AttributeMapping" :: NullOrUndefined (AttributeMappingType), "IdpIdentifiers" :: NullOrUndefined (IdpIdentifiersListType) }
+  = UpdateIdentityProviderRequest { "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameType, "ProviderDetails" :: Maybe (ProviderDetailsType), "AttributeMapping" :: Maybe (AttributeMappingType), "IdpIdentifiers" :: Maybe (IdpIdentifiersListType) }
 ```
 
 ##### Instances
@@ -9795,7 +9795,7 @@ Constructs UpdateIdentityProviderRequest from required parameters
 #### `newUpdateIdentityProviderRequest'`
 
 ``` purescript
-newUpdateIdentityProviderRequest' :: ProviderNameType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameType, "ProviderDetails" :: NullOrUndefined (ProviderDetailsType), "AttributeMapping" :: NullOrUndefined (AttributeMappingType), "IdpIdentifiers" :: NullOrUndefined (IdpIdentifiersListType) } -> { "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameType, "ProviderDetails" :: NullOrUndefined (ProviderDetailsType), "AttributeMapping" :: NullOrUndefined (AttributeMappingType), "IdpIdentifiers" :: NullOrUndefined (IdpIdentifiersListType) }) -> UpdateIdentityProviderRequest
+newUpdateIdentityProviderRequest' :: ProviderNameType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameType, "ProviderDetails" :: Maybe (ProviderDetailsType), "AttributeMapping" :: Maybe (AttributeMappingType), "IdpIdentifiers" :: Maybe (IdpIdentifiersListType) } -> { "UserPoolId" :: UserPoolIdType, "ProviderName" :: ProviderNameType, "ProviderDetails" :: Maybe (ProviderDetailsType), "AttributeMapping" :: Maybe (AttributeMappingType), "IdpIdentifiers" :: Maybe (IdpIdentifiersListType) }) -> UpdateIdentityProviderRequest
 ```
 
 Constructs UpdateIdentityProviderRequest's fields from required parameters
@@ -9836,7 +9836,7 @@ Constructs UpdateIdentityProviderResponse's fields from required parameters
 
 ``` purescript
 newtype UpdateResourceServerRequest
-  = UpdateResourceServerRequest { "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: NullOrUndefined (ResourceServerScopeListType) }
+  = UpdateResourceServerRequest { "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: Maybe (ResourceServerScopeListType) }
 ```
 
 ##### Instances
@@ -9859,7 +9859,7 @@ Constructs UpdateResourceServerRequest from required parameters
 #### `newUpdateResourceServerRequest'`
 
 ``` purescript
-newUpdateResourceServerRequest' :: ResourceServerIdentifierType -> ResourceServerNameType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: NullOrUndefined (ResourceServerScopeListType) } -> { "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: NullOrUndefined (ResourceServerScopeListType) }) -> UpdateResourceServerRequest
+newUpdateResourceServerRequest' :: ResourceServerIdentifierType -> ResourceServerNameType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: Maybe (ResourceServerScopeListType) } -> { "UserPoolId" :: UserPoolIdType, "Identifier" :: ResourceServerIdentifierType, "Name" :: ResourceServerNameType, "Scopes" :: Maybe (ResourceServerScopeListType) }) -> UpdateResourceServerRequest
 ```
 
 Constructs UpdateResourceServerRequest's fields from required parameters
@@ -9934,7 +9934,7 @@ Constructs UpdateUserAttributesRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateUserAttributesResponse
-  = UpdateUserAttributesResponse { "CodeDeliveryDetailsList" :: NullOrUndefined (CodeDeliveryDetailsListType) }
+  = UpdateUserAttributesResponse { "CodeDeliveryDetailsList" :: Maybe (CodeDeliveryDetailsListType) }
 ```
 
 <p>Represents the response from the server for the request to update user attributes.</p>
@@ -9959,7 +9959,7 @@ Constructs UpdateUserAttributesResponse from required parameters
 #### `newUpdateUserAttributesResponse'`
 
 ``` purescript
-newUpdateUserAttributesResponse' :: ({ "CodeDeliveryDetailsList" :: NullOrUndefined (CodeDeliveryDetailsListType) } -> { "CodeDeliveryDetailsList" :: NullOrUndefined (CodeDeliveryDetailsListType) }) -> UpdateUserAttributesResponse
+newUpdateUserAttributesResponse' :: ({ "CodeDeliveryDetailsList" :: Maybe (CodeDeliveryDetailsListType) } -> { "CodeDeliveryDetailsList" :: Maybe (CodeDeliveryDetailsListType) }) -> UpdateUserAttributesResponse
 ```
 
 Constructs UpdateUserAttributesResponse's fields from required parameters
@@ -9968,7 +9968,7 @@ Constructs UpdateUserAttributesResponse's fields from required parameters
 
 ``` purescript
 newtype UpdateUserPoolClientRequest
-  = UpdateUserPoolClientRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ClientName" :: NullOrUndefined (ClientNameType), "RefreshTokenValidity" :: NullOrUndefined (RefreshTokenValidityType), "ReadAttributes" :: NullOrUndefined (ClientPermissionListType), "WriteAttributes" :: NullOrUndefined (ClientPermissionListType), "ExplicitAuthFlows" :: NullOrUndefined (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: NullOrUndefined (SupportedIdentityProvidersListType), "CallbackURLs" :: NullOrUndefined (CallbackURLsListType), "LogoutURLs" :: NullOrUndefined (LogoutURLsListType), "DefaultRedirectURI" :: NullOrUndefined (RedirectUrlType), "AllowedOAuthFlows" :: NullOrUndefined (OAuthFlowsType), "AllowedOAuthScopes" :: NullOrUndefined (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: NullOrUndefined (BooleanType), "AnalyticsConfiguration" :: NullOrUndefined (AnalyticsConfigurationType) }
+  = UpdateUserPoolClientRequest { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ClientName" :: Maybe (ClientNameType), "RefreshTokenValidity" :: Maybe (RefreshTokenValidityType), "ReadAttributes" :: Maybe (ClientPermissionListType), "WriteAttributes" :: Maybe (ClientPermissionListType), "ExplicitAuthFlows" :: Maybe (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: Maybe (SupportedIdentityProvidersListType), "CallbackURLs" :: Maybe (CallbackURLsListType), "LogoutURLs" :: Maybe (LogoutURLsListType), "DefaultRedirectURI" :: Maybe (RedirectUrlType), "AllowedOAuthFlows" :: Maybe (OAuthFlowsType), "AllowedOAuthScopes" :: Maybe (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: Maybe (BooleanType), "AnalyticsConfiguration" :: Maybe (AnalyticsConfigurationType) }
 ```
 
 <p>Represents the request to update the user pool client.</p>
@@ -9993,7 +9993,7 @@ Constructs UpdateUserPoolClientRequest from required parameters
 #### `newUpdateUserPoolClientRequest'`
 
 ``` purescript
-newUpdateUserPoolClientRequest' :: ClientIdType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ClientName" :: NullOrUndefined (ClientNameType), "RefreshTokenValidity" :: NullOrUndefined (RefreshTokenValidityType), "ReadAttributes" :: NullOrUndefined (ClientPermissionListType), "WriteAttributes" :: NullOrUndefined (ClientPermissionListType), "ExplicitAuthFlows" :: NullOrUndefined (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: NullOrUndefined (SupportedIdentityProvidersListType), "CallbackURLs" :: NullOrUndefined (CallbackURLsListType), "LogoutURLs" :: NullOrUndefined (LogoutURLsListType), "DefaultRedirectURI" :: NullOrUndefined (RedirectUrlType), "AllowedOAuthFlows" :: NullOrUndefined (OAuthFlowsType), "AllowedOAuthScopes" :: NullOrUndefined (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: NullOrUndefined (BooleanType), "AnalyticsConfiguration" :: NullOrUndefined (AnalyticsConfigurationType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ClientName" :: NullOrUndefined (ClientNameType), "RefreshTokenValidity" :: NullOrUndefined (RefreshTokenValidityType), "ReadAttributes" :: NullOrUndefined (ClientPermissionListType), "WriteAttributes" :: NullOrUndefined (ClientPermissionListType), "ExplicitAuthFlows" :: NullOrUndefined (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: NullOrUndefined (SupportedIdentityProvidersListType), "CallbackURLs" :: NullOrUndefined (CallbackURLsListType), "LogoutURLs" :: NullOrUndefined (LogoutURLsListType), "DefaultRedirectURI" :: NullOrUndefined (RedirectUrlType), "AllowedOAuthFlows" :: NullOrUndefined (OAuthFlowsType), "AllowedOAuthScopes" :: NullOrUndefined (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: NullOrUndefined (BooleanType), "AnalyticsConfiguration" :: NullOrUndefined (AnalyticsConfigurationType) }) -> UpdateUserPoolClientRequest
+newUpdateUserPoolClientRequest' :: ClientIdType -> UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ClientName" :: Maybe (ClientNameType), "RefreshTokenValidity" :: Maybe (RefreshTokenValidityType), "ReadAttributes" :: Maybe (ClientPermissionListType), "WriteAttributes" :: Maybe (ClientPermissionListType), "ExplicitAuthFlows" :: Maybe (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: Maybe (SupportedIdentityProvidersListType), "CallbackURLs" :: Maybe (CallbackURLsListType), "LogoutURLs" :: Maybe (LogoutURLsListType), "DefaultRedirectURI" :: Maybe (RedirectUrlType), "AllowedOAuthFlows" :: Maybe (OAuthFlowsType), "AllowedOAuthScopes" :: Maybe (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: Maybe (BooleanType), "AnalyticsConfiguration" :: Maybe (AnalyticsConfigurationType) } -> { "UserPoolId" :: UserPoolIdType, "ClientId" :: ClientIdType, "ClientName" :: Maybe (ClientNameType), "RefreshTokenValidity" :: Maybe (RefreshTokenValidityType), "ReadAttributes" :: Maybe (ClientPermissionListType), "WriteAttributes" :: Maybe (ClientPermissionListType), "ExplicitAuthFlows" :: Maybe (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: Maybe (SupportedIdentityProvidersListType), "CallbackURLs" :: Maybe (CallbackURLsListType), "LogoutURLs" :: Maybe (LogoutURLsListType), "DefaultRedirectURI" :: Maybe (RedirectUrlType), "AllowedOAuthFlows" :: Maybe (OAuthFlowsType), "AllowedOAuthScopes" :: Maybe (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: Maybe (BooleanType), "AnalyticsConfiguration" :: Maybe (AnalyticsConfigurationType) }) -> UpdateUserPoolClientRequest
 ```
 
 Constructs UpdateUserPoolClientRequest's fields from required parameters
@@ -10002,7 +10002,7 @@ Constructs UpdateUserPoolClientRequest's fields from required parameters
 
 ``` purescript
 newtype UpdateUserPoolClientResponse
-  = UpdateUserPoolClientResponse { "UserPoolClient" :: NullOrUndefined (UserPoolClientType) }
+  = UpdateUserPoolClientResponse { "UserPoolClient" :: Maybe (UserPoolClientType) }
 ```
 
 <p>Represents the response from the server to the request to update the user pool client.</p>
@@ -10027,7 +10027,7 @@ Constructs UpdateUserPoolClientResponse from required parameters
 #### `newUpdateUserPoolClientResponse'`
 
 ``` purescript
-newUpdateUserPoolClientResponse' :: ({ "UserPoolClient" :: NullOrUndefined (UserPoolClientType) } -> { "UserPoolClient" :: NullOrUndefined (UserPoolClientType) }) -> UpdateUserPoolClientResponse
+newUpdateUserPoolClientResponse' :: ({ "UserPoolClient" :: Maybe (UserPoolClientType) } -> { "UserPoolClient" :: Maybe (UserPoolClientType) }) -> UpdateUserPoolClientResponse
 ```
 
 Constructs UpdateUserPoolClientResponse's fields from required parameters
@@ -10036,7 +10036,7 @@ Constructs UpdateUserPoolClientResponse's fields from required parameters
 
 ``` purescript
 newtype UpdateUserPoolRequest
-  = UpdateUserPoolRequest { "UserPoolId" :: UserPoolIdType, "Policies" :: NullOrUndefined (UserPoolPolicyType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "AutoVerifiedAttributes" :: NullOrUndefined (VerifiedAttributesListType), "SmsVerificationMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailVerificationMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailVerificationSubject" :: NullOrUndefined (EmailVerificationSubjectType), "VerificationMessageTemplate" :: NullOrUndefined (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType), "DeviceConfiguration" :: NullOrUndefined (DeviceConfigurationType), "EmailConfiguration" :: NullOrUndefined (EmailConfigurationType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType), "UserPoolTags" :: NullOrUndefined (UserPoolTagsType), "AdminCreateUserConfig" :: NullOrUndefined (AdminCreateUserConfigType), "UserPoolAddOns" :: NullOrUndefined (UserPoolAddOnsType) }
+  = UpdateUserPoolRequest { "UserPoolId" :: UserPoolIdType, "Policies" :: Maybe (UserPoolPolicyType), "LambdaConfig" :: Maybe (LambdaConfigType), "AutoVerifiedAttributes" :: Maybe (VerifiedAttributesListType), "SmsVerificationMessage" :: Maybe (SmsVerificationMessageType), "EmailVerificationMessage" :: Maybe (EmailVerificationMessageType), "EmailVerificationSubject" :: Maybe (EmailVerificationSubjectType), "VerificationMessageTemplate" :: Maybe (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "MfaConfiguration" :: Maybe (UserPoolMfaType), "DeviceConfiguration" :: Maybe (DeviceConfigurationType), "EmailConfiguration" :: Maybe (EmailConfigurationType), "SmsConfiguration" :: Maybe (SmsConfigurationType), "UserPoolTags" :: Maybe (UserPoolTagsType), "AdminCreateUserConfig" :: Maybe (AdminCreateUserConfigType), "UserPoolAddOns" :: Maybe (UserPoolAddOnsType) }
 ```
 
 <p>Represents the request to update the user pool.</p>
@@ -10061,7 +10061,7 @@ Constructs UpdateUserPoolRequest from required parameters
 #### `newUpdateUserPoolRequest'`
 
 ``` purescript
-newUpdateUserPoolRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "Policies" :: NullOrUndefined (UserPoolPolicyType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "AutoVerifiedAttributes" :: NullOrUndefined (VerifiedAttributesListType), "SmsVerificationMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailVerificationMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailVerificationSubject" :: NullOrUndefined (EmailVerificationSubjectType), "VerificationMessageTemplate" :: NullOrUndefined (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType), "DeviceConfiguration" :: NullOrUndefined (DeviceConfigurationType), "EmailConfiguration" :: NullOrUndefined (EmailConfigurationType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType), "UserPoolTags" :: NullOrUndefined (UserPoolTagsType), "AdminCreateUserConfig" :: NullOrUndefined (AdminCreateUserConfigType), "UserPoolAddOns" :: NullOrUndefined (UserPoolAddOnsType) } -> { "UserPoolId" :: UserPoolIdType, "Policies" :: NullOrUndefined (UserPoolPolicyType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "AutoVerifiedAttributes" :: NullOrUndefined (VerifiedAttributesListType), "SmsVerificationMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailVerificationMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailVerificationSubject" :: NullOrUndefined (EmailVerificationSubjectType), "VerificationMessageTemplate" :: NullOrUndefined (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType), "DeviceConfiguration" :: NullOrUndefined (DeviceConfigurationType), "EmailConfiguration" :: NullOrUndefined (EmailConfigurationType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType), "UserPoolTags" :: NullOrUndefined (UserPoolTagsType), "AdminCreateUserConfig" :: NullOrUndefined (AdminCreateUserConfigType), "UserPoolAddOns" :: NullOrUndefined (UserPoolAddOnsType) }) -> UpdateUserPoolRequest
+newUpdateUserPoolRequest' :: UserPoolIdType -> ({ "UserPoolId" :: UserPoolIdType, "Policies" :: Maybe (UserPoolPolicyType), "LambdaConfig" :: Maybe (LambdaConfigType), "AutoVerifiedAttributes" :: Maybe (VerifiedAttributesListType), "SmsVerificationMessage" :: Maybe (SmsVerificationMessageType), "EmailVerificationMessage" :: Maybe (EmailVerificationMessageType), "EmailVerificationSubject" :: Maybe (EmailVerificationSubjectType), "VerificationMessageTemplate" :: Maybe (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "MfaConfiguration" :: Maybe (UserPoolMfaType), "DeviceConfiguration" :: Maybe (DeviceConfigurationType), "EmailConfiguration" :: Maybe (EmailConfigurationType), "SmsConfiguration" :: Maybe (SmsConfigurationType), "UserPoolTags" :: Maybe (UserPoolTagsType), "AdminCreateUserConfig" :: Maybe (AdminCreateUserConfigType), "UserPoolAddOns" :: Maybe (UserPoolAddOnsType) } -> { "UserPoolId" :: UserPoolIdType, "Policies" :: Maybe (UserPoolPolicyType), "LambdaConfig" :: Maybe (LambdaConfigType), "AutoVerifiedAttributes" :: Maybe (VerifiedAttributesListType), "SmsVerificationMessage" :: Maybe (SmsVerificationMessageType), "EmailVerificationMessage" :: Maybe (EmailVerificationMessageType), "EmailVerificationSubject" :: Maybe (EmailVerificationSubjectType), "VerificationMessageTemplate" :: Maybe (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "MfaConfiguration" :: Maybe (UserPoolMfaType), "DeviceConfiguration" :: Maybe (DeviceConfigurationType), "EmailConfiguration" :: Maybe (EmailConfigurationType), "SmsConfiguration" :: Maybe (SmsConfigurationType), "UserPoolTags" :: Maybe (UserPoolTagsType), "AdminCreateUserConfig" :: Maybe (AdminCreateUserConfigType), "UserPoolAddOns" :: Maybe (UserPoolAddOnsType) }) -> UpdateUserPoolRequest
 ```
 
 Constructs UpdateUserPoolRequest's fields from required parameters
@@ -10088,7 +10088,7 @@ Encode UpdateUserPoolResponse
 
 ``` purescript
 newtype UserContextDataType
-  = UserContextDataType { "EncodedData" :: NullOrUndefined (StringType) }
+  = UserContextDataType { "EncodedData" :: Maybe (StringType) }
 ```
 
 <p>Contextual data such as the user's device fingerprint, IP address, or location used for evaluating the risk of an unexpected event by Amazon Cognito advanced security.</p>
@@ -10113,7 +10113,7 @@ Constructs UserContextDataType from required parameters
 #### `newUserContextDataType'`
 
 ``` purescript
-newUserContextDataType' :: ({ "EncodedData" :: NullOrUndefined (StringType) } -> { "EncodedData" :: NullOrUndefined (StringType) }) -> UserContextDataType
+newUserContextDataType' :: ({ "EncodedData" :: Maybe (StringType) } -> { "EncodedData" :: Maybe (StringType) }) -> UserContextDataType
 ```
 
 Constructs UserContextDataType's fields from required parameters
@@ -10138,7 +10138,7 @@ Encode UserFilterType
 
 ``` purescript
 newtype UserImportInProgressException
-  = UserImportInProgressException { message :: NullOrUndefined (MessageType) }
+  = UserImportInProgressException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when you are trying to modify a user pool while a user import job is in progress for that pool.</p>
@@ -10163,7 +10163,7 @@ Constructs UserImportInProgressException from required parameters
 #### `newUserImportInProgressException'`
 
 ``` purescript
-newUserImportInProgressException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> UserImportInProgressException
+newUserImportInProgressException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> UserImportInProgressException
 ```
 
 Constructs UserImportInProgressException's fields from required parameters
@@ -10220,7 +10220,7 @@ Encode UserImportJobStatusType
 
 ``` purescript
 newtype UserImportJobType
-  = UserImportJobType { "JobName" :: NullOrUndefined (UserImportJobNameType), "JobId" :: NullOrUndefined (UserImportJobIdType), "UserPoolId" :: NullOrUndefined (UserPoolIdType), "PreSignedUrl" :: NullOrUndefined (PreSignedUrlType), "CreationDate" :: NullOrUndefined (DateType), "StartDate" :: NullOrUndefined (DateType), "CompletionDate" :: NullOrUndefined (DateType), "Status" :: NullOrUndefined (UserImportJobStatusType), "CloudWatchLogsRoleArn" :: NullOrUndefined (ArnType), "ImportedUsers" :: NullOrUndefined (LongType), "SkippedUsers" :: NullOrUndefined (LongType), "FailedUsers" :: NullOrUndefined (LongType), "CompletionMessage" :: NullOrUndefined (CompletionMessageType) }
+  = UserImportJobType { "JobName" :: Maybe (UserImportJobNameType), "JobId" :: Maybe (UserImportJobIdType), "UserPoolId" :: Maybe (UserPoolIdType), "PreSignedUrl" :: Maybe (PreSignedUrlType), "CreationDate" :: Maybe (DateType), "StartDate" :: Maybe (DateType), "CompletionDate" :: Maybe (DateType), "Status" :: Maybe (UserImportJobStatusType), "CloudWatchLogsRoleArn" :: Maybe (ArnType), "ImportedUsers" :: Maybe (LongType), "SkippedUsers" :: Maybe (LongType), "FailedUsers" :: Maybe (LongType), "CompletionMessage" :: Maybe (CompletionMessageType) }
 ```
 
 <p>The user import job type.</p>
@@ -10245,7 +10245,7 @@ Constructs UserImportJobType from required parameters
 #### `newUserImportJobType'`
 
 ``` purescript
-newUserImportJobType' :: ({ "JobName" :: NullOrUndefined (UserImportJobNameType), "JobId" :: NullOrUndefined (UserImportJobIdType), "UserPoolId" :: NullOrUndefined (UserPoolIdType), "PreSignedUrl" :: NullOrUndefined (PreSignedUrlType), "CreationDate" :: NullOrUndefined (DateType), "StartDate" :: NullOrUndefined (DateType), "CompletionDate" :: NullOrUndefined (DateType), "Status" :: NullOrUndefined (UserImportJobStatusType), "CloudWatchLogsRoleArn" :: NullOrUndefined (ArnType), "ImportedUsers" :: NullOrUndefined (LongType), "SkippedUsers" :: NullOrUndefined (LongType), "FailedUsers" :: NullOrUndefined (LongType), "CompletionMessage" :: NullOrUndefined (CompletionMessageType) } -> { "JobName" :: NullOrUndefined (UserImportJobNameType), "JobId" :: NullOrUndefined (UserImportJobIdType), "UserPoolId" :: NullOrUndefined (UserPoolIdType), "PreSignedUrl" :: NullOrUndefined (PreSignedUrlType), "CreationDate" :: NullOrUndefined (DateType), "StartDate" :: NullOrUndefined (DateType), "CompletionDate" :: NullOrUndefined (DateType), "Status" :: NullOrUndefined (UserImportJobStatusType), "CloudWatchLogsRoleArn" :: NullOrUndefined (ArnType), "ImportedUsers" :: NullOrUndefined (LongType), "SkippedUsers" :: NullOrUndefined (LongType), "FailedUsers" :: NullOrUndefined (LongType), "CompletionMessage" :: NullOrUndefined (CompletionMessageType) }) -> UserImportJobType
+newUserImportJobType' :: ({ "JobName" :: Maybe (UserImportJobNameType), "JobId" :: Maybe (UserImportJobIdType), "UserPoolId" :: Maybe (UserPoolIdType), "PreSignedUrl" :: Maybe (PreSignedUrlType), "CreationDate" :: Maybe (DateType), "StartDate" :: Maybe (DateType), "CompletionDate" :: Maybe (DateType), "Status" :: Maybe (UserImportJobStatusType), "CloudWatchLogsRoleArn" :: Maybe (ArnType), "ImportedUsers" :: Maybe (LongType), "SkippedUsers" :: Maybe (LongType), "FailedUsers" :: Maybe (LongType), "CompletionMessage" :: Maybe (CompletionMessageType) } -> { "JobName" :: Maybe (UserImportJobNameType), "JobId" :: Maybe (UserImportJobIdType), "UserPoolId" :: Maybe (UserPoolIdType), "PreSignedUrl" :: Maybe (PreSignedUrlType), "CreationDate" :: Maybe (DateType), "StartDate" :: Maybe (DateType), "CompletionDate" :: Maybe (DateType), "Status" :: Maybe (UserImportJobStatusType), "CloudWatchLogsRoleArn" :: Maybe (ArnType), "ImportedUsers" :: Maybe (LongType), "SkippedUsers" :: Maybe (LongType), "FailedUsers" :: Maybe (LongType), "CompletionMessage" :: Maybe (CompletionMessageType) }) -> UserImportJobType
 ```
 
 Constructs UserImportJobType's fields from required parameters
@@ -10270,7 +10270,7 @@ Encode UserImportJobsListType
 
 ``` purescript
 newtype UserLambdaValidationException
-  = UserLambdaValidationException { message :: NullOrUndefined (MessageType) }
+  = UserLambdaValidationException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when the Amazon Cognito service encounters a user validation exception with the AWS Lambda service.</p>
@@ -10295,7 +10295,7 @@ Constructs UserLambdaValidationException from required parameters
 #### `newUserLambdaValidationException'`
 
 ``` purescript
-newUserLambdaValidationException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> UserLambdaValidationException
+newUserLambdaValidationException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> UserLambdaValidationException
 ```
 
 Constructs UserLambdaValidationException's fields from required parameters
@@ -10320,7 +10320,7 @@ Encode UserMFASettingListType
 
 ``` purescript
 newtype UserNotConfirmedException
-  = UserNotConfirmedException { message :: NullOrUndefined (MessageType) }
+  = UserNotConfirmedException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when a user is not confirmed successfully.</p>
@@ -10345,7 +10345,7 @@ Constructs UserNotConfirmedException from required parameters
 #### `newUserNotConfirmedException'`
 
 ``` purescript
-newUserNotConfirmedException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> UserNotConfirmedException
+newUserNotConfirmedException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> UserNotConfirmedException
 ```
 
 Constructs UserNotConfirmedException's fields from required parameters
@@ -10354,7 +10354,7 @@ Constructs UserNotConfirmedException's fields from required parameters
 
 ``` purescript
 newtype UserNotFoundException
-  = UserNotFoundException { message :: NullOrUndefined (MessageType) }
+  = UserNotFoundException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when a user is not found.</p>
@@ -10379,7 +10379,7 @@ Constructs UserNotFoundException from required parameters
 #### `newUserNotFoundException'`
 
 ``` purescript
-newUserNotFoundException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> UserNotFoundException
+newUserNotFoundException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> UserNotFoundException
 ```
 
 Constructs UserNotFoundException's fields from required parameters
@@ -10388,7 +10388,7 @@ Constructs UserNotFoundException's fields from required parameters
 
 ``` purescript
 newtype UserPoolAddOnNotEnabledException
-  = UserPoolAddOnNotEnabledException { message :: NullOrUndefined (MessageType) }
+  = UserPoolAddOnNotEnabledException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when user pool add-ons are not enabled.</p>
@@ -10413,7 +10413,7 @@ Constructs UserPoolAddOnNotEnabledException from required parameters
 #### `newUserPoolAddOnNotEnabledException'`
 
 ``` purescript
-newUserPoolAddOnNotEnabledException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> UserPoolAddOnNotEnabledException
+newUserPoolAddOnNotEnabledException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> UserPoolAddOnNotEnabledException
 ```
 
 Constructs UserPoolAddOnNotEnabledException's fields from required parameters
@@ -10456,7 +10456,7 @@ Constructs UserPoolAddOnsType's fields from required parameters
 
 ``` purescript
 newtype UserPoolClientDescription
-  = UserPoolClientDescription { "ClientId" :: NullOrUndefined (ClientIdType), "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientName" :: NullOrUndefined (ClientNameType) }
+  = UserPoolClientDescription { "ClientId" :: Maybe (ClientIdType), "UserPoolId" :: Maybe (UserPoolIdType), "ClientName" :: Maybe (ClientNameType) }
 ```
 
 <p>The description of the user pool client.</p>
@@ -10481,7 +10481,7 @@ Constructs UserPoolClientDescription from required parameters
 #### `newUserPoolClientDescription'`
 
 ``` purescript
-newUserPoolClientDescription' :: ({ "ClientId" :: NullOrUndefined (ClientIdType), "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientName" :: NullOrUndefined (ClientNameType) } -> { "ClientId" :: NullOrUndefined (ClientIdType), "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientName" :: NullOrUndefined (ClientNameType) }) -> UserPoolClientDescription
+newUserPoolClientDescription' :: ({ "ClientId" :: Maybe (ClientIdType), "UserPoolId" :: Maybe (UserPoolIdType), "ClientName" :: Maybe (ClientNameType) } -> { "ClientId" :: Maybe (ClientIdType), "UserPoolId" :: Maybe (UserPoolIdType), "ClientName" :: Maybe (ClientNameType) }) -> UserPoolClientDescription
 ```
 
 Constructs UserPoolClientDescription's fields from required parameters
@@ -10506,7 +10506,7 @@ Encode UserPoolClientListType
 
 ``` purescript
 newtype UserPoolClientType
-  = UserPoolClientType { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientName" :: NullOrUndefined (ClientNameType), "ClientId" :: NullOrUndefined (ClientIdType), "ClientSecret" :: NullOrUndefined (ClientSecretType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType), "RefreshTokenValidity" :: NullOrUndefined (RefreshTokenValidityType), "ReadAttributes" :: NullOrUndefined (ClientPermissionListType), "WriteAttributes" :: NullOrUndefined (ClientPermissionListType), "ExplicitAuthFlows" :: NullOrUndefined (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: NullOrUndefined (SupportedIdentityProvidersListType), "CallbackURLs" :: NullOrUndefined (CallbackURLsListType), "LogoutURLs" :: NullOrUndefined (LogoutURLsListType), "DefaultRedirectURI" :: NullOrUndefined (RedirectUrlType), "AllowedOAuthFlows" :: NullOrUndefined (OAuthFlowsType), "AllowedOAuthScopes" :: NullOrUndefined (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: NullOrUndefined (BooleanType), "AnalyticsConfiguration" :: NullOrUndefined (AnalyticsConfigurationType) }
+  = UserPoolClientType { "UserPoolId" :: Maybe (UserPoolIdType), "ClientName" :: Maybe (ClientNameType), "ClientId" :: Maybe (ClientIdType), "ClientSecret" :: Maybe (ClientSecretType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType), "RefreshTokenValidity" :: Maybe (RefreshTokenValidityType), "ReadAttributes" :: Maybe (ClientPermissionListType), "WriteAttributes" :: Maybe (ClientPermissionListType), "ExplicitAuthFlows" :: Maybe (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: Maybe (SupportedIdentityProvidersListType), "CallbackURLs" :: Maybe (CallbackURLsListType), "LogoutURLs" :: Maybe (LogoutURLsListType), "DefaultRedirectURI" :: Maybe (RedirectUrlType), "AllowedOAuthFlows" :: Maybe (OAuthFlowsType), "AllowedOAuthScopes" :: Maybe (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: Maybe (BooleanType), "AnalyticsConfiguration" :: Maybe (AnalyticsConfigurationType) }
 ```
 
 <p>Contains information about a user pool client.</p>
@@ -10531,7 +10531,7 @@ Constructs UserPoolClientType from required parameters
 #### `newUserPoolClientType'`
 
 ``` purescript
-newUserPoolClientType' :: ({ "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientName" :: NullOrUndefined (ClientNameType), "ClientId" :: NullOrUndefined (ClientIdType), "ClientSecret" :: NullOrUndefined (ClientSecretType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType), "RefreshTokenValidity" :: NullOrUndefined (RefreshTokenValidityType), "ReadAttributes" :: NullOrUndefined (ClientPermissionListType), "WriteAttributes" :: NullOrUndefined (ClientPermissionListType), "ExplicitAuthFlows" :: NullOrUndefined (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: NullOrUndefined (SupportedIdentityProvidersListType), "CallbackURLs" :: NullOrUndefined (CallbackURLsListType), "LogoutURLs" :: NullOrUndefined (LogoutURLsListType), "DefaultRedirectURI" :: NullOrUndefined (RedirectUrlType), "AllowedOAuthFlows" :: NullOrUndefined (OAuthFlowsType), "AllowedOAuthScopes" :: NullOrUndefined (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: NullOrUndefined (BooleanType), "AnalyticsConfiguration" :: NullOrUndefined (AnalyticsConfigurationType) } -> { "UserPoolId" :: NullOrUndefined (UserPoolIdType), "ClientName" :: NullOrUndefined (ClientNameType), "ClientId" :: NullOrUndefined (ClientIdType), "ClientSecret" :: NullOrUndefined (ClientSecretType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType), "RefreshTokenValidity" :: NullOrUndefined (RefreshTokenValidityType), "ReadAttributes" :: NullOrUndefined (ClientPermissionListType), "WriteAttributes" :: NullOrUndefined (ClientPermissionListType), "ExplicitAuthFlows" :: NullOrUndefined (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: NullOrUndefined (SupportedIdentityProvidersListType), "CallbackURLs" :: NullOrUndefined (CallbackURLsListType), "LogoutURLs" :: NullOrUndefined (LogoutURLsListType), "DefaultRedirectURI" :: NullOrUndefined (RedirectUrlType), "AllowedOAuthFlows" :: NullOrUndefined (OAuthFlowsType), "AllowedOAuthScopes" :: NullOrUndefined (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: NullOrUndefined (BooleanType), "AnalyticsConfiguration" :: NullOrUndefined (AnalyticsConfigurationType) }) -> UserPoolClientType
+newUserPoolClientType' :: ({ "UserPoolId" :: Maybe (UserPoolIdType), "ClientName" :: Maybe (ClientNameType), "ClientId" :: Maybe (ClientIdType), "ClientSecret" :: Maybe (ClientSecretType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType), "RefreshTokenValidity" :: Maybe (RefreshTokenValidityType), "ReadAttributes" :: Maybe (ClientPermissionListType), "WriteAttributes" :: Maybe (ClientPermissionListType), "ExplicitAuthFlows" :: Maybe (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: Maybe (SupportedIdentityProvidersListType), "CallbackURLs" :: Maybe (CallbackURLsListType), "LogoutURLs" :: Maybe (LogoutURLsListType), "DefaultRedirectURI" :: Maybe (RedirectUrlType), "AllowedOAuthFlows" :: Maybe (OAuthFlowsType), "AllowedOAuthScopes" :: Maybe (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: Maybe (BooleanType), "AnalyticsConfiguration" :: Maybe (AnalyticsConfigurationType) } -> { "UserPoolId" :: Maybe (UserPoolIdType), "ClientName" :: Maybe (ClientNameType), "ClientId" :: Maybe (ClientIdType), "ClientSecret" :: Maybe (ClientSecretType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType), "RefreshTokenValidity" :: Maybe (RefreshTokenValidityType), "ReadAttributes" :: Maybe (ClientPermissionListType), "WriteAttributes" :: Maybe (ClientPermissionListType), "ExplicitAuthFlows" :: Maybe (ExplicitAuthFlowsListType), "SupportedIdentityProviders" :: Maybe (SupportedIdentityProvidersListType), "CallbackURLs" :: Maybe (CallbackURLsListType), "LogoutURLs" :: Maybe (LogoutURLsListType), "DefaultRedirectURI" :: Maybe (RedirectUrlType), "AllowedOAuthFlows" :: Maybe (OAuthFlowsType), "AllowedOAuthScopes" :: Maybe (ScopeListType), "AllowedOAuthFlowsUserPoolClient" :: Maybe (BooleanType), "AnalyticsConfiguration" :: Maybe (AnalyticsConfigurationType) }) -> UserPoolClientType
 ```
 
 Constructs UserPoolClientType's fields from required parameters
@@ -10540,7 +10540,7 @@ Constructs UserPoolClientType's fields from required parameters
 
 ``` purescript
 newtype UserPoolDescriptionType
-  = UserPoolDescriptionType { "Id" :: NullOrUndefined (UserPoolIdType), "Name" :: NullOrUndefined (UserPoolNameType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "Status" :: NullOrUndefined (StatusType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) }
+  = UserPoolDescriptionType { "Id" :: Maybe (UserPoolIdType), "Name" :: Maybe (UserPoolNameType), "LambdaConfig" :: Maybe (LambdaConfigType), "Status" :: Maybe (StatusType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) }
 ```
 
 <p>A user pool description.</p>
@@ -10565,7 +10565,7 @@ Constructs UserPoolDescriptionType from required parameters
 #### `newUserPoolDescriptionType'`
 
 ``` purescript
-newUserPoolDescriptionType' :: ({ "Id" :: NullOrUndefined (UserPoolIdType), "Name" :: NullOrUndefined (UserPoolNameType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "Status" :: NullOrUndefined (StatusType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) } -> { "Id" :: NullOrUndefined (UserPoolIdType), "Name" :: NullOrUndefined (UserPoolNameType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "Status" :: NullOrUndefined (StatusType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType) }) -> UserPoolDescriptionType
+newUserPoolDescriptionType' :: ({ "Id" :: Maybe (UserPoolIdType), "Name" :: Maybe (UserPoolNameType), "LambdaConfig" :: Maybe (LambdaConfigType), "Status" :: Maybe (StatusType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) } -> { "Id" :: Maybe (UserPoolIdType), "Name" :: Maybe (UserPoolNameType), "LambdaConfig" :: Maybe (LambdaConfigType), "Status" :: Maybe (StatusType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType) }) -> UserPoolDescriptionType
 ```
 
 Constructs UserPoolDescriptionType's fields from required parameters
@@ -10638,7 +10638,7 @@ Encode UserPoolNameType
 
 ``` purescript
 newtype UserPoolPolicyType
-  = UserPoolPolicyType { "PasswordPolicy" :: NullOrUndefined (PasswordPolicyType) }
+  = UserPoolPolicyType { "PasswordPolicy" :: Maybe (PasswordPolicyType) }
 ```
 
 <p>The policy associated with a user pool.</p>
@@ -10663,7 +10663,7 @@ Constructs UserPoolPolicyType from required parameters
 #### `newUserPoolPolicyType'`
 
 ``` purescript
-newUserPoolPolicyType' :: ({ "PasswordPolicy" :: NullOrUndefined (PasswordPolicyType) } -> { "PasswordPolicy" :: NullOrUndefined (PasswordPolicyType) }) -> UserPoolPolicyType
+newUserPoolPolicyType' :: ({ "PasswordPolicy" :: Maybe (PasswordPolicyType) } -> { "PasswordPolicy" :: Maybe (PasswordPolicyType) }) -> UserPoolPolicyType
 ```
 
 Constructs UserPoolPolicyType's fields from required parameters
@@ -10672,7 +10672,7 @@ Constructs UserPoolPolicyType's fields from required parameters
 
 ``` purescript
 newtype UserPoolTaggingException
-  = UserPoolTaggingException { message :: NullOrUndefined (MessageType) }
+  = UserPoolTaggingException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when a user pool tag cannot be set or updated.</p>
@@ -10697,7 +10697,7 @@ Constructs UserPoolTaggingException from required parameters
 #### `newUserPoolTaggingException'`
 
 ``` purescript
-newUserPoolTaggingException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> UserPoolTaggingException
+newUserPoolTaggingException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> UserPoolTaggingException
 ```
 
 Constructs UserPoolTaggingException's fields from required parameters
@@ -10722,7 +10722,7 @@ Encode UserPoolTagsType
 
 ``` purescript
 newtype UserPoolType
-  = UserPoolType { "Id" :: NullOrUndefined (UserPoolIdType), "Name" :: NullOrUndefined (UserPoolNameType), "Policies" :: NullOrUndefined (UserPoolPolicyType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "Status" :: NullOrUndefined (StatusType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType), "SchemaAttributes" :: NullOrUndefined (SchemaAttributesListType), "AutoVerifiedAttributes" :: NullOrUndefined (VerifiedAttributesListType), "AliasAttributes" :: NullOrUndefined (AliasAttributesListType), "UsernameAttributes" :: NullOrUndefined (UsernameAttributesListType), "SmsVerificationMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailVerificationMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailVerificationSubject" :: NullOrUndefined (EmailVerificationSubjectType), "VerificationMessageTemplate" :: NullOrUndefined (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType), "DeviceConfiguration" :: NullOrUndefined (DeviceConfigurationType), "EstimatedNumberOfUsers" :: NullOrUndefined (IntegerType), "EmailConfiguration" :: NullOrUndefined (EmailConfigurationType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType), "UserPoolTags" :: NullOrUndefined (UserPoolTagsType), "SmsConfigurationFailure" :: NullOrUndefined (StringType), "EmailConfigurationFailure" :: NullOrUndefined (StringType), "Domain" :: NullOrUndefined (DomainType), "AdminCreateUserConfig" :: NullOrUndefined (AdminCreateUserConfigType), "UserPoolAddOns" :: NullOrUndefined (UserPoolAddOnsType) }
+  = UserPoolType { "Id" :: Maybe (UserPoolIdType), "Name" :: Maybe (UserPoolNameType), "Policies" :: Maybe (UserPoolPolicyType), "LambdaConfig" :: Maybe (LambdaConfigType), "Status" :: Maybe (StatusType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType), "SchemaAttributes" :: Maybe (SchemaAttributesListType), "AutoVerifiedAttributes" :: Maybe (VerifiedAttributesListType), "AliasAttributes" :: Maybe (AliasAttributesListType), "UsernameAttributes" :: Maybe (UsernameAttributesListType), "SmsVerificationMessage" :: Maybe (SmsVerificationMessageType), "EmailVerificationMessage" :: Maybe (EmailVerificationMessageType), "EmailVerificationSubject" :: Maybe (EmailVerificationSubjectType), "VerificationMessageTemplate" :: Maybe (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "MfaConfiguration" :: Maybe (UserPoolMfaType), "DeviceConfiguration" :: Maybe (DeviceConfigurationType), "EstimatedNumberOfUsers" :: Maybe (IntegerType), "EmailConfiguration" :: Maybe (EmailConfigurationType), "SmsConfiguration" :: Maybe (SmsConfigurationType), "UserPoolTags" :: Maybe (UserPoolTagsType), "SmsConfigurationFailure" :: Maybe (StringType), "EmailConfigurationFailure" :: Maybe (StringType), "Domain" :: Maybe (DomainType), "AdminCreateUserConfig" :: Maybe (AdminCreateUserConfigType), "UserPoolAddOns" :: Maybe (UserPoolAddOnsType) }
 ```
 
 <p>A container for information about the user pool.</p>
@@ -10747,7 +10747,7 @@ Constructs UserPoolType from required parameters
 #### `newUserPoolType'`
 
 ``` purescript
-newUserPoolType' :: ({ "Id" :: NullOrUndefined (UserPoolIdType), "Name" :: NullOrUndefined (UserPoolNameType), "Policies" :: NullOrUndefined (UserPoolPolicyType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "Status" :: NullOrUndefined (StatusType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType), "SchemaAttributes" :: NullOrUndefined (SchemaAttributesListType), "AutoVerifiedAttributes" :: NullOrUndefined (VerifiedAttributesListType), "AliasAttributes" :: NullOrUndefined (AliasAttributesListType), "UsernameAttributes" :: NullOrUndefined (UsernameAttributesListType), "SmsVerificationMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailVerificationMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailVerificationSubject" :: NullOrUndefined (EmailVerificationSubjectType), "VerificationMessageTemplate" :: NullOrUndefined (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType), "DeviceConfiguration" :: NullOrUndefined (DeviceConfigurationType), "EstimatedNumberOfUsers" :: NullOrUndefined (IntegerType), "EmailConfiguration" :: NullOrUndefined (EmailConfigurationType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType), "UserPoolTags" :: NullOrUndefined (UserPoolTagsType), "SmsConfigurationFailure" :: NullOrUndefined (StringType), "EmailConfigurationFailure" :: NullOrUndefined (StringType), "Domain" :: NullOrUndefined (DomainType), "AdminCreateUserConfig" :: NullOrUndefined (AdminCreateUserConfigType), "UserPoolAddOns" :: NullOrUndefined (UserPoolAddOnsType) } -> { "Id" :: NullOrUndefined (UserPoolIdType), "Name" :: NullOrUndefined (UserPoolNameType), "Policies" :: NullOrUndefined (UserPoolPolicyType), "LambdaConfig" :: NullOrUndefined (LambdaConfigType), "Status" :: NullOrUndefined (StatusType), "LastModifiedDate" :: NullOrUndefined (DateType), "CreationDate" :: NullOrUndefined (DateType), "SchemaAttributes" :: NullOrUndefined (SchemaAttributesListType), "AutoVerifiedAttributes" :: NullOrUndefined (VerifiedAttributesListType), "AliasAttributes" :: NullOrUndefined (AliasAttributesListType), "UsernameAttributes" :: NullOrUndefined (UsernameAttributesListType), "SmsVerificationMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailVerificationMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailVerificationSubject" :: NullOrUndefined (EmailVerificationSubjectType), "VerificationMessageTemplate" :: NullOrUndefined (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: NullOrUndefined (SmsVerificationMessageType), "MfaConfiguration" :: NullOrUndefined (UserPoolMfaType), "DeviceConfiguration" :: NullOrUndefined (DeviceConfigurationType), "EstimatedNumberOfUsers" :: NullOrUndefined (IntegerType), "EmailConfiguration" :: NullOrUndefined (EmailConfigurationType), "SmsConfiguration" :: NullOrUndefined (SmsConfigurationType), "UserPoolTags" :: NullOrUndefined (UserPoolTagsType), "SmsConfigurationFailure" :: NullOrUndefined (StringType), "EmailConfigurationFailure" :: NullOrUndefined (StringType), "Domain" :: NullOrUndefined (DomainType), "AdminCreateUserConfig" :: NullOrUndefined (AdminCreateUserConfigType), "UserPoolAddOns" :: NullOrUndefined (UserPoolAddOnsType) }) -> UserPoolType
+newUserPoolType' :: ({ "Id" :: Maybe (UserPoolIdType), "Name" :: Maybe (UserPoolNameType), "Policies" :: Maybe (UserPoolPolicyType), "LambdaConfig" :: Maybe (LambdaConfigType), "Status" :: Maybe (StatusType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType), "SchemaAttributes" :: Maybe (SchemaAttributesListType), "AutoVerifiedAttributes" :: Maybe (VerifiedAttributesListType), "AliasAttributes" :: Maybe (AliasAttributesListType), "UsernameAttributes" :: Maybe (UsernameAttributesListType), "SmsVerificationMessage" :: Maybe (SmsVerificationMessageType), "EmailVerificationMessage" :: Maybe (EmailVerificationMessageType), "EmailVerificationSubject" :: Maybe (EmailVerificationSubjectType), "VerificationMessageTemplate" :: Maybe (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "MfaConfiguration" :: Maybe (UserPoolMfaType), "DeviceConfiguration" :: Maybe (DeviceConfigurationType), "EstimatedNumberOfUsers" :: Maybe (IntegerType), "EmailConfiguration" :: Maybe (EmailConfigurationType), "SmsConfiguration" :: Maybe (SmsConfigurationType), "UserPoolTags" :: Maybe (UserPoolTagsType), "SmsConfigurationFailure" :: Maybe (StringType), "EmailConfigurationFailure" :: Maybe (StringType), "Domain" :: Maybe (DomainType), "AdminCreateUserConfig" :: Maybe (AdminCreateUserConfigType), "UserPoolAddOns" :: Maybe (UserPoolAddOnsType) } -> { "Id" :: Maybe (UserPoolIdType), "Name" :: Maybe (UserPoolNameType), "Policies" :: Maybe (UserPoolPolicyType), "LambdaConfig" :: Maybe (LambdaConfigType), "Status" :: Maybe (StatusType), "LastModifiedDate" :: Maybe (DateType), "CreationDate" :: Maybe (DateType), "SchemaAttributes" :: Maybe (SchemaAttributesListType), "AutoVerifiedAttributes" :: Maybe (VerifiedAttributesListType), "AliasAttributes" :: Maybe (AliasAttributesListType), "UsernameAttributes" :: Maybe (UsernameAttributesListType), "SmsVerificationMessage" :: Maybe (SmsVerificationMessageType), "EmailVerificationMessage" :: Maybe (EmailVerificationMessageType), "EmailVerificationSubject" :: Maybe (EmailVerificationSubjectType), "VerificationMessageTemplate" :: Maybe (VerificationMessageTemplateType), "SmsAuthenticationMessage" :: Maybe (SmsVerificationMessageType), "MfaConfiguration" :: Maybe (UserPoolMfaType), "DeviceConfiguration" :: Maybe (DeviceConfigurationType), "EstimatedNumberOfUsers" :: Maybe (IntegerType), "EmailConfiguration" :: Maybe (EmailConfigurationType), "SmsConfiguration" :: Maybe (SmsConfigurationType), "UserPoolTags" :: Maybe (UserPoolTagsType), "SmsConfigurationFailure" :: Maybe (StringType), "EmailConfigurationFailure" :: Maybe (StringType), "Domain" :: Maybe (DomainType), "AdminCreateUserConfig" :: Maybe (AdminCreateUserConfigType), "UserPoolAddOns" :: Maybe (UserPoolAddOnsType) }) -> UserPoolType
 ```
 
 Constructs UserPoolType's fields from required parameters
@@ -10772,7 +10772,7 @@ Encode UserStatusType
 
 ``` purescript
 newtype UserType
-  = UserType { "Username" :: NullOrUndefined (UsernameType), "Attributes" :: NullOrUndefined (AttributeListType), "UserCreateDate" :: NullOrUndefined (DateType), "UserLastModifiedDate" :: NullOrUndefined (DateType), "Enabled" :: NullOrUndefined (BooleanType), "UserStatus" :: NullOrUndefined (UserStatusType), "MFAOptions" :: NullOrUndefined (MFAOptionListType) }
+  = UserType { "Username" :: Maybe (UsernameType), "Attributes" :: Maybe (AttributeListType), "UserCreateDate" :: Maybe (DateType), "UserLastModifiedDate" :: Maybe (DateType), "Enabled" :: Maybe (BooleanType), "UserStatus" :: Maybe (UserStatusType), "MFAOptions" :: Maybe (MFAOptionListType) }
 ```
 
 <p>The user type.</p>
@@ -10797,7 +10797,7 @@ Constructs UserType from required parameters
 #### `newUserType'`
 
 ``` purescript
-newUserType' :: ({ "Username" :: NullOrUndefined (UsernameType), "Attributes" :: NullOrUndefined (AttributeListType), "UserCreateDate" :: NullOrUndefined (DateType), "UserLastModifiedDate" :: NullOrUndefined (DateType), "Enabled" :: NullOrUndefined (BooleanType), "UserStatus" :: NullOrUndefined (UserStatusType), "MFAOptions" :: NullOrUndefined (MFAOptionListType) } -> { "Username" :: NullOrUndefined (UsernameType), "Attributes" :: NullOrUndefined (AttributeListType), "UserCreateDate" :: NullOrUndefined (DateType), "UserLastModifiedDate" :: NullOrUndefined (DateType), "Enabled" :: NullOrUndefined (BooleanType), "UserStatus" :: NullOrUndefined (UserStatusType), "MFAOptions" :: NullOrUndefined (MFAOptionListType) }) -> UserType
+newUserType' :: ({ "Username" :: Maybe (UsernameType), "Attributes" :: Maybe (AttributeListType), "UserCreateDate" :: Maybe (DateType), "UserLastModifiedDate" :: Maybe (DateType), "Enabled" :: Maybe (BooleanType), "UserStatus" :: Maybe (UserStatusType), "MFAOptions" :: Maybe (MFAOptionListType) } -> { "Username" :: Maybe (UsernameType), "Attributes" :: Maybe (AttributeListType), "UserCreateDate" :: Maybe (DateType), "UserLastModifiedDate" :: Maybe (DateType), "Enabled" :: Maybe (BooleanType), "UserStatus" :: Maybe (UserStatusType), "MFAOptions" :: Maybe (MFAOptionListType) }) -> UserType
 ```
 
 Constructs UserType's fields from required parameters
@@ -10838,7 +10838,7 @@ Encode UsernameAttributesListType
 
 ``` purescript
 newtype UsernameExistsException
-  = UsernameExistsException { message :: NullOrUndefined (MessageType) }
+  = UsernameExistsException { message :: Maybe (MessageType) }
 ```
 
 <p>This exception is thrown when Amazon Cognito encounters a user name that already exists in the user pool.</p>
@@ -10863,7 +10863,7 @@ Constructs UsernameExistsException from required parameters
 #### `newUsernameExistsException'`
 
 ``` purescript
-newUsernameExistsException' :: ({ message :: NullOrUndefined (MessageType) } -> { message :: NullOrUndefined (MessageType) }) -> UsernameExistsException
+newUsernameExistsException' :: ({ message :: Maybe (MessageType) } -> { message :: Maybe (MessageType) }) -> UsernameExistsException
 ```
 
 Constructs UsernameExistsException's fields from required parameters
@@ -10904,7 +10904,7 @@ Encode UsersListType
 
 ``` purescript
 newtype VerificationMessageTemplateType
-  = VerificationMessageTemplateType { "SmsMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailSubject" :: NullOrUndefined (EmailVerificationSubjectType), "EmailMessageByLink" :: NullOrUndefined (EmailVerificationMessageByLinkType), "EmailSubjectByLink" :: NullOrUndefined (EmailVerificationSubjectByLinkType), "DefaultEmailOption" :: NullOrUndefined (DefaultEmailOptionType) }
+  = VerificationMessageTemplateType { "SmsMessage" :: Maybe (SmsVerificationMessageType), "EmailMessage" :: Maybe (EmailVerificationMessageType), "EmailSubject" :: Maybe (EmailVerificationSubjectType), "EmailMessageByLink" :: Maybe (EmailVerificationMessageByLinkType), "EmailSubjectByLink" :: Maybe (EmailVerificationSubjectByLinkType), "DefaultEmailOption" :: Maybe (DefaultEmailOptionType) }
 ```
 
 <p>The template for verification messages.</p>
@@ -10929,7 +10929,7 @@ Constructs VerificationMessageTemplateType from required parameters
 #### `newVerificationMessageTemplateType'`
 
 ``` purescript
-newVerificationMessageTemplateType' :: ({ "SmsMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailSubject" :: NullOrUndefined (EmailVerificationSubjectType), "EmailMessageByLink" :: NullOrUndefined (EmailVerificationMessageByLinkType), "EmailSubjectByLink" :: NullOrUndefined (EmailVerificationSubjectByLinkType), "DefaultEmailOption" :: NullOrUndefined (DefaultEmailOptionType) } -> { "SmsMessage" :: NullOrUndefined (SmsVerificationMessageType), "EmailMessage" :: NullOrUndefined (EmailVerificationMessageType), "EmailSubject" :: NullOrUndefined (EmailVerificationSubjectType), "EmailMessageByLink" :: NullOrUndefined (EmailVerificationMessageByLinkType), "EmailSubjectByLink" :: NullOrUndefined (EmailVerificationSubjectByLinkType), "DefaultEmailOption" :: NullOrUndefined (DefaultEmailOptionType) }) -> VerificationMessageTemplateType
+newVerificationMessageTemplateType' :: ({ "SmsMessage" :: Maybe (SmsVerificationMessageType), "EmailMessage" :: Maybe (EmailVerificationMessageType), "EmailSubject" :: Maybe (EmailVerificationSubjectType), "EmailMessageByLink" :: Maybe (EmailVerificationMessageByLinkType), "EmailSubjectByLink" :: Maybe (EmailVerificationSubjectByLinkType), "DefaultEmailOption" :: Maybe (DefaultEmailOptionType) } -> { "SmsMessage" :: Maybe (SmsVerificationMessageType), "EmailMessage" :: Maybe (EmailVerificationMessageType), "EmailSubject" :: Maybe (EmailVerificationSubjectType), "EmailMessageByLink" :: Maybe (EmailVerificationMessageByLinkType), "EmailSubjectByLink" :: Maybe (EmailVerificationSubjectByLinkType), "DefaultEmailOption" :: Maybe (DefaultEmailOptionType) }) -> VerificationMessageTemplateType
 ```
 
 Constructs VerificationMessageTemplateType's fields from required parameters
@@ -10970,7 +10970,7 @@ Encode VerifiedAttributesListType
 
 ``` purescript
 newtype VerifySoftwareTokenRequest
-  = VerifySoftwareTokenRequest { "AccessToken" :: NullOrUndefined (TokenModelType), "Session" :: NullOrUndefined (SessionType), "UserCode" :: SoftwareTokenMFAUserCodeType, "FriendlyDeviceName" :: NullOrUndefined (StringType) }
+  = VerifySoftwareTokenRequest { "AccessToken" :: Maybe (TokenModelType), "Session" :: Maybe (SessionType), "UserCode" :: SoftwareTokenMFAUserCodeType, "FriendlyDeviceName" :: Maybe (StringType) }
 ```
 
 ##### Instances
@@ -10993,7 +10993,7 @@ Constructs VerifySoftwareTokenRequest from required parameters
 #### `newVerifySoftwareTokenRequest'`
 
 ``` purescript
-newVerifySoftwareTokenRequest' :: SoftwareTokenMFAUserCodeType -> ({ "AccessToken" :: NullOrUndefined (TokenModelType), "Session" :: NullOrUndefined (SessionType), "UserCode" :: SoftwareTokenMFAUserCodeType, "FriendlyDeviceName" :: NullOrUndefined (StringType) } -> { "AccessToken" :: NullOrUndefined (TokenModelType), "Session" :: NullOrUndefined (SessionType), "UserCode" :: SoftwareTokenMFAUserCodeType, "FriendlyDeviceName" :: NullOrUndefined (StringType) }) -> VerifySoftwareTokenRequest
+newVerifySoftwareTokenRequest' :: SoftwareTokenMFAUserCodeType -> ({ "AccessToken" :: Maybe (TokenModelType), "Session" :: Maybe (SessionType), "UserCode" :: SoftwareTokenMFAUserCodeType, "FriendlyDeviceName" :: Maybe (StringType) } -> { "AccessToken" :: Maybe (TokenModelType), "Session" :: Maybe (SessionType), "UserCode" :: SoftwareTokenMFAUserCodeType, "FriendlyDeviceName" :: Maybe (StringType) }) -> VerifySoftwareTokenRequest
 ```
 
 Constructs VerifySoftwareTokenRequest's fields from required parameters
@@ -11002,7 +11002,7 @@ Constructs VerifySoftwareTokenRequest's fields from required parameters
 
 ``` purescript
 newtype VerifySoftwareTokenResponse
-  = VerifySoftwareTokenResponse { "Status" :: NullOrUndefined (VerifySoftwareTokenResponseType), "Session" :: NullOrUndefined (SessionType) }
+  = VerifySoftwareTokenResponse { "Status" :: Maybe (VerifySoftwareTokenResponseType), "Session" :: Maybe (SessionType) }
 ```
 
 ##### Instances
@@ -11025,7 +11025,7 @@ Constructs VerifySoftwareTokenResponse from required parameters
 #### `newVerifySoftwareTokenResponse'`
 
 ``` purescript
-newVerifySoftwareTokenResponse' :: ({ "Status" :: NullOrUndefined (VerifySoftwareTokenResponseType), "Session" :: NullOrUndefined (SessionType) } -> { "Status" :: NullOrUndefined (VerifySoftwareTokenResponseType), "Session" :: NullOrUndefined (SessionType) }) -> VerifySoftwareTokenResponse
+newVerifySoftwareTokenResponse' :: ({ "Status" :: Maybe (VerifySoftwareTokenResponseType), "Session" :: Maybe (SessionType) } -> { "Status" :: Maybe (VerifySoftwareTokenResponseType), "Session" :: Maybe (SessionType) }) -> VerifySoftwareTokenResponse
 ```
 
 Constructs VerifySoftwareTokenResponse's fields from required parameters
